@@ -31,8 +31,27 @@
                     <view key="view" contentMode="scaleToFill" id="kL2-1g-qw6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sR9-Rn-CN2">
+                                <rect key="frame" x="16" y="119" width="361" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="OAe-gs-gHc">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cKN-Ar-myf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cKN-Ar-myf" firstAttribute="bottom" secondItem="sR9-Rn-CN2" secondAttribute="bottom" constant="16" id="FeV-RF-B74"/>
+                            <constraint firstItem="sR9-Rn-CN2" firstAttribute="top" secondItem="cKN-Ar-myf" secondAttribute="top" constant="16" id="LX6-UT-AOK"/>
+                            <constraint firstItem="sR9-Rn-CN2" firstAttribute="leading" secondItem="cKN-Ar-myf" secondAttribute="leading" constant="16" id="NWg-8z-7rU"/>
+                            <constraint firstItem="cKN-Ar-myf" firstAttribute="trailing" secondItem="sR9-Rn-CN2" secondAttribute="trailing" constant="16" id="Vk4-lf-Mro"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C9F-2A-zei"/>
                     <connections>
@@ -41,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-Gy-70G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498.4732824427481" y="-268.3098591549296"/>
+            <point key="canvasLocation" x="976" y="-285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZSO-dq-Jqw">
@@ -75,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-268"/>
+            <point key="canvasLocation" x="1731" y="-285"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="KZf-uD-9gE">
@@ -94,7 +113,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tw-ON-X21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="-268"/>
+            <point key="canvasLocation" x="189" y="-285"/>
         </scene>
     </scenes>
     <resources>
