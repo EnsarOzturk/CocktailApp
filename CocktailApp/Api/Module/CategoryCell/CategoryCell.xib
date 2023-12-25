@@ -43,6 +43,10 @@
                 <constraint firstAttribute="bottom" secondItem="Xal-PS-FWJ" secondAttribute="bottom" id="rZn-ew-ysv"/>
             </constraints>
             <size key="customSize" width="150" height="180"/>
+            <connections>
+                <outlet property="imageView" destination="dyi-ww-FeT" id="rgF-cY-Vr5"/>
+                <outlet property="label" destination="Xal-PS-FWJ" id="yep-8a-qmS"/>
+            </connections>
             <point key="canvasLocation" x="-9.1603053435114496" y="-104.22535211267606"/>
         </collectionViewCell>
     </objects>
