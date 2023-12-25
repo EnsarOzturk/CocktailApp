@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,15 +11,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="gTV-IL-0wX" customClass="CategoryCell" customModule="CocktailApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-ww-FeT">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dyi-ww-FeT" secondAttribute="height" multiplier="1:1" id="aJn-CL-1fr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-PS-FWJ">
+                        <rect key="frame" x="0.0" y="150" width="150" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="178" height="270"/>
-            <point key="canvasLocation" x="12.213740458015266" y="-72.535211267605632"/>
+            <constraints>
+                <constraint firstItem="dyi-ww-FeT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DX8-az-HV0"/>
+                <constraint firstAttribute="trailing" secondItem="dyi-ww-FeT" secondAttribute="trailing" id="ETL-yP-THK"/>
+                <constraint firstAttribute="trailing" secondItem="Xal-PS-FWJ" secondAttribute="trailing" id="Fst-Wq-RgI"/>
+                <constraint firstItem="Xal-PS-FWJ" firstAttribute="top" secondItem="dyi-ww-FeT" secondAttribute="bottom" id="G5P-8o-QwJ"/>
+                <constraint firstItem="Xal-PS-FWJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GGa-JA-gVn"/>
+                <constraint firstItem="Xal-PS-FWJ" firstAttribute="top" secondItem="dyi-ww-FeT" secondAttribute="bottom" id="Lc8-Kg-VAc"/>
+                <constraint firstItem="dyi-ww-FeT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fN5-j2-Nqq"/>
+                <constraint firstAttribute="bottom" secondItem="Xal-PS-FWJ" secondAttribute="bottom" id="rZn-ew-ysv"/>
+            </constraints>
+            <size key="customSize" width="150" height="180"/>
+            <point key="canvasLocation" x="-9.1603053435114496" y="-104.22535211267606"/>
         </collectionViewCell>
     </objects>
 </document>
