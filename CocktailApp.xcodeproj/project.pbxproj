@@ -24,6 +24,7 @@
 		FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */; };
 		FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */; };
 		FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */; };
+		FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F92B39A8630035A224 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndpointItem.swift; sourceTree = "<group>"; };
+		FC9861F92B39A8630035A224 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		FC9861C32B38C3E10035A224 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				FC9861F72B39A74D0035A224 /* Utils */,
 				FC9861EC2B39A13F0035A224 /* EndPointItems */,
 				FC9861E62B39A0400035A224 /* Service */,
 				FC9861DF2B399F000035A224 /* Models */,
@@ -129,6 +132,22 @@
 				FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */,
 			);
 			path = EndPointItems;
+			sourceTree = "<group>";
+		};
+		FC9861F72B39A74D0035A224 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861F82B39A8390035A224 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC9861F82B39A8390035A224 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861F92B39A8630035A224 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9861E82B39A05F0035A224 /* NetworkManager.swift in Sources */,
+				FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */,
 				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
