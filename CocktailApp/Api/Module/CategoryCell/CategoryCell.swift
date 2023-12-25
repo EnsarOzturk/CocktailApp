@@ -10,11 +10,14 @@ import UIKit
 class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    
     static let identifier = "CategoryCell"
+    
+    func configure(category: Category) {
+        label.text = category.strCategory
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func layoutSubviews() {
