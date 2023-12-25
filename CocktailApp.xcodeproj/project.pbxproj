@@ -23,6 +23,7 @@
 		FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861ED2B39A1610035A224 /* Endpoint.swift */; };
 		FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */; };
 		FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */; };
+		FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FC9861ED2B39A1610035A224 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpointItem.swift; sourceTree = "<group>"; };
+		FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndpointItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				FC9861ED2B39A1610035A224 /* Endpoint.swift */,
 				FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */,
 				FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */,
+				FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */,
 			);
 			path = EndPointItems;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
+				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
 				FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
