@@ -17,6 +17,7 @@
 		FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861DD2B399D120035A224 /* ListViewController.swift */; };
 		FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E02B399F270035A224 /* SearchResponse.swift */; };
 		FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E22B399F850035A224 /* CategoryResponse.swift */; };
+		FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E42B399FB70035A224 /* ListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FC9861DD2B399D120035A224 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FC9861E02B399F270035A224 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		FC9861E22B399F850035A224 /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
+		FC9861E42B399FB70035A224 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				FC9861E02B399F270035A224 /* SearchResponse.swift */,
 				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
+				FC9861E42B399FB70035A224 /* ListResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
