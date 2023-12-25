@@ -21,6 +21,7 @@
 		FC9861E82B39A05F0035A224 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E72B39A05F0035A224 /* NetworkManager.swift */; };
 		FC9861EB2B39A0E10035A224 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC9861EA2B39A0E10035A224 /* Alamofire */; };
 		FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861ED2B39A1610035A224 /* Endpoint.swift */; };
+		FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FC9861E42B399FB70035A224 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		FC9861E72B39A05F0035A224 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FC9861ED2B39A1610035A224 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9861ED2B39A1610035A224 /* Endpoint.swift */,
+				FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */,
 			);
 			path = EndPointItems;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
+				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
