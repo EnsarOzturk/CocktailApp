@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="uc8-7q-6DQ">
             <objects>
-                <viewController id="Lqs-28-SMM" sceneMemberID="viewController">
+                <viewController id="Lqs-28-SMM" customClass="CategoryViewController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kL2-1g-qw6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
