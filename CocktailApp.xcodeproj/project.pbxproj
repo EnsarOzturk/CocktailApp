@@ -16,6 +16,7 @@
 		FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861DB2B398EF00035A224 /* CategoryViewController.swift */; };
 		FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861DD2B399D120035A224 /* ListViewController.swift */; };
 		FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E02B399F270035A224 /* SearchResponse.swift */; };
+		FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E22B399F850035A224 /* CategoryResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC9861DB2B398EF00035A224 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FC9861DD2B399D120035A224 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FC9861E02B399F270035A224 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		FC9861E22B399F850035A224 /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9861E02B399F270035A224 /* SearchResponse.swift */,
+				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
+				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
