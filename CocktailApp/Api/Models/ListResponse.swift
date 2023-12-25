@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DesiredDrinkResponse: Codable {
+struct ListResponse: Codable {
     let drinks: [Drink]?
 }
 
