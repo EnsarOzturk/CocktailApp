@@ -15,30 +15,44 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
+        
+        // fetch network
+        network.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { result in
+            switch result {
+            case .success(let response):
+                if let categories = response.drinks {
+                    self.categories = categories
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+            }
+            case .failure(let error): print(error)
+            }
+        }
     }
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    
-}
-
-extension CategoryViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
+        let category = categories[indexPath.row]
+        
+        return cell
     }
 }
 
 extension CategoryViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 56) / 2
+        let height = width / 2 * 3
+        return CGSize(width: width, height: height)
+    }
 }
