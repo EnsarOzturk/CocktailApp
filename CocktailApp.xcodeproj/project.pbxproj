@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
-		FC9861C92B38C3E10035A224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C82B38C3E10035A224 /* ViewController.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
 		FC9861CE2B38C3E30035A224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CD2B38C3E30035A224 /* Assets.xcassets */; };
 		FC9861D12B38C3E30035A224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC9861C82B38C3E10035A224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC9861CB2B38C3E10035A224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC9861CD2B38C3E30035A224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC9861D02B38C3E30035A224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				FC9861D82B3987420035A224 /* Controllers */,
 				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
 				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
-				FC9861C82B38C3E10035A224 /* ViewController.swift */,
 				FC9861CA2B38C3E10035A224 /* Main.storyboard */,
 				FC9861CD2B38C3E30035A224 /* Assets.xcassets */,
 				FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */,
@@ -153,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
-				FC9861C92B38C3E10035A224 /* ViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
