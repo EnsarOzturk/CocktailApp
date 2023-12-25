@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B68C2B3A0E3100092762 /* ListCell.swift */; };
+		FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B68D2B3A0E3100092762 /* ListCell.xib */; };
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC76B68C2B3A0E3100092762 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		FC76B68D2B3A0E3100092762 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC76B68B2B3A0E1E00092762 /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC76B68C2B3A0E3100092762 /* ListCell.swift */,
+				FC76B68D2B3A0E3100092762 /* ListCell.xib */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
 		FC9861B82B38C3E10035A224 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		FC9861FE2B39ACC50035A224 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FC76B68B2B3A0E1E00092762 /* ListCell */,
 				FC9862002B39BB5B0035A224 /* CategoryCell */,
 			);
 			path = Module;
@@ -251,6 +265,7 @@
 				FC9861CE2B38C3E30035A224 /* Assets.xcassets in Resources */,
 				FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */,
 				FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */,
+				FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +287,7 @@
 				FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
+				FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */,
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,

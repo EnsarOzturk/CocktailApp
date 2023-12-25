@@ -14,8 +14,10 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchCoctailsCategory()
+        
+        // collectionView
+        collectionView.dataSource = self
         
         // navigation
         title = selectedCategory?.strCategory
@@ -29,4 +31,15 @@ class ListViewController: UIViewController {
         }
         
     }
+}
+
+extension ListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        drinks.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 }
