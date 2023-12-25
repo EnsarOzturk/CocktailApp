@@ -15,6 +15,7 @@
 		FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861D92B3987630035A224 /* SearchViewController.swift */; };
 		FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861DB2B398EF00035A224 /* CategoryViewController.swift */; };
 		FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861DD2B399D120035A224 /* ListViewController.swift */; };
+		FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861E02B399F270035A224 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC9861D92B3987630035A224 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FC9861DB2B398EF00035A224 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FC9861DD2B399D120035A224 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FC9861E02B399F270035A224 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FC9861C32B38C3E10035A224 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				FC9861DF2B399F000035A224 /* Models */,
 				FC9861D82B3987420035A224 /* Controllers */,
 				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
 				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
@@ -79,6 +82,14 @@
 				FC9861DD2B399D120035A224 /* ListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC9861DF2B399F000035A224 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861E02B399F270035A224 /* SearchResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			files = (
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
+				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
