@@ -25,6 +25,7 @@
 		FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */; };
 		FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */; };
 		FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F92B39A8630035A224 /* UIImage+Extension.swift */; };
+		FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861FB2B39AC480035A224 /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F92B39A8630035A224 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FC9861FB2B39AC480035A224 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9861F92B39A8630035A224 /* UIImage+Extension.swift */,
+				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
 				FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */,
+				FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
