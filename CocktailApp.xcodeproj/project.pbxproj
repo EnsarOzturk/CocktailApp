@@ -83,10 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9861F72B39A74D0035A224 /* Utils */,
-				FC9861EC2B39A13F0035A224 /* EndPointItems */,
-				FC9861E62B39A0400035A224 /* Service */,
-				FC9861DF2B399F000035A224 /* Models */,
-				FC9861D82B3987420035A224 /* Controllers */,
+				FC9861FD2B39AC8C0035A224 /* Api */,
 				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
 				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
 				FC9861CA2B38C3E10035A224 /* Main.storyboard */,
@@ -151,6 +148,25 @@
 				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC9861FD2B39AC8C0035A224 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861FE2B39ACC50035A224 /* Module */,
+				FC9861D82B3987420035A224 /* Controllers */,
+				FC9861DF2B399F000035A224 /* Models */,
+				FC9861E62B39A0400035A224 /* Service */,
+				FC9861EC2B39A13F0035A224 /* EndPointItems */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		FC9861FE2B39ACC50035A224 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
