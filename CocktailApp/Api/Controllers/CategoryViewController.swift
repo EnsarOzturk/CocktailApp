@@ -28,10 +28,10 @@ class CategoryViewController: UIViewController {
                     self.categories = categories
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()
-                    }
+              }
             }
             case .failure(let error): print(error)
-            }
+          }
         }
     }
 }
@@ -43,8 +43,9 @@ extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
-        let category = categories[indexPath.row]
-        
+        let category: Category
+        category = categories[indexPath.row]
+        cell.configure(category: category)
         return cell
     }
 }
