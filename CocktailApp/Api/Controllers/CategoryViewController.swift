@@ -17,7 +17,6 @@ class CategoryViewController: UIViewController{
 
         // collectionView
         collectionView.dataSource = self
-        collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         
@@ -54,10 +53,24 @@ extension CategoryViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = categories[indexPath.row].strCategory
+        if let selectedCategory = categories.first(where: { $0.strCategory == selectedCategory }) {
+            listViewController(category: selectedCategory)
+        } else {
+      }
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    
+    func listViewController(category: Category) {
+        let listVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+        if let navigationController = navigationController {
+            listVC.selectedCategory = category
+            navigationController.pushViewController(listVC, animated: true)
+        } else {
+    }
+}
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
     }
 }
