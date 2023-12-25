@@ -26,6 +26,8 @@
 		FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */; };
 		FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861F92B39A8630035A224 /* UIImage+Extension.swift */; };
 		FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861FB2B39AC480035A224 /* URL+Extension.swift */; };
+		FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9862012B39BB7F0035A224 /* CategoryCell.swift */; };
+		FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9862022B39BB7F0035A224 /* CategoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861F92B39A8630035A224 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FC9861FB2B39AC480035A224 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		FC9862012B39BB7F0035A224 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		FC9862022B39BB7F0035A224 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +169,18 @@
 		FC9861FE2B39ACC50035A224 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FC9862002B39BB5B0035A224 /* CategoryCell */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		FC9862002B39BB5B0035A224 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC9862012B39BB7F0035A224 /* CategoryCell.swift */,
+				FC9862022B39BB7F0035A224 /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,7 @@
 				FC9861D12B38C3E30035A224 /* LaunchScreen.storyboard in Resources */,
 				FC9861CE2B38C3E30035A224 /* Assets.xcassets in Resources */,
 				FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */,
+				FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +272,7 @@
 				FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
+				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
