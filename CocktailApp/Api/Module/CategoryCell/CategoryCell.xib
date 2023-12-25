@@ -17,14 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-ww-FeT">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktail" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-ww-FeT">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="dyi-ww-FeT" secondAttribute="height" multiplier="1:1" id="aJn-CL-1fr"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-PS-FWJ">
-                        <rect key="frame" x="0.0" y="150" width="150" height="30"/>
+                        <rect key="frame" x="8" y="150" width="134" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
             <constraints>
                 <constraint firstItem="dyi-ww-FeT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DX8-az-HV0"/>
                 <constraint firstAttribute="trailing" secondItem="dyi-ww-FeT" secondAttribute="trailing" id="ETL-yP-THK"/>
-                <constraint firstAttribute="trailing" secondItem="Xal-PS-FWJ" secondAttribute="trailing" id="Fst-Wq-RgI"/>
+                <constraint firstAttribute="trailing" secondItem="Xal-PS-FWJ" secondAttribute="trailing" constant="8" id="Fst-Wq-RgI"/>
                 <constraint firstItem="Xal-PS-FWJ" firstAttribute="top" secondItem="dyi-ww-FeT" secondAttribute="bottom" id="G5P-8o-QwJ"/>
-                <constraint firstItem="Xal-PS-FWJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GGa-JA-gVn"/>
+                <constraint firstItem="Xal-PS-FWJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="GGa-JA-gVn"/>
                 <constraint firstItem="Xal-PS-FWJ" firstAttribute="top" secondItem="dyi-ww-FeT" secondAttribute="bottom" id="Lc8-Kg-VAc"/>
                 <constraint firstItem="dyi-ww-FeT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fN5-j2-Nqq"/>
                 <constraint firstAttribute="bottom" secondItem="Xal-PS-FWJ" secondAttribute="bottom" id="rZn-ew-ysv"/>
@@ -50,4 +50,7 @@
             <point key="canvasLocation" x="-9.1603053435114496" y="-104.22535211267606"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="cocktail" width="512" height="512"/>
+    </resources>
 </document>

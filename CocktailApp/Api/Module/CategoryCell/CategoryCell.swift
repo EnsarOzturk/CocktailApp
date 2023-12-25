@@ -23,6 +23,12 @@ class CategoryCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         // label
-        label.contentMode = .center
+        label.textAlignment = .center
+        label.font = UIFont(name: "Copperplate", size: 12)
+        
+        // cell
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 5
     }
 }
