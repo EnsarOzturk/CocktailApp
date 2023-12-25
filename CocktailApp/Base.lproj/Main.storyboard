@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="p1D-ie-CVF">
             <objects>
-                <viewController id="kDB-N4-RAo" sceneMemberID="viewController">
+                <viewController id="kDB-N4-RAo" customClass="SearchViewController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0VX-cr-18x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58e-r2-hlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="368"/>
+            <point key="canvasLocation" x="189" y="379"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="uc8-7q-6DQ">
@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-Gy-70G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="-239"/>
+            <point key="canvasLocation" x="189" y="-273"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZSO-dq-Jqw">
@@ -56,7 +56,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pra-iR-mVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-720" y="64"/>
+            <point key="canvasLocation" x="-718" y="30"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

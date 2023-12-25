@@ -13,6 +13,7 @@
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
 		FC9861CE2B38C3E30035A224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CD2B38C3E30035A224 /* Assets.xcassets */; };
 		FC9861D12B38C3E30035A224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */; };
+		FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861D92B3987630035A224 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC9861CD2B38C3E30035A224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC9861D02B38C3E30035A224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC9861D22B38C3E30035A224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9861D92B3987630035A224 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		FC9861C32B38C3E10035A224 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				FC9861D82B3987420035A224 /* Controllers */,
 				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
 				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
 				FC9861C82B38C3E10035A224 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				FC9861D22B38C3E30035A224 /* Info.plist */,
 			);
 			path = CocktailApp;
+			sourceTree = "<group>";
+		};
+		FC9861D82B3987420035A224 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861D92B3987630035A224 /* SearchViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				FC9861C92B38C3E10035A224 /* ViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
+				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
