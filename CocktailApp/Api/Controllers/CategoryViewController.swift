@@ -9,6 +9,8 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    private let network = NetworkManager()
+    private var categories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
