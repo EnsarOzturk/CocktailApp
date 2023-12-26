@@ -8,10 +8,17 @@
 import UIKit
 
 class SearchListCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    static let identifier = "SearchListCell"
+    
+    func configure(drink: Drink) {
+        imageView.load(url: drink.strDrinkThumb)
+        label.text = drink.strDrink
+    }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
 }
