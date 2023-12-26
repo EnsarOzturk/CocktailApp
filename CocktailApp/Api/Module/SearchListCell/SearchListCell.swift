@@ -13,7 +13,7 @@ class SearchListCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     static let identifier = "SearchListCell"
     
-    func configure(cocktail: Search) {
+    func configure(with cocktail: Cocktail) {
         imageView.load(url: cocktail.strDrinkThumb)
         label.text = cocktail.strDrink
     }

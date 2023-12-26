@@ -9,20 +9,11 @@ import Foundation
 
 struct SearchResponse: Codable {
     let drinks: [Cocktail]
-       
-       enum CodingKeys: String, CodingKey {
-           case drinks = "drinks"
-       }
    }
 
 struct Cocktail: Codable {
-    let id: String
-    let name: String
-    let thumbnail: String?
+    let idDrink: String
+    let strDrink: String
+    let strDrinkThumb: String?
     
-    enum CodingKeys: String, CodingKey {
-        case id = "idDrink"
-        case name = "strDrink"
-        case thumbnail = "strDrinkThumb"
-    }
 }

@@ -150,19 +150,9 @@
                     <connections>
                         <outlet property="collectionView" destination="r54-58-DFe" id="ufP-6A-Zls"/>
                         <outlet property="searchBar" destination="eaB-5S-9zl" id="TOP-vK-qZF"/>
-                        <outlet property="searchDisplayController" destination="g2x-yP-qIk" id="uXb-jQ-UbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnS-Ri-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="g2x-yP-qIk">
-                    <connections>
-                        <outlet property="delegate" destination="Xfv-ZP-mfD" id="Y9Q-ZB-ze7"/>
-                        <outlet property="searchBar" destination="eaB-5S-9zl" id="9Ea-ro-qFB"/>
-                        <outlet property="searchContentsController" destination="Xfv-ZP-mfD" id="l5y-de-YCn"/>
-                        <outlet property="searchResultsDataSource" destination="Xfv-ZP-mfD" id="kl6-d6-nnY"/>
-                        <outlet property="searchResultsDelegate" destination="Xfv-ZP-mfD" id="3Zv-3h-UI0"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="174.80916030534351" y="-139.43661971830986"/>
         </scene>
