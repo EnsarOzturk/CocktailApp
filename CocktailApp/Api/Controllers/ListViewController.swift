@@ -76,7 +76,7 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 32) / 2
+        let width = (UIScreen.main.bounds.width - 48) / 2
         let height = width / 2 * 3
         return CGSize(width: width, height: height)
     }

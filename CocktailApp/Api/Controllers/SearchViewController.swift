@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    private var drinks: [Cocktail] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
