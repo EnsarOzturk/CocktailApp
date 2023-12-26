@@ -21,6 +21,7 @@ class ListViewController: UIViewController {
         // collectionView
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
+//        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
         // navigation
         title = selectedCategory?.strCategory
@@ -68,4 +69,16 @@ extension ListViewController: UICollectionViewDataSource {
         cell.configure(drink: drink)
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+}
+
+extension ListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 32) / 2
+        let height = width / 2 * 3
+        return CGSize(width: width, height: height)
+    }
+    
 }

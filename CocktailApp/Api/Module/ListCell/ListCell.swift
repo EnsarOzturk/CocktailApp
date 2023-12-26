@@ -24,5 +24,8 @@ class ListCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        // cell
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.lightGray.cgColor
     }
 }

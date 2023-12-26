@@ -17,6 +17,7 @@ class CategoryViewController: UIViewController{
 
         // collectionView
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         
@@ -40,7 +41,7 @@ class CategoryViewController: UIViewController{
     }
 }
 
-extension CategoryViewController: UICollectionViewDataSource {
+extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         categories.count
     }
