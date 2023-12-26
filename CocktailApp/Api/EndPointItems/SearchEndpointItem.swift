@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct SearchEndpointItem: Endpoint {
+    let query: String
+    
+    var path: String {
+        return "/search.php"
+    }
+    
+    var queryItems: [URLQueryItem] {
+        return [URLQueryItem(name: "s", value: query)]
+    }
+}
