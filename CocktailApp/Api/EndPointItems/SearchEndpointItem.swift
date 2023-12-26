@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import Alamofire
 
-struct SearchEndpointItem: Endpoint {
-    let query: String
+enum SearchEndpointItem: Endpoint {
+    case searchByName(query: String)
     
     var path: String {
-        return "/search.php"
+        switch self {
+        case .searchByName(let query):
+            return "/search.php?s=\(query)"
+        }
     }
-    
-    var queryItems: [URLQueryItem] {
-        return [URLQueryItem(name: "s", value: query)]
+}
+
+extension SearchEndpointItem {
+    func handle(error: Error) {
+        print("Search Endpoint Error: \(error)")
     }
 }

@@ -8,11 +8,21 @@
 import Foundation
 
 struct SearchResponse: Codable {
-    let drinks: [Cocktail]?
-}
+    let drinks: [Cocktail]
+       
+       enum CodingKeys: String, CodingKey {
+           case drinks = "drinks"
+       }
+   }
 
 struct Cocktail: Codable {
-    let idDrink: String?
-    let strDrink: String?
-    let strDrinkThumb: String?
+    let id: String
+    let name: String
+    let thumbnail: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "idDrink"
+        case name = "strDrink"
+        case thumbnail = "strDrinkThumb"
+    }
 }

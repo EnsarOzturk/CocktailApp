@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-cY-Bag">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-cY-Bag">
                                 <rect key="frame" x="8" y="111" width="377" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ddX-Q2-4ML">
@@ -113,9 +113,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r54-58-DFe">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="8" y="107" width="377" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="twA-bT-Ca9">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="twA-bT-Ca9">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -123,24 +123,48 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-5S-9zl">
+                                <rect key="frame" x="8" y="59" width="377" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="joo-jH-K3L"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xfv-ZP-mfD" id="SxV-RT-HZY"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bH6-mV-SpR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bH6-mV-SpR" firstAttribute="bottom" secondItem="r54-58-DFe" secondAttribute="bottom" id="NFo-9k-wzi"/>
-                            <constraint firstItem="bH6-mV-SpR" firstAttribute="trailing" secondItem="r54-58-DFe" secondAttribute="trailing" id="RXK-A5-0YN"/>
-                            <constraint firstItem="r54-58-DFe" firstAttribute="top" secondItem="bH6-mV-SpR" secondAttribute="top" id="VLN-Md-dK2"/>
-                            <constraint firstItem="r54-58-DFe" firstAttribute="leading" secondItem="bH6-mV-SpR" secondAttribute="leading" id="exV-SO-QGi"/>
+                            <constraint firstItem="bH6-mV-SpR" firstAttribute="trailing" secondItem="eaB-5S-9zl" secondAttribute="trailing" constant="8" id="JXx-8M-WLm"/>
+                            <constraint firstItem="r54-58-DFe" firstAttribute="leading" secondItem="bH6-mV-SpR" secondAttribute="leading" constant="8" id="Jab-72-hAW"/>
+                            <constraint firstItem="bH6-mV-SpR" firstAttribute="trailing" secondItem="r54-58-DFe" secondAttribute="trailing" constant="8" id="N3x-5l-m3i"/>
+                            <constraint firstAttribute="bottom" secondItem="r54-58-DFe" secondAttribute="bottom" id="e6y-aV-2JS"/>
+                            <constraint firstItem="eaB-5S-9zl" firstAttribute="top" secondItem="bH6-mV-SpR" secondAttribute="top" id="hMG-1C-eTD"/>
+                            <constraint firstItem="eaB-5S-9zl" firstAttribute="leading" secondItem="bH6-mV-SpR" secondAttribute="leading" constant="8" id="tkD-IP-b4f"/>
+                            <constraint firstItem="r54-58-DFe" firstAttribute="top" secondItem="eaB-5S-9zl" secondAttribute="bottom" constant="8" id="z4y-tf-lJv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="oXt-1v-ewB"/>
                     <connections>
                         <outlet property="collectionView" destination="r54-58-DFe" id="ufP-6A-Zls"/>
+                        <outlet property="searchBar" destination="eaB-5S-9zl" id="TOP-vK-qZF"/>
+                        <outlet property="searchDisplayController" destination="g2x-yP-qIk" id="uXb-jQ-UbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnS-Ri-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="g2x-yP-qIk">
+                    <connections>
+                        <outlet property="delegate" destination="Xfv-ZP-mfD" id="Y9Q-ZB-ze7"/>
+                        <outlet property="searchBar" destination="eaB-5S-9zl" id="9Ea-ro-qFB"/>
+                        <outlet property="searchContentsController" destination="Xfv-ZP-mfD" id="l5y-de-YCn"/>
+                        <outlet property="searchResultsDataSource" destination="Xfv-ZP-mfD" id="kl6-d6-nnY"/>
+                        <outlet property="searchResultsDelegate" destination="Xfv-ZP-mfD" id="3Zv-3h-UI0"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="175" y="-139"/>
+            <point key="canvasLocation" x="174.80916030534351" y="-139.43661971830986"/>
         </scene>
         <!--Item-->
         <scene sceneID="xy5-le-dbE">
