@@ -6,21 +6,17 @@
 //
 
 import Foundation
-import Alamofire
 
 enum SearchEndpointItem: Endpoint {
-    case searchByName(query: String)
-    
+    case searchByCocktailName(name: String)
+    case listCocktailsByFirstLetter(letter: String)
+
     var path: String {
         switch self {
-        case .searchByName(let query):
-            return "/search.php?s=\(query)"
+        case .searchByCocktailName(let name):
+            return "/search.php?s=\(name)"
+        case .listCocktailsByFirstLetter(let letter):
+            return "/search.php?f=\(letter)"
         }
-    }
-}
-
-extension SearchEndpointItem {
-    func handle(error: Error) {
-        print("Search Endpoint Error: \(error)")
     }
 }
