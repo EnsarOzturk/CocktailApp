@@ -112,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r54-58-DFe">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r54-58-DFe">
                                 <rect key="frame" x="8" y="107" width="377" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="twA-bT-Ca9">
@@ -123,33 +123,18 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-5S-9zl">
-                                <rect key="frame" x="8" y="59" width="377" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="joo-jH-K3L"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Xfv-ZP-mfD" id="SxV-RT-HZY"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bH6-mV-SpR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bH6-mV-SpR" firstAttribute="trailing" secondItem="eaB-5S-9zl" secondAttribute="trailing" constant="8" id="JXx-8M-WLm"/>
                             <constraint firstItem="r54-58-DFe" firstAttribute="leading" secondItem="bH6-mV-SpR" secondAttribute="leading" constant="8" id="Jab-72-hAW"/>
                             <constraint firstItem="bH6-mV-SpR" firstAttribute="trailing" secondItem="r54-58-DFe" secondAttribute="trailing" constant="8" id="N3x-5l-m3i"/>
                             <constraint firstAttribute="bottom" secondItem="r54-58-DFe" secondAttribute="bottom" id="e6y-aV-2JS"/>
-                            <constraint firstItem="eaB-5S-9zl" firstAttribute="top" secondItem="bH6-mV-SpR" secondAttribute="top" id="hMG-1C-eTD"/>
-                            <constraint firstItem="eaB-5S-9zl" firstAttribute="leading" secondItem="bH6-mV-SpR" secondAttribute="leading" constant="8" id="tkD-IP-b4f"/>
-                            <constraint firstItem="r54-58-DFe" firstAttribute="top" secondItem="eaB-5S-9zl" secondAttribute="bottom" constant="8" id="z4y-tf-lJv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="oXt-1v-ewB"/>
                     <connections>
                         <outlet property="collectionView" destination="r54-58-DFe" id="ufP-6A-Zls"/>
-                        <outlet property="searchBar" destination="eaB-5S-9zl" id="TOP-vK-qZF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnS-Ri-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
