@@ -137,6 +137,9 @@
                     <navigationItem key="navigationItem" id="GCS-8o-WEr">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.split.3x3.fill" catalog="system" id="w5n-PV-InV">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="viewStyleButtonTapped:" destination="Xfv-ZP-mfD" id="jA8-ex-nfx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -11,6 +11,7 @@ import SDWebImage
 class SearchListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var view: UIView!
     static let identifier = "SearchListCell"
     
     func configure(with cocktail: Cocktail) {
@@ -22,12 +23,16 @@ class SearchListCell: UICollectionViewCell {
         super.layoutSubviews()
         // label
         label.textAlignment = .center
+        label.textColor = .white
+        
+        //view
+        view.layer.cornerRadius = 4
         
         //imageView
         imageView.layer.cornerRadius = 8
         
         //cell
-        layer.borderWidth = 2
+        layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
         layer.cornerRadius = 8
     }

@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     var filteredCocktails: [Cocktail] = []
     var searchController: UISearchController!
     let network = NetworkManager()
+    private var viewStyle: viewStyle = .big
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,6 @@ class SearchViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
         collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
-       
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         searchUpdate()
         
@@ -66,6 +66,12 @@ class SearchViewController: UIViewController {
     func searchBarIsEmpty() -> Bool {
           return searchController.searchBar.text?.isEmpty ?? true
       }
+    
+    // viewStyleButton
+    @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
+        viewStyle = viewStyle == .big ? .small : .big
+        collectionView.reloadData()
+    }
 }
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -76,25 +82,43 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchListCell.identifier, for: indexPath) as! SearchListCell
-
-                let cocktail: Cocktail
-                if isFiltering() {
-                    cocktail = filteredCocktails[indexPath.item]
-                } else {
-                    cocktail = cocktails[indexPath.item]
-                }
-                    cell.configure(with: cocktail)
-
-                return cell
+        switch viewStyle {
+        case .big:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchListCell.identifier, for: indexPath) as! SearchListCell
+            let cocktail: Cocktail
+            if isFiltering() {
+            cocktail = filteredCocktails[indexPath.item]
+        } else {
+            cocktail = cocktails[indexPath.item]
+        }
+            cell.configure(with: cocktail)
+            return cell
+        case .small:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCardCell.identifier, for: indexPath) as! SmallCardCell
+            let cocktail: Cocktail
+            if isFiltering() {
+            cocktail = filteredCocktails[indexPath.item]
+        } else {
+            cocktail = cocktails[indexPath.item]
+        }
+            cell.configure(with: cocktail)
+            return cell
     }
+  }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 24) / 2
-        let height = width / 2 * 3
-        return CGSize(width: width, height: height)
+        switch viewStyle {
+        case .big:
+            let width = (UIScreen.main.bounds.width - 24) / 2
+            let height = width / 2 * 3
+            return CGSize(width: width, height: height)
+        case .small:
+            let width = (UIScreen.main.bounds.width - 32) / 3
+            let height = width / 2 * 3
+            return CGSize(width: width, height: height)
+        }
     }
 }
 
@@ -110,7 +134,7 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-enum ViewStyle {
+enum viewStyle {
     case big
     case small
 }
