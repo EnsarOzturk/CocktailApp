@@ -47,9 +47,6 @@ class CategoryViewController: UIViewController{
           }
         }
     }
-    @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
-    }
-    
 }
 
 extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate {

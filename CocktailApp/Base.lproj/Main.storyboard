@@ -57,14 +57,7 @@
                             <constraint firstItem="nvS-Sr-urY" firstAttribute="bottom" secondItem="6NK-L7-Dgt" secondAttribute="bottom" constant="16" id="YCz-R3-pAS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SOJ-4b-WwE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.grid.2x2.fill" catalog="system" id="dlS-7O-bSd">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="viewStyleButtonTapped:" destination="eSR-d5-q95" id="k4B-zF-qir"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="SOJ-4b-WwE"/>
                     <connections>
                         <outlet property="collectionView" destination="6NK-L7-Dgt" id="PGJ-hD-Zah"/>
                         <segue destination="BYZ-38-t0r" kind="show" id="4UQ-Io-PC7"/>
@@ -103,7 +96,11 @@
                             <constraint firstItem="qmH-cY-Bag" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aAK-pt-RAL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DFl-wC-tKb"/>
+                    <navigationItem key="navigationItem" id="DFl-wC-tKb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.split.2x2.fill" catalog="system" id="9XD-hr-XKG">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="qmH-cY-Bag" id="YHA-IM-Zf0"/>
                     </connections>
@@ -201,7 +198,7 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="rectangle.grid.2x2.fill" catalog="system" width="128" height="97"/>
+        <image name="rectangle.split.2x2.fill" catalog="system" width="128" height="93"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="opaqueSeparatorColor">
