@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -13,7 +14,7 @@ class ListCell: UICollectionViewCell {
     static let identifier = "ListCell"
   
     func configure(drink: Drink) {
-        imageView.load(url: drink.strDrinkThumb)
+        imageView.setImage(with: drink.strDrinkThumb)
         label.text = drink.strDrink
     }
     

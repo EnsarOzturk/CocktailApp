@@ -14,7 +14,7 @@ class NetworkManager {
         AF.request(item.url, method: item.method).responseData { response in
             switch response.result {
             case .success(let data):
-                print(response.request?.url)
+                print(response.request?.url ?? "")
                 print(item.path)
                 let jsonString = String(data: data, encoding: .utf8)
                 print("API Response: \(jsonString ?? "No Data")")

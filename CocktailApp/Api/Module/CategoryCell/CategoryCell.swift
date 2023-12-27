@@ -55,11 +55,18 @@ class CategoryCell: UICollectionViewCell {
         super.layoutSubviews()
         // label
         label.textAlignment = .center
-        label.font = UIFont(name: "Copperplate", size: 12)
+        label.font = UIFont(name: "Copperplate", size: 15)
+        label.textColor = UIColor.darkGray
+        label.shadowColor = UIColor.systemGray4
+        label.shadowOffset = CGSize(width: 1, height: 1)
+        label.layer.shadowOpacity = 0.2
+        label.layer.shadowRadius = 2
         
         // cell
-        layer.borderWidth = 2
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 1.5
+        layer.borderColor = UIColor.systemGray4.cgColor
         layer.cornerRadius = 5
+        layer.backgroundColor = UIColor.systemGray6.cgColor
+        
     }
 }
