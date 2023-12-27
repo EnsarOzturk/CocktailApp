@@ -26,6 +26,7 @@ class ListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
+        collectionView.register(UINib(nibName: "BigCardCell", bundle: nil), forCellWithReuseIdentifier: BigCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         collectionView.backgroundColor = UIColor.systemGray6
         
