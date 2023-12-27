@@ -23,6 +23,8 @@ class SearchViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
+        collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
+       
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         searchUpdate()
         
