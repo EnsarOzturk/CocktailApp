@@ -99,6 +99,9 @@
                     <navigationItem key="navigationItem" id="DFl-wC-tKb">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.split.2x2.fill" catalog="system" id="9XD-hr-XKG">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="viewStyleButtonTapped:" destination="BYZ-38-t0r" id="d3f-ko-mhV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -79,6 +79,9 @@ class ListViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
+    }
 }
 
 extension ListViewController: UICollectionViewDataSource {
