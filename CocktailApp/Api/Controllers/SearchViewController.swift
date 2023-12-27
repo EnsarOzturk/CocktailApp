@@ -162,7 +162,7 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-enum viewStyle {
+enum listViewStyle {
     case big
     case small
 }

@@ -81,6 +81,7 @@ class ListViewController: UIViewController {
     }
     
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
+        
     }
 }
 
@@ -107,5 +108,9 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
         let height = width / 2 * 3
         return CGSize(width: width, height: height)
     }
-    
+}
+
+enum viewStyle {
+    case small
+    case big
 }
