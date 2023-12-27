@@ -7,9 +7,7 @@
 
 import UIKit
 
-
 class SearchViewController: UIViewController {
-  
     @IBOutlet weak var collectionView: UICollectionView!
     var cocktails: [Cocktail] = []
     var filteredCocktails: [Cocktail] = []
@@ -42,6 +40,14 @@ class SearchViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if !isFiltering() {
+            fetchCocktails(for: "")
+        }
+    }
+    
     private func searchUpdate() {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -56,6 +62,7 @@ class SearchViewController: UIViewController {
                 switch result {
                 case .success(let response):
                     self?.cocktails = response.drinks
+                    self?.saveCocktailsToUserDefaults()
                     self?.collectionView.reloadData()
                 case .failure(let error):
                     print("Error fetching cocktails: \(error)")
@@ -67,6 +74,14 @@ class SearchViewController: UIViewController {
           filteredCocktails = cocktails.filter { $0.strDrink.lowercased().contains(searchText.lowercased()) }
           collectionView.reloadData()
       }
+    // user defaults
+    func loadCocktailsFromUserDefaults() {
+          if let data = UserDefaults.standard.data(forKey: "cocktails") {
+              let cocktails = try? JSONDecoder().decode([Cocktail].self, from: data)
+              self.cocktails = cocktails ?? []
+              collectionView.reloadData()
+          }
+      }
     
     func isFiltering() -> Bool {
             return searchController.isActive && !searchBarIsEmpty()
@@ -74,6 +89,11 @@ class SearchViewController: UIViewController {
     func searchBarIsEmpty() -> Bool {
           return searchController.searchBar.text?.isEmpty ?? true
       }
+    func saveCocktailsToUserDefaults() {
+            let data = try? JSONEncoder().encode(cocktails)
+            UserDefaults.standard.set(data, forKey: "cocktails")
+        }
+    
     
     // viewStyleButton
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
