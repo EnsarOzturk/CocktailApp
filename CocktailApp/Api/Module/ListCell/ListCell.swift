@@ -28,14 +28,14 @@ class ListCell: UICollectionViewCell {
         backgroundColor = UIColor.systemGray6
         // label
         label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont(name: "Copperplate", size: 12)
+        label.textColor = .darkGray
+        label.font = UIFont(name: "Copperplate", size: 13)
         // imageView
         imageView.layer.cornerRadius = 4
         
         // view
         view.layer.cornerRadius = 4
-        view.backgroundColor = UIColor.systemGray4
+        view.backgroundColor = UIColor.systemGray5
         
         // cell
         layer.borderWidth = 0.5

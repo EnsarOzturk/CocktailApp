@@ -42,8 +42,8 @@ class ListViewController: UIViewController {
     }
     
     private func navigationTitleAttributes() {
-        if let largeTitleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
-                var updatedAttributes = largeTitleAttributes
+        if let titleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
+                var updatedAttributes = titleAttributes
                 updatedAttributes[.foregroundColor] = UIColor.darkGray
                 navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
             } else {
