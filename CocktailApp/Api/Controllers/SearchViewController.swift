@@ -10,8 +10,6 @@ import UIKit
 
 class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchResultsUpdating, UICollectionViewDelegateFlowLayout {
   
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     var cocktails: [Cocktail] = []
     var filteredCocktails: [Cocktail] = []
