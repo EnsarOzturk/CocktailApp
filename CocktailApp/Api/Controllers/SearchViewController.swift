@@ -19,18 +19,26 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // collection
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.systemGray6
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
         collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         searchUpdate()
         
+        // view
+        view.backgroundColor = UIColor.systemGray6
+        
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
         title = "Search Cocktails"
+        
+        // tabbar
+        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
+        tabBarController?.tabBar.tintColor = UIColor.darkGray
         
     }
     

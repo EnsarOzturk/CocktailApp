@@ -11,6 +11,8 @@ import SDWebImage
 class SmallCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var view: UIView!
+    
     static let identifier = "SmallCardCell"
     
     func configure(with cocktail: Cocktail) {
@@ -28,6 +30,10 @@ class SmallCardCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .white
+        // view
+        view.layer.cornerRadius = 2
+        view.layer.borderWidth = 0.5
+        view.layer.borderColor = UIColor.white.cgColor
         // imageView
         imageView.layer.cornerRadius = 4
         

@@ -27,6 +27,8 @@ class SearchListCell: UICollectionViewCell {
         
         //view
         view.layer.cornerRadius = 4
+        view.layer.borderWidth = 0.25
+        view.layer.borderColor = UIColor.white.cgColor
         
         //imageView
         imageView.layer.cornerRadius = 8

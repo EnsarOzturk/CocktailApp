@@ -14,15 +14,15 @@ class CategoryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // view
-        view.backgroundColor = UIColor.systemGray6
-
-        // collectionView
+        // collection
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.systemGray6
+        
+        // view
+        view.backgroundColor = UIColor.systemGray6
         
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
