@@ -29,16 +29,14 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
              searchController.searchResultsUpdater = self
              searchController.obscuresBackgroundDuringPresentation = false
              searchController.searchBar.placeholder = "Search Cocktails"
-        searchController.searchBar.backgroundColor = .red
 
              navigationItem.searchController = searchController
              definesPresentationContext = true
-        fetchCocktails()
         
     }
     
-    func fetchCocktails() {
-            let endpoint = SearchEndpointItem.listCocktailsByFirstLetter(letter: "a")
+    func fetchCocktails(for searchQuery: String) {
+        let endpoint = SearchEndpointItem.searchByCocktailName(name: searchQuery)
             network.request(type: SearchResponse.self, item: endpoint) { [weak self] result in
                 switch result {
                 case .success(let response):
@@ -80,8 +78,9 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text ?? ""
+        guard let searchText = searchController.searchBar.text else { return }
                 filterContentForSearchText(searchText)
+        fetchCocktails(for: searchText)
     }
     
     func filterContentForSearchText(_ searchText: String) {
