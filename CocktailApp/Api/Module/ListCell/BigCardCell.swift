@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BigCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -13,6 +14,10 @@ class BigCardCell: UICollectionViewCell {
     @IBOutlet weak var view: UIView!
     static let identifier = "BigCardCell"
     
+    func configure(drink: Drink) {
+        imageView.setImage(with: drink.strDrinkThumb)
+        label.text = drink.strDrink
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
