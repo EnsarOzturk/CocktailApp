@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BigCardCell" customModule="CocktailApp" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BigCardCell" id="gTV-IL-0wX" customClass="BigCardCell" customModule="CocktailApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -56,6 +56,11 @@
                 <constraint firstAttribute="bottom" secondItem="3dN-Ko-RYb" secondAttribute="bottom" constant="8" id="kVH-1L-G9s"/>
             </constraints>
             <size key="customSize" width="157" height="225"/>
+            <connections>
+                <outlet property="imageView" destination="qSw-hC-qGS" id="rYj-bE-P9Z"/>
+                <outlet property="label" destination="gnO-Lk-qfj" id="8LU-8O-iqu"/>
+                <outlet property="view" destination="3dN-Ko-RYb" id="ho1-qr-bK9"/>
+            </connections>
             <point key="canvasLocation" x="205.34351145038167" y="82.042253521126767"/>
         </collectionViewCell>
     </objects>
