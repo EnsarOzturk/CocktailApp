@@ -16,15 +16,39 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationTitleAttributes()
         fetchCoctailsCategory()
+        // view
+        view.backgroundColor = UIColor.systemGray6
         
         // collectionView
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
-//        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+        collectionView.backgroundColor = UIColor.systemGray6
+        
         // navigation
         title = selectedCategory?.strCategory
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = UIColor.darkGray
+        
+        // tabbar
+        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
+        tabBarController?.tabBar.tintColor = UIColor.darkGray
+        
+        // view
+        view.backgroundColor = UIColor.systemGray6
+    }
+    
+    private func navigationTitleAttributes() {
+        if let largeTitleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
+                var updatedAttributes = largeTitleAttributes
+                updatedAttributes[.foregroundColor] = UIColor.darkGray
+                navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
+            } else {
+                navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+            }
     }
     
     func fetchCoctailsCategory() {
@@ -76,7 +100,7 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 48) / 2
+        let width = (UIScreen.main.bounds.width - 32) / 3
         let height = width / 2 * 3
         return CGSize(width: width, height: height)
     }

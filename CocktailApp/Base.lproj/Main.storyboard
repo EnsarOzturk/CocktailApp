@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-cY-Bag">
-                                <rect key="frame" x="8" y="111" width="377" height="650"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ddX-Q2-4ML">
                                     <size key="itemSize" width="128" height="128"/>
@@ -90,10 +90,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qmH-cY-Bag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="I25-6b-mHd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qmH-cY-Bag" secondAttribute="trailing" constant="8" id="KuG-CF-RfF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmH-cY-Bag" secondAttribute="bottom" constant="8" id="ZZK-e4-rhl"/>
-                            <constraint firstItem="qmH-cY-Bag" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="aAK-pt-RAL"/>
+                            <constraint firstItem="qmH-cY-Bag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I25-6b-mHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qmH-cY-Bag" secondAttribute="trailing" id="KuG-CF-RfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmH-cY-Bag" secondAttribute="bottom" id="ZZK-e4-rhl"/>
+                            <constraint firstItem="qmH-cY-Bag" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aAK-pt-RAL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DFl-wC-tKb"/>

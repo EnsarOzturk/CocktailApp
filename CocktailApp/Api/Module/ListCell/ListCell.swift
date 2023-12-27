@@ -11,6 +11,7 @@ import SDWebImage
 class ListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var view: UIView!
     static let identifier = "ListCell"
   
     func configure(drink: Drink) {
@@ -20,13 +21,26 @@ class ListCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundColor = UIColor.systemGray6
+        // label
+        label.textAlignment = .center
+        label.textColor = .white
+        label.font = UIFont(name: "Copperplate", size: 12)
+        // imageView
+        imageView.layer.cornerRadius = 4
+        
+        // view
+        view.layer.cornerRadius = 4
+        view.backgroundColor = UIColor.systemGray4
+        
         // cell
-        layer.borderWidth = 2
+        layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 4
     }
 }
+
