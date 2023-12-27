@@ -11,6 +11,8 @@
 		FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B68D2B3A0E3100092762 /* ListCell.xib */; };
 		FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6912B3AE6B200092762 /* SearchListCell.swift */; };
 		FC76B6942B3AE6B200092762 /* SearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B6922B3AE6B200092762 /* SearchListCell.xib */; };
+		FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6952B3C248800092762 /* UIImageView+Extension.swift */; };
+		FC76B6992B3C252400092762 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FC76B6982B3C252400092762 /* SDWebImage */; };
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
@@ -39,6 +41,7 @@
 		FC76B68D2B3A0E3100092762 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FC76B6912B3AE6B200092762 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		FC76B6922B3AE6B200092762 /* SearchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListCell.xib; sourceTree = "<group>"; };
+		FC76B6952B3C248800092762 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC76B6992B3C252400092762 /* SDWebImage in Frameworks */,
 				FC9861EB2B39A0E10035A224 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +180,7 @@
 			children = (
 				FC9861F92B39A8630035A224 /* UIImage+Extension.swift */,
 				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
+				FC76B6952B3C248800092762 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			name = CocktailApp;
 			packageProductDependencies = (
 				FC9861EA2B39A0E10035A224 /* Alamofire */,
+				FC76B6982B3C252400092762 /* SDWebImage */,
 			);
 			productName = CocktailApp;
 			productReference = FC9861C12B38C3E10035A224 /* CocktailApp.app */;
@@ -260,6 +266,7 @@
 			mainGroup = FC9861B82B38C3E10035A224;
 			packageReferences = (
 				FC9861E92B39A0E10035A224 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FC76B6972B3C252400092762 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FC9861C22B38C3E10035A224 /* Products */;
 			projectDirPath = "";
@@ -307,6 +314,7 @@
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
+				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);
@@ -530,6 +538,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FC76B6972B3C252400092762 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		FC9861E92B39A0E10035A224 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -541,6 +557,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FC76B6982B3C252400092762 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC76B6972B3C252400092762 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		FC9861EA2B39A0E10035A224 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FC9861E92B39A0E10035A224 /* XCRemoteSwiftPackageReference "Alamofire" */;

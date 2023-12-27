@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Alamofire
+import SDWebImage
 
 class SearchListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -14,7 +14,7 @@ class SearchListCell: UICollectionViewCell {
     static let identifier = "SearchListCell"
     
     func configure(with cocktail: Cocktail) {
-        imageView.load(url: cocktail.strDrinkThumb)
+        imageView.setImage(with: cocktail.strDrinkThumb)
         label.text = cocktail.strDrink
     }
 
