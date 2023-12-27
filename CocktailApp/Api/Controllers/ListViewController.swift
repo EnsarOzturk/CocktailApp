@@ -12,6 +12,7 @@ class ListViewController: UIViewController {
     private let network = NetworkManager()
     private var drinks: [Drink] = []
     var selectedCategory: Category?
+    private var listViewStyle: listViewStyle = .small
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +82,8 @@ class ListViewController: UIViewController {
     }
     
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
-        
+        listViewStyle = listViewStyle == .small ? .big : .small
+        collectionView.reloadData()
     }
 }
 
