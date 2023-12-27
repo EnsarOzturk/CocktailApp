@@ -94,12 +94,22 @@ extension ListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
-        let drink: Drink
-        drink = drinks[indexPath.row]
-        cell.configure(drink: drink)
-        return cell
+        switch listViewStyle {
+        case .small:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
+            let drink: Drink
+            drink = drinks[indexPath.row]
+            cell.configure(drink: drink)
+            return cell
+        case .big:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigCardCell", for: indexPath) as! BigCardCell
+            let drink: Drink
+            drink = drinks[indexPath.row]
+            cell.configure(drink: drink)
+            return cell
+        }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
     }
@@ -107,9 +117,16 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 32) / 3
-        let height = width / 2 * 3
-        return CGSize(width: width, height: height)
+        switch listViewStyle {
+        case .small:
+            let width = (UIScreen.main.bounds.width - 32) / 3
+            let height = width / 2 * 3
+            return CGSize(width: width, height: height)
+        case .big:
+            let width = (UIScreen.main.bounds.width - 24) / 2
+            let height = width / 2 * 3
+            return CGSize(width: width, height: height)
+        }
     }
 }
 
