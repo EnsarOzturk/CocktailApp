@@ -29,7 +29,7 @@ class ListCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .darkGray
-        label.font = UIFont(name: "Copperplate", size: 13)
+        label.font = UIFont(name: "Copperplate", size: 15)
         // imageView
         imageView.layer.cornerRadius = 4
         

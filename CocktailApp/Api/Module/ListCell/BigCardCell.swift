@@ -24,4 +24,24 @@ class BigCardCell: UICollectionViewCell {
         
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        backgroundColor = UIColor.systemGray6
+        // label
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        label.font = UIFont(name: "Copperplate", size: 13)
+        // imageView
+        imageView.layer.cornerRadius = 8
+        
+        // view
+        view.layer.cornerRadius = 8
+        view.backgroundColor = UIColor.systemGray5
+        
+        // cell
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 8
+    }
 }
