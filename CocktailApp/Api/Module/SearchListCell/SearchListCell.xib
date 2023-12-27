@@ -11,20 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchListCell" id="gTV-IL-0wX" customClass="SearchListCell" customModule="CocktailApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UnL-Ra-7Gh">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UnL-Ra-7Gh">
+                        <rect key="frame" x="4" y="4" width="149" height="180.33333333333334"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="UnL-Ra-7Gh" secondAttribute="height" multiplier="18:17" id="4JI-Ss-CDH"/>
+                            <constraint firstAttribute="width" secondItem="UnL-Ra-7Gh" secondAttribute="height" multiplier="157:190" id="K4p-gP-X3a"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IO-Y4-6ls">
-                        <rect key="frame" x="8" y="170" width="164" height="30"/>
+                        <rect key="frame" x="4" y="188.33333333333334" width="149" height="36.666666666666657"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,21 +33,21 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="3IO-Y4-6ls" secondAttribute="bottom" id="2aC-I3-3gh"/>
-                <constraint firstItem="3IO-Y4-6ls" firstAttribute="top" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" id="QZe-lq-uXH"/>
-                <constraint firstItem="3IO-Y4-6ls" firstAttribute="top" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" id="SVl-JC-9sR"/>
-                <constraint firstItem="UnL-Ra-7Gh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UFf-v5-Iss"/>
-                <constraint firstAttribute="trailing" secondItem="3IO-Y4-6ls" secondAttribute="trailing" constant="8" id="abT-yc-q2a"/>
-                <constraint firstAttribute="trailing" secondItem="UnL-Ra-7Gh" secondAttribute="trailing" id="bgo-jO-dM1"/>
-                <constraint firstItem="UnL-Ra-7Gh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nqB-1L-nlO"/>
-                <constraint firstItem="3IO-Y4-6ls" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="tnT-f6-FU2"/>
+                <constraint firstItem="3IO-Y4-6ls" firstAttribute="top" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" constant="4" id="1Rz-rL-iVe"/>
+                <constraint firstItem="3IO-Y4-6ls" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="3jC-Mn-XYU"/>
+                <constraint firstItem="UnL-Ra-7Gh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="HCw-Nc-yRU"/>
+                <constraint firstItem="UnL-Ra-7Gh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="g6V-US-rJv"/>
+                <constraint firstAttribute="bottom" secondItem="3IO-Y4-6ls" secondAttribute="bottom" id="hny-ah-nVO"/>
+                <constraint firstAttribute="trailing" secondItem="3IO-Y4-6ls" secondAttribute="trailing" constant="4" id="oit-F6-kJJ"/>
+                <constraint firstAttribute="trailing" secondItem="UnL-Ra-7Gh" secondAttribute="trailing" constant="4" id="rap-4q-tvg"/>
+                <constraint firstItem="3IO-Y4-6ls" firstAttribute="top" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" constant="4" id="xyA-DZ-p7y"/>
             </constraints>
-            <size key="customSize" width="180" height="200"/>
+            <size key="customSize" width="157" height="225"/>
             <connections>
                 <outlet property="imageView" destination="UnL-Ra-7Gh" id="fBF-Iv-EHW"/>
                 <outlet property="label" destination="3IO-Y4-6ls" id="a5D-ga-mZv"/>
             </connections>
-            <point key="canvasLocation" x="174.04580152671755" y="73.239436619718319"/>
+            <point key="canvasLocation" x="156.4885496183206" y="82.042253521126767"/>
         </collectionViewCell>
     </objects>
 </document>

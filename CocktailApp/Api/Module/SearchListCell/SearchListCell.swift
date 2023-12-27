@@ -20,6 +20,15 @@ class SearchListCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        // label
+        label.textAlignment = .center
         
+        //imageView
+        imageView.layer.cornerRadius = 8
+        
+        //cell
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 8
     }
 }

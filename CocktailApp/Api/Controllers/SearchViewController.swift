@@ -23,16 +23,21 @@ class SearchViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         searchUpdate()
+        
+        // navigation
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Search Cocktails"
+        
     }
     
     private func searchUpdate() {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Cocktails"
+        searchController.searchBar.tintColor = UIColor.systemGray
         navigationItem.searchController = searchController
-        definesPresentationContext = true
     }
     
     func fetchCocktails(for searchQuery: String) {
@@ -85,7 +90,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
 extension SearchViewController: UISearchResultsUpdating {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 48) / 3
+        let width = (UIScreen.main.bounds.width - 24) / 2
         let height = width / 2 * 3
         return CGSize(width: width, height: height)
     }
@@ -96,6 +101,10 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
         guard let searchText = searchController.searchBar.text else { return }
                 filterContentForSearchText(searchText)
                 fetchCocktails(for: searchText)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
     }
 }
 

@@ -134,7 +134,11 @@
                             <constraint firstItem="bH6-mV-SpR" firstAttribute="bottom" secondItem="r54-58-DFe" secondAttribute="bottom" id="ku6-jj-DTd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GCS-8o-WEr"/>
+                    <navigationItem key="navigationItem" id="GCS-8o-WEr">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.split.3x3.fill" catalog="system" id="w5n-PV-InV">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="r54-58-DFe" id="ufP-6A-Zls"/>
                     </connections>
@@ -148,7 +152,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NSM-TK-bSN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categories" id="haQ-34-y2r">
-                        <imageReference key="image" image="square.grid.3x3.fill" catalog="system" symbolScale="default"/>
+                        <imageReference key="image" image="square.split.2x2.fill" catalog="system" symbolScale="default"/>
                         <color key="badgeColor" systemColor="opaqueSeparatorColor"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -187,7 +191,8 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="square.grid.3x3.fill" catalog="system" width="128" height="113"/>
+        <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
+        <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
