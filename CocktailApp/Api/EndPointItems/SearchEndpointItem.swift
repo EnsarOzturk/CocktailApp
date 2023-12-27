@@ -20,20 +20,5 @@ enum SearchEndpointItem: Endpoint {
             return "/search.php?f=\(letter)"
         }
     }
-//    case searchCocktails(query: String)
-//
-//        var path: String {
-//            switch self {
-//            case .searchCocktails:
-//                return "/search.php"
-//            }
-//        }
-//
-//        var parameters: [String: Any]? {
-//            switch self {
-//            case .searchCocktails(let query):
-//                return ["s": query]
-//            }
-//        }
-    }
+}
 
