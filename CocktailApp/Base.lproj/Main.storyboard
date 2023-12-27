@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,11 +143,14 @@
             </objects>
             <point key="canvasLocation" x="1101.5267175572519" y="-139.43661971830986"/>
         </scene>
-        <!--Item-->
+        <!--Categories-->
         <scene sceneID="xy5-le-dbE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NSM-TK-bSN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="haQ-34-y2r"/>
+                    <tabBarItem key="tabBarItem" title="Categories" id="haQ-34-y2r">
+                        <imageReference key="image" image="square.grid.3x3.fill" catalog="system" symbolScale="default"/>
+                        <color key="badgeColor" systemColor="opaqueSeparatorColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zWw-QM-eth">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -161,11 +165,11 @@
             </objects>
             <point key="canvasLocation" x="151.90839694656489" y="-815.49295774647896"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="C0M-76-Ria">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dIm-2U-YUh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oXt-1v-ewB"/>
+                    <tabBarItem key="tabBarItem" selectedImage="magnifyingglass" catalog="system" systemItem="search" id="oXt-1v-ewB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yY6-20-bBc">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -182,6 +186,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="square.grid.3x3.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

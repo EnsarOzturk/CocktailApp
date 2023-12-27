@@ -14,16 +14,24 @@ class CategoryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // view
+        view.backgroundColor = UIColor.systemGray6
 
         // collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor = UIColor.systemGray6
         
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Categories"
+        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
+        
+        // tabbar
+        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
+        tabBarController?.tabBar.tintColor = UIColor.darkGray
         
         // fetch network
         network.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { result in
