@@ -15,6 +15,8 @@
 		FC76B6992B3C252400092762 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FC76B6982B3C252400092762 /* SDWebImage */; };
 		FC76B69C2B3C535500092762 /* SmallCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B69A2B3C535500092762 /* SmallCardCell.swift */; };
 		FC76B69D2B3C535500092762 /* SmallCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B69B2B3C535500092762 /* SmallCardCell.xib */; };
+		FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */; };
+		FC76B6A12B3CC2FB00092762 /* BigCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */; };
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		FC76B6952B3C248800092762 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FC76B69A2B3C535500092762 /* SmallCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardCell.swift; sourceTree = "<group>"; };
 		FC76B69B2B3C535500092762 /* SmallCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallCardCell.xib; sourceTree = "<group>"; };
+		FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardCell.swift; sourceTree = "<group>"; };
+		FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigCardCell.xib; sourceTree = "<group>"; };
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			children = (
 				FC76B68C2B3A0E3100092762 /* ListCell.swift */,
 				FC76B68D2B3A0E3100092762 /* ListCell.xib */,
+				FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */,
+				FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */,
 			);
 			path = ListCell;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				FC9861CE2B38C3E30035A224 /* Assets.xcassets in Resources */,
 				FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */,
 				FC76B69D2B3C535500092762 /* SmallCardCell.xib in Resources */,
+				FC76B6A12B3CC2FB00092762 /* BigCardCell.xib in Resources */,
 				FC76B6942B3AE6B200092762 /* SearchListCell.xib in Resources */,
 				FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */,
 				FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */,
@@ -312,6 +319,7 @@
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
+				FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */,
 				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
 				FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */,
 				FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */,
