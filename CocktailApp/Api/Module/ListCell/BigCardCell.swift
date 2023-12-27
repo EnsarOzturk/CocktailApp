@@ -11,6 +11,7 @@ class BigCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
+    static let identifier = "BigCardCell"
     
     
     override func awakeFromNib() {
