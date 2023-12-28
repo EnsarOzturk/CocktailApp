@@ -57,7 +57,7 @@ class SearchViewController: UIViewController {
     }
     
     func fetchCocktails(for searchQuery: String) {
-        let endpoint = SearchEndpointItem.searchByCocktailName(name: searchQuery)
+        let endpoint = SearchEndpointItem.cocktailName(name: searchQuery)
             network.request(type: SearchResponse.self, item: endpoint) { [weak self] result in
                 switch result {
                 case .success(let response):

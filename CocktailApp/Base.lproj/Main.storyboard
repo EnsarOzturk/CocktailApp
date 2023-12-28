@@ -164,11 +164,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N08-rf-llC">
+                                        <rect key="frame" x="8" y="438" width="361" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="A3Y-5c-Mqb"/>
+                                            <constraint firstAttribute="width" constant="361" id="Y2H-Jf-Mv6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="MRP-uU-bBd" firstAttribute="leading" secondItem="Vjq-42-J67" secondAttribute="trailing" constant="8" symbolic="YES" id="8ga-bU-jat"/>
                                     <constraint firstItem="Vjq-42-J67" firstAttribute="top" secondItem="psZ-SE-Oe1" secondAttribute="top" constant="8" id="ChF-xw-vX0"/>
+                                    <constraint firstItem="N08-rf-llC" firstAttribute="top" secondItem="Zuy-k4-swM" secondAttribute="bottom" constant="85.670000000000002" id="Iek-69-dcu"/>
                                     <constraint firstItem="41s-iw-DNy" firstAttribute="top" secondItem="y26-P7-QCt" secondAttribute="bottom" constant="8" symbolic="YES" id="IiN-wn-oFz"/>
                                     <constraint firstAttribute="trailing" secondItem="41s-iw-DNy" secondAttribute="trailing" constant="8" id="VkU-ey-XLV"/>
                                     <constraint firstItem="y26-P7-QCt" firstAttribute="top" secondItem="Vjq-42-J67" secondAttribute="bottom" constant="8" symbolic="YES" id="ZY0-9i-H43"/>
@@ -178,6 +189,9 @@
                                     <constraint firstItem="Zuy-k4-swM" firstAttribute="leading" secondItem="psZ-SE-Oe1" secondAttribute="leading" constant="8" id="gri-IS-5oN"/>
                                     <constraint firstAttribute="trailing" secondItem="MRP-uU-bBd" secondAttribute="trailing" constant="8" id="hNw-2g-Y3q"/>
                                     <constraint firstAttribute="trailing" secondItem="Zuy-k4-swM" secondAttribute="trailing" constant="8" id="m5p-Pc-RlH"/>
+                                    <constraint firstItem="N08-rf-llC" firstAttribute="leading" secondItem="psZ-SE-Oe1" secondAttribute="leading" constant="8" id="oD0-vO-xf3"/>
+                                    <constraint firstAttribute="trailing" secondItem="N08-rf-llC" secondAttribute="trailing" constant="8" id="qVA-85-Ptb"/>
+                                    <constraint firstAttribute="bottom" secondItem="N08-rf-llC" secondAttribute="bottom" constant="258" id="rI6-sq-hPQ"/>
                                     <constraint firstItem="41s-iw-DNy" firstAttribute="leading" secondItem="psZ-SE-Oe1" secondAttribute="leading" constant="8" id="xEy-DR-8HH"/>
                                     <constraint firstItem="Vjq-42-J67" firstAttribute="leading" secondItem="psZ-SE-Oe1" secondAttribute="leading" constant="8" id="zKS-jF-63U"/>
                                     <constraint firstAttribute="trailing" secondItem="y26-P7-QCt" secondAttribute="trailing" constant="8" id="zsb-6V-8P0"/>
@@ -194,7 +208,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="psZ-SE-Oe1" id="STR-vM-6DB"/>
+                        <outlet property="imageView" destination="Vjq-42-J67" id="4O4-9L-xog"/>
+                        <outlet property="nameLabel" destination="N08-rf-llC" id="u89-td-4gU"/>
                         <outlet property="strIngredient1Label" destination="y26-P7-QCt" id="q30-1Y-8JM"/>
                         <outlet property="strIngredient2Label" destination="41s-iw-DNy" id="VXf-IF-UOt"/>
                         <outlet property="strIngredient3" destination="Zuy-k4-swM" id="koR-WH-4L3"/>

@@ -60,4 +60,6 @@ struct DrinkDetail: Codable {
     let strImageAttribution: String?
     let strCreativeCommonsConfirmed: String?
     let dateModified: String
+    
 }
+

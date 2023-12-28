@@ -115,6 +115,30 @@ extension ListViewController: UICollectionViewDataSource {
     }
 }
 
+extension ListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDrink = drinks[indexPath.row]
+            if let drinkId = selectedDrink.idDrink {
+                showDetailViewController(with: drinkId)
+            } else {
+                print("Error: Selected drink ID is nil")
+    }
+}
+    
+    func showDetailViewController(with drinkId: String) {
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           
+           if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+               detailVC.cocktailId = drinkId
+               navigationController?.pushViewController(detailVC, animated: true)
+           } else {
+               print("Error: Unable to instantiate DetailViewController from storyboard")
+           }
+       }
+}
+
+
+
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch listViewStyle {

@@ -6,19 +6,47 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailsViewController: UIViewController {
-    @IBOutlet weak var imageView: UIView!
-    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var strIngredient1Label: UILabel!
-    
     @IBOutlet weak var strIngredient2Label: UILabel!
-    
     @IBOutlet weak var strIngredient3: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var cocktailId: String?
+    var drink: DrinkDetail?
+    let network = NetworkManager()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchCocktailDetails()
         
+    }
+    
+    func fetchCocktailDetails() {
+        if let cocktailId = cocktailId {
+            let endpoint = DetailEndpointItem.cocktailDetails(cocktailID: cocktailId)
+            network.request(type: DetailResponse.self, item: endpoint) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    if let fetchDrink = response.drinks.first {
+                    self?.drink = fetchDrink
+                    self?.updateUI()
+            }
+                case .failure(let error):
+                print("Error fetching cocktail details: \(error)")
+        }
+      }
+    }
+  }
+    
+    func updateUI() {
+        if let imageUrl = URL(string: drink?.strDrinkThumb ?? "") {
+            imageView.sd_setImage(with: imageUrl)
+        }
+        
+        nameLabel.text = drink?.strDrink
     }
 }
