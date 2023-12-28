@@ -13,6 +13,20 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     // features
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var IBALabel: UILabel!
+    @IBOutlet weak var alcoholicLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    // ıngeredients
+    @IBOutlet weak var ıngredientLabel1: UILabel!
+    @IBOutlet weak var ıngredientLabel2: UILabel!
+    @IBOutlet weak var ıngredientLabel3: UILabel!
+    @IBOutlet weak var ıngredientLabel4: UILabel!
+    @IBOutlet weak var ıngredientLabel5: UILabel!
+    @IBOutlet weak var ıngredientLabel6: UILabel!
+    @IBOutlet weak var ıngredientLabel7: UILabel!
+    @IBOutlet weak var ıngredientLabel8: UILabel!
+    @IBOutlet weak var ıngredientLabel9: UILabel!
     
     
     var cocktailId: String?

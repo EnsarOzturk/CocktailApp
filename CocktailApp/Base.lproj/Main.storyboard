@@ -457,7 +457,7 @@
                                                     <constraint firstAttribute="width" constant="129" id="gQb-R3-lkQ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Click for the recipe"/>
                                                 <connections>
                                                     <action selector="recipeShowButton:" destination="VxW-bQ-wca" eventType="touchUpInside" id="7Rw-WJ-N8K"/>
                                                 </connections>
@@ -502,9 +502,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="IBALabel" destination="wbG-Cr-dR0" id="62d-up-CMr"/>
+                        <outlet property="alcoholicLabel" destination="ARj-eM-rGD" id="ReJ-xu-PAJ"/>
                         <outlet property="backgroundView" destination="te9-ck-VYG" id="BzP-1h-sIA"/>
+                        <outlet property="categoryLabel" destination="vYC-QR-n20" id="NWl-cm-xoR"/>
+                        <outlet property="dateLabel" destination="eNx-v5-Zz5" id="fgh-Ow-Hx0"/>
                         <outlet property="imageView" destination="CkM-7X-asu" id="9g1-nY-ieo"/>
                         <outlet property="nameLabel" destination="3bY-vm-wy6" id="PZb-Pr-17p"/>
+                        <outlet property="ıngredientLabel1" destination="k9k-AT-5X5" id="8jX-0T-nZd"/>
+                        <outlet property="ıngredientLabel2" destination="k9k-AT-5X5" id="GjS-WV-JfI"/>
+                        <outlet property="ıngredientLabel3" destination="0We-VD-fcl" id="bqs-cQ-Wpi"/>
+                        <outlet property="ıngredientLabel4" destination="0We-VD-fcl" id="kYR-BI-3Mz"/>
+                        <outlet property="ıngredientLabel5" destination="iIW-ZV-8T9" id="yHl-sA-2qV"/>
+                        <outlet property="ıngredientLabel6" destination="g9K-xy-TbU" id="25T-vO-hZX"/>
+                        <outlet property="ıngredientLabel7" destination="Cpa-Ym-6Me" id="Bbq-z2-ER2"/>
+                        <outlet property="ıngredientLabel8" destination="a1I-Ez-BeE" id="wIR-9s-lWv"/>
+                        <outlet property="ıngredientLabel9" destination="4kT-Fk-r4V" id="Mrn-Hq-aWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVj-aV-wPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
