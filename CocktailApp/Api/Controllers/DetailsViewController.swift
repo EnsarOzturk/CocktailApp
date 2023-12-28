@@ -9,11 +9,7 @@ import UIKit
 import SDWebImage
 
 class DetailsViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var strIngredient1Label: UILabel!
-    @IBOutlet weak var strIngredient2Label: UILabel!
-    @IBOutlet weak var strIngredient3: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+   
     
     var cocktailId: String?
     var drink: DrinkDetail?
