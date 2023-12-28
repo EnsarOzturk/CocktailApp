@@ -133,7 +133,21 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return cell
     }
   }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDrink = cocktails[indexPath.row]
+        showDetailViewController(with: selectedDrink.idDrink)
+    }
+   
+    func showDetailViewController(with drinkId: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+            detailVC.cocktailId = drinkId
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
 }
+    
 
 extension SearchViewController: UISearchResultsUpdating {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

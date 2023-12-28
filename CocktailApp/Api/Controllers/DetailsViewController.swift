@@ -36,7 +36,7 @@ class DetailsViewController: UIViewController {
                     self?.updateUI()
             }
                 case .failure(let error):
-                print("Error fetching cocktail details: \(error)")
+                print("Error cocktail details: \(error)")
         }
       }
     }
@@ -44,9 +44,10 @@ class DetailsViewController: UIViewController {
     
     func updateUI() {
         if let imageUrl = URL(string: drink?.strDrinkThumb ?? "") {
-            imageView.sd_setImage(with: imageUrl)
+            imageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "Cocktail"))
+        } else {
+            
         }
-        
         nameLabel.text = drink?.strDrink
     }
 }

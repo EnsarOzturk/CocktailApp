@@ -56,14 +56,10 @@ class ListViewController: UIViewController {
     func fetchCoctailsCategory() {
         guard let selectedCategory = selectedCategory,
               let originalCategory = selectedCategory.strCategory else {
-            print("Error: selectedCategory is nil")
             return
         }
         
         let endpoint = ListEndpointItem(category: originalCategory.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-        
-        print("Request URL: \(endpoint.url)")
-       
         network.request(type: ListResponse.self, item: endpoint) { result in
             switch result {
             case .success(let response):
@@ -121,7 +117,6 @@ extension ListViewController: UICollectionViewDelegate {
             if let drinkId = selectedDrink.idDrink {
                 showDetailViewController(with: drinkId)
             } else {
-                print("Error: Selected drink ID is nil")
     }
 }
     
@@ -132,12 +127,9 @@ extension ListViewController: UICollectionViewDelegate {
                detailVC.cocktailId = drinkId
                navigationController?.pushViewController(detailVC, animated: true)
            } else {
-               print("Error: Unable to instantiate DetailViewController from storyboard")
-           }
-       }
+        }
+    }
 }
-
-
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
