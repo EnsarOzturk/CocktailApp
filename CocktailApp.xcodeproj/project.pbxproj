@@ -19,6 +19,7 @@
 		FC76B6A12B3CC2FB00092762 /* BigCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */; };
 		FC76B6A32B3D5D8B00092762 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */; };
 		FC76B6A52B3D5E8500092762 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6A42B3D5E8500092762 /* DetailResponse.swift */; };
+		FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6A62B3D60B600092762 /* DetailEndpointItem.swift */; };
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigCardCell.xib; sourceTree = "<group>"; };
 		FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FC76B6A42B3D5E8500092762 /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
+		FC76B6A62B3D60B600092762 /* DetailEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEndpointItem.swift; sourceTree = "<group>"; };
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				FC9861EF2B39A5DE0035A224 /* SearchEndpointItem.swift */,
 				FC9861F12B39A6280035A224 /* CategoryEndpointItem.swift */,
 				FC9861F52B39A6DD0035A224 /* ListEndpointItem.swift */,
+				FC76B6A62B3D60B600092762 /* DetailEndpointItem.swift */,
 			);
 			path = EndPointItems;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				FC76B6A32B3D5D8B00092762 /* DetailsViewController.swift in Sources */,
 				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
+				FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */,
