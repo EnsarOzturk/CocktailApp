@@ -18,6 +18,7 @@
 		FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */; };
 		FC76B6A12B3CC2FB00092762 /* BigCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */; };
 		FC76B6A32B3D5D8B00092762 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */; };
+		FC76B6A52B3D5E8500092762 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6A42B3D5E8500092762 /* DetailResponse.swift */; };
 		FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C42B38C3E10035A224 /* AppDelegate.swift */; };
 		FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861C62B38C3E10035A224 /* SceneDelegate.swift */; };
 		FC9861CC2B38C3E10035A224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9861CA2B38C3E10035A224 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardCell.swift; sourceTree = "<group>"; };
 		FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigCardCell.xib; sourceTree = "<group>"; };
 		FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FC76B6A42B3D5E8500092762 /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		FC9861C12B38C3E10035A224 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9861C42B38C3E10035A224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9861C62B38C3E10035A224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				FC9861E02B399F270035A224 /* SearchResponse.swift */,
 				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
 				FC9861E42B399FB70035A224 /* ListResponse.swift */,
+				FC76B6A42B3D5E8500092762 /* DetailResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
+				FC76B6A52B3D5E8500092762 /* DetailResponse.swift in Sources */,
 				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
