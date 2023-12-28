@@ -9,7 +9,11 @@ import UIKit
 import SDWebImage
 
 class DetailsViewController: UIViewController {
-   
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    // features
+    
     
     var cocktailId: String?
     var drink: DrinkDetail?
@@ -45,5 +49,9 @@ class DetailsViewController: UIViewController {
             
         }
         nameLabel.text = drink?.strDrink
+    }
+    
+    @IBAction func recipeShowButton(_ sender: UIButton) {
+        
     }
 }
