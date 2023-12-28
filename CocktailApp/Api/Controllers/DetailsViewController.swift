@@ -52,6 +52,20 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
+        let recipe = drink?.strInstructions ?? "Sorry recipe not available :/"
+        let alertController = UIAlertController(
+                    title: "Drink Recipe",
+                    message: recipe,
+                    preferredStyle: .alert )
         
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                
+        let backAction = UIAlertAction(title: "Back to list", style: .default) { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            
+    }
+                alertController.addAction(backAction)
+                present(alertController, animated: true, completion: nil)
     }
 }
