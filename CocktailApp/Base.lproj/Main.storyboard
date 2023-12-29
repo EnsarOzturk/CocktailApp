@@ -508,6 +508,7 @@
                         <outlet property="categoryLabel" destination="vYC-QR-n20" id="NWl-cm-xoR"/>
                         <outlet property="dateLabel" destination="eNx-v5-Zz5" id="fgh-Ow-Hx0"/>
                         <outlet property="featureView" destination="e36-WQ-uKS" id="162-0N-lUO"/>
+                        <outlet property="glassLabel" destination="Rxe-EZ-aQX" id="rKL-XA-ZOd"/>
                         <outlet property="imageView" destination="CkM-7X-asu" id="9g1-nY-ieo"/>
                         <outlet property="measureImageView" destination="WnL-tU-8Cx" id="N3D-Cn-aYq"/>
                         <outlet property="measureLabel1" destination="kkN-d7-O7A" id="cAE-bv-Dxz"/>

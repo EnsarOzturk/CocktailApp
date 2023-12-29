@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var IBALabel: UILabel!
     @IBOutlet weak var alcoholicLabel: UILabel!
+    @IBOutlet weak var glassLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var featureView: UIView!
     
@@ -90,6 +91,7 @@ class DetailsViewController: UIViewController {
         categoryLabel.text = drink?.strCategory
         IBALabel.text = drink?.strIBA ?? "-"
         alcoholicLabel.text = drink?.strAlcoholic
+        glassLabel.text = drink?.strGlass
         dateLabel.text = drink?.dateModified
         
         ıngredientLabel1.text = drink?.strIngredient1
@@ -135,11 +137,36 @@ class DetailsViewController: UIViewController {
         configureMeasureLabel(label: measureLabel6)
         configureMeasureLabel(label: measureLabel7)
         
+        configureIngredientLabel(label: ıngredientLabel1)
+        configureIngredientLabel(label: ıngredientLabel2)
+        configureIngredientLabel(label: ıngredientLabel3)
+        configureIngredientLabel(label: ıngredientLabel4)
+        configureIngredientLabel(label: ıngredientLabel5)
+        configureIngredientLabel(label: ıngredientLabel6)
+        configureIngredientLabel(label: ıngredientLabel7)
+        configureIngredientLabel(label: ıngredientLabel8)
+        configureIngredientLabel(label: ıngredientLabel9)
+        
+        configureFeaturesLabel(label: categoryLabel)
+        configureFeaturesLabel(label: IBALabel)
+        configureFeaturesLabel(label: alcoholicLabel)
+        configureFeaturesLabel(label: dateLabel)
+        
     }
     
     func configureMeasureLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.5
         label?.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func configureIngredientLabel(label: UILabel?) {
+        label?.layer.borderWidth = 0.5
+        label?.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func configureFeaturesLabel(label: UILabel?) {
+        label?.layer.borderWidth = 0.5
+        label?.layer.borderColor = UIColor.black.cgColor
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
