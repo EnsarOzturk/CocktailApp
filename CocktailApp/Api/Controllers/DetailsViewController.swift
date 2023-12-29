@@ -75,6 +75,11 @@ class DetailsViewController: UIViewController {
         } else {
             
         }
+        
+    func designComponents() {
+            
+        }
+    
         nameLabel.text = drink?.strDrink
         categoryLabel.text = drink?.strCategory
         IBALabel.text = drink?.strIBA ?? "-"
