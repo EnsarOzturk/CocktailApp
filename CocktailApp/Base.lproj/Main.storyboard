@@ -608,7 +608,6 @@
                         <outlet property="nameLabel" destination="3bY-vm-wy6" id="PZb-Pr-17p"/>
                         <outlet property="recibeButton" destination="SxH-ax-NTn" id="l21-82-los"/>
                         <outlet property="recipeView" destination="3O7-OA-YQt" id="4rP-Rg-hP9"/>
-                        <outlet property="ıngredientCarrigeLabel" destination="PGw-j4-W4a" id="W7p-hJ-tc8"/>
                         <outlet property="ıngredientImageView" destination="UEa-2n-VZ5" id="Ysx-yg-xLD"/>
                         <outlet property="ıngredientLabel1" destination="k9k-AT-5X5" id="8jX-0T-nZd"/>
                         <outlet property="ıngredientLabel2" destination="k9k-AT-5X5" id="GjS-WV-JfI"/>

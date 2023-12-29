@@ -32,7 +32,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var ıngredientLabel9: UILabel!
     @IBOutlet weak var ıngredientView: UIView!
     @IBOutlet weak var ıngredientImageView: UIImageView!
-    @IBOutlet weak var ıngredientCarrigeLabel: UILabel!
+
     
     // measure
     @IBOutlet weak var measureLabel1: UILabel!
@@ -117,6 +117,8 @@ class DetailsViewController: UIViewController {
     }
     
     func designComponents() {
+        // ıngredientCarrigeLabel
+        
         featureView.layer.cornerRadius = 6
         
         imageView.layer.cornerRadius = 6
