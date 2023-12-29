@@ -191,19 +191,33 @@ class DetailsViewController: UIViewController {
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
         let recipe = drink?.strInstructions ?? "Sorry recipe not available :/"
-        let alertController = UIAlertController(
-                    title: "Drink Recipe",
-                    message: recipe,
-                    preferredStyle: .alert )
+        let popUpVC = UIViewController()
+        popUpVC.view.backgroundColor = .white
         
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                alertController.addAction(okAction)
-                
-        let backAction = UIAlertAction(title: "Back to list", style: .default) { [weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
-            
+        let recipeLabel = UILabel()
+        recipeLabel.text = recipe
+        recipeLabel.font = UIFont.systemFont(ofSize: 20)
+        recipeLabel.textAlignment = .center
+        recipeLabel.numberOfLines = 0
+        popUpVC.view.addSubview(recipeLabel)
+        
+        recipeLabel.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    recipeLabel.centerXAnchor.constraint(equalTo: popUpVC.view.centerXAnchor),
+                    recipeLabel.centerYAnchor.constraint(equalTo: popUpVC.view.centerYAnchor),
+                    recipeLabel.widthAnchor.constraint(equalTo: popUpVC.view.widthAnchor, constant: -20)
+                ])
+       
+        popUpVC.preferredContentSize = CGSize(width: 300, height: 200)
+        popUpVC.view.layer.cornerRadius = 10
+        
+        popUpVC.modalPresentationStyle = .popover
+                if let popoverPresentationController = popUpVC.popoverPresentationController {
+                    popoverPresentationController.sourceView = sender
+                    popoverPresentationController.sourceRect = sender.bounds
+                    popoverPresentationController.permittedArrowDirections = [.up]
+                    present(popUpVC, animated: true, completion: nil)
+                }
+            }
     }
-                alertController.addAction(backAction)
-                present(alertController, animated: true, completion: nil)
-    }
-}
+
