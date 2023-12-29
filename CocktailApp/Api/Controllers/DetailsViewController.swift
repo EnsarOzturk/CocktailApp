@@ -118,10 +118,12 @@ class DetailsViewController: UIViewController {
     
     func designComponents() {
         featureView.layer.cornerRadius = 6
-        featureView.layer.borderWidth = 1
-        featureView.layer.borderColor = UIColor.systemBrown.cgColor
+        featureView.layer.borderWidth = 0.2
+        featureView.layer.borderColor = UIColor.brown.cgColor
         
         imageView.layer.cornerRadius = 6
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.darkGray.cgColor
         
         ıngredientView.layer.cornerRadius = 6
         ıngredientImageView.layer.cornerRadius = 6
