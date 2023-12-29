@@ -508,6 +508,13 @@
                         <outlet property="categoryLabel" destination="vYC-QR-n20" id="NWl-cm-xoR"/>
                         <outlet property="dateLabel" destination="eNx-v5-Zz5" id="fgh-Ow-Hx0"/>
                         <outlet property="imageView" destination="CkM-7X-asu" id="9g1-nY-ieo"/>
+                        <outlet property="measureLabel1" destination="kkN-d7-O7A" id="cAE-bv-Dxz"/>
+                        <outlet property="measureLabel2" destination="DO0-nm-UMg" id="Ndw-lV-RQ5"/>
+                        <outlet property="measureLabel3" destination="LKH-Ik-0iS" id="Gvy-W1-lFR"/>
+                        <outlet property="measureLabel4" destination="9Q7-sn-7Pq" id="xrM-qZ-UP9"/>
+                        <outlet property="measureLabel5" destination="tOU-4q-y0Q" id="Ew1-C3-tiQ"/>
+                        <outlet property="measureLabel6" destination="InY-Rx-amN" id="c3w-jz-ecZ"/>
+                        <outlet property="measureLabel7" destination="Yyz-Oi-YH5" id="Wz9-M9-FnI"/>
                         <outlet property="nameLabel" destination="3bY-vm-wy6" id="PZb-Pr-17p"/>
                         <outlet property="ıngredientLabel1" destination="k9k-AT-5X5" id="8jX-0T-nZd"/>
                         <outlet property="ıngredientLabel2" destination="k9k-AT-5X5" id="GjS-WV-JfI"/>

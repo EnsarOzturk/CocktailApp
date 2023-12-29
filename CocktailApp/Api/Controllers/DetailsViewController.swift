@@ -27,6 +27,14 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var ıngredientLabel7: UILabel!
     @IBOutlet weak var ıngredientLabel8: UILabel!
     @IBOutlet weak var ıngredientLabel9: UILabel!
+    // measure
+    @IBOutlet weak var measureLabel1: UILabel!
+    @IBOutlet weak var measureLabel2: UILabel!
+    @IBOutlet weak var measureLabel3: UILabel!
+    @IBOutlet weak var measureLabel4: UILabel!
+    @IBOutlet weak var measureLabel5: UILabel!
+    @IBOutlet weak var measureLabel6: UILabel!
+    @IBOutlet weak var measureLabel7: UILabel!
     
     
     var cocktailId: String?
