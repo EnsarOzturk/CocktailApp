@@ -127,15 +127,13 @@ class DetailsViewController: UIViewController {
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.darkGray.cgColor
         
-        ıngredientView.layer.cornerRadius = 6
-        ıngredientImageView.layer.cornerRadius = 6
-        ıngredientView.layer.borderWidth = 0.5
+        ıngredientView.layer.borderWidth = 0.2
         ıngredientView.layer.borderColor = UIColor.black.cgColor
         
         measureView.layer.cornerRadius = 6
-        measureImageView.layer.cornerRadius = 6
-        measureView.layer.borderWidth = 1
-        measureView.layer.borderColor = UIColor.darkGray.cgColor
+
+        measureView.layer.borderWidth = 0.2
+        measureView.layer.borderColor = UIColor.black.cgColor
         
         recipeView.layer.cornerRadius = 6
         
@@ -146,16 +144,6 @@ class DetailsViewController: UIViewController {
         configureMeasureLabel(label: measureLabel5)
         configureMeasureLabel(label: measureLabel6)
         configureMeasureLabel(label: measureLabel7)
-        
-        configureIngredientLabel(label: ıngredientLabel1)
-        configureIngredientLabel(label: ıngredientLabel2)
-        configureIngredientLabel(label: ıngredientLabel3)
-        configureIngredientLabel(label: ıngredientLabel4)
-        configureIngredientLabel(label: ıngredientLabel5)
-        configureIngredientLabel(label: ıngredientLabel6)
-        configureIngredientLabel(label: ıngredientLabel7)
-        configureIngredientLabel(label: ıngredientLabel8)
-        configureIngredientLabel(label: ıngredientLabel9)
         
         configureFeaturesLabel(label: categoryLabel)
         configureFeaturesLabel(label: IBALabel)
@@ -174,16 +162,10 @@ class DetailsViewController: UIViewController {
     }
     
     func configureMeasureLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.5
-        label?.layer.borderColor = UIColor.white.cgColor
-        label?.layer.cornerRadius = 4
+        label?.layer.borderColor = UIColor.black.cgColor
+        label?.textColor = .black
     }
     
-    func configureIngredientLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.3
-        label?.layer.borderColor = UIColor.black.cgColor
-        label?.layer.cornerRadius = 4
-    }
     
     func configureFeaturesLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.2
