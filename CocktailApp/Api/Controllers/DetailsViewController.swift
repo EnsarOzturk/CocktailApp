@@ -118,6 +118,8 @@ class DetailsViewController: UIViewController {
     
     func designComponents() {
         featureView.layer.cornerRadius = 6
+        featureView.layer.borderWidth = 1
+        featureView.layer.borderColor = UIColor.systemBrown.cgColor
         
         imageView.layer.cornerRadius = 6
         
@@ -170,7 +172,7 @@ class DetailsViewController: UIViewController {
     }
     
     func configureFeaturesLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.3
+        label?.layer.borderWidth = 0.2
         label?.layer.borderColor = UIColor.black.cgColor
     }
     
