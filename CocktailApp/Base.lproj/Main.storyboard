@@ -130,7 +130,7 @@
                                             <constraint firstAttribute="width" constant="150" id="pRa-Wg-JGb"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-vm-wy6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-vm-wy6">
                                         <rect key="frame" x="6" y="6" width="381" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="OLg-ng-fxA"/>

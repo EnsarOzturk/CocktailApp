@@ -120,12 +120,26 @@ class DetailsViewController: UIViewController {
         ıngredientView.layer.cornerRadius = 6
         ıngredientImageView.layer.cornerRadius = 6
         
+        nameLabel.backgroundColor = UIColor.systemGray5
         
         measureView.layer.cornerRadius = 6
         measureImageView.layer.cornerRadius = 6
         
         recipeView.layer.cornerRadius = 6
         
+        configureMeasureLabel(label: measureLabel1)
+        configureMeasureLabel(label: measureLabel2)
+        configureMeasureLabel(label: measureLabel3)
+        configureMeasureLabel(label: measureLabel4)
+        configureMeasureLabel(label: measureLabel5)
+        configureMeasureLabel(label: measureLabel6)
+        configureMeasureLabel(label: measureLabel7)
+        
+    }
+    
+    func configureMeasureLabel(label: UILabel?) {
+        label?.layer.borderWidth = 0.5
+        label?.layer.borderColor = UIColor.white.cgColor
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
