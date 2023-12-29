@@ -120,6 +120,7 @@ class DetailsViewController: UIViewController {
         ıngredientView.layer.cornerRadius = 6
         ıngredientImageView.layer.cornerRadius = 6
         
+        
         measureView.layer.cornerRadius = 6
         measureImageView.layer.cornerRadius = 6
         
