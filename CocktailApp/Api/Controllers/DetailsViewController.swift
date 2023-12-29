@@ -46,7 +46,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var measureImageView: UIImageView!
     
     // recipe
-    @IBOutlet weak var recibeButton: UIButton!
+    @IBOutlet weak var recipeButton: UIButton!
     @IBOutlet weak var recipeView: UIView!
     
     
@@ -120,6 +120,8 @@ class DetailsViewController: UIViewController {
         featureView.layer.cornerRadius = 6
         featureView.layer.borderWidth = 0.2
         featureView.layer.borderColor = UIColor.brown.cgColor
+        
+        recipeButton.layer.cornerRadius = 6
         
         imageView.layer.cornerRadius = 6
         imageView.layer.borderWidth = 1
