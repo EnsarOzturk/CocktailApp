@@ -166,27 +166,27 @@ class DetailsViewController: UIViewController {
     }
     
     func nameLabelDesign() {
-        nameLabel.layer.borderWidth = 0.2
-        nameLabel.layer.borderColor = UIColor.black.cgColor
-        nameLabel.shadowOffset = CGSize(width: 2, height: 2)
-        nameLabel.layer.shadowRadius = 1.0
-        nameLabel.layer.shadowOpacity = 0.8
+        nameLabel.layer.borderWidth = 0.3
+        nameLabel.layer.borderColor = UIColor.darkGray.cgColor
+        nameLabel.layer.cornerRadius = 6
     }
-    
     
     func configureMeasureLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.5
         label?.layer.borderColor = UIColor.white.cgColor
+        label?.layer.cornerRadius = 4
     }
     
     func configureIngredientLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.3
         label?.layer.borderColor = UIColor.black.cgColor
+        label?.layer.cornerRadius = 4
     }
     
     func configureFeaturesLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.2
         label?.layer.borderColor = UIColor.black.cgColor
+        label?.layer.cornerRadius = 4
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {

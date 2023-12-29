@@ -25,9 +25,7 @@ class SearchViewController: UIViewController {
         collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         searchUpdate()
-        
-        // view
-        view.backgroundColor = UIColor.systemGray6
+
         
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
