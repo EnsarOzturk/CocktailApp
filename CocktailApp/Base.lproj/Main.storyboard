@@ -214,7 +214,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edm-WC-vXN">
                                         <rect key="frame" x="8" y="258" width="200" height="259"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IngredientsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-2n-VZ5">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IngredientsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-2n-VZ5">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="259"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-wr-mTz">
@@ -336,7 +336,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-Ws-kNH">
                                         <rect key="frame" x="214" y="258" width="173" height="259"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeasureBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WnL-tU-8Cx">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeasureBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WnL-tU-8Cx">
                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="259"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYv-eq-rkc">
@@ -517,7 +517,10 @@
                         <outlet property="measureLabel5" destination="tOU-4q-y0Q" id="Ew1-C3-tiQ"/>
                         <outlet property="measureLabel6" destination="InY-Rx-amN" id="c3w-jz-ecZ"/>
                         <outlet property="measureLabel7" destination="Yyz-Oi-YH5" id="Wz9-M9-FnI"/>
+                        <outlet property="measureView" destination="H2P-Ws-kNH" id="kyI-Mw-Yuy"/>
                         <outlet property="nameLabel" destination="3bY-vm-wy6" id="PZb-Pr-17p"/>
+                        <outlet property="recibeButton" destination="SxH-ax-NTn" id="l21-82-los"/>
+                        <outlet property="recipeView" destination="3O7-OA-YQt" id="4rP-Rg-hP9"/>
                         <outlet property="ıngredientImageView" destination="UEa-2n-VZ5" id="Ysx-yg-xLD"/>
                         <outlet property="ıngredientLabel1" destination="k9k-AT-5X5" id="8jX-0T-nZd"/>
                         <outlet property="ıngredientLabel2" destination="k9k-AT-5X5" id="GjS-WV-JfI"/>

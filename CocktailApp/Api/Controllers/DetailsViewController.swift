@@ -40,7 +40,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var measureLabel5: UILabel!
     @IBOutlet weak var measureLabel6: UILabel!
     @IBOutlet weak var measureLabel7: UILabel!
+    @IBOutlet weak var measureView: UIView!
     @IBOutlet weak var measureImageView: UIImageView!
+    
+    // recipe
+    @IBOutlet weak var recibeButton: UIButton!
+    @IBOutlet weak var recipeView: UIView!
+    
     
     var cocktailId: String?
     var drink: DrinkDetail?
@@ -48,7 +54,9 @@ class DetailsViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchCocktailDetails()
+        designComponents()
         
     }
     
@@ -76,9 +84,7 @@ class DetailsViewController: UIViewController {
             
         }
         
-    func designComponents() {
-            
-        }
+  
     
         nameLabel.text = drink?.strDrink
         categoryLabel.text = drink?.strCategory
@@ -103,6 +109,22 @@ class DetailsViewController: UIViewController {
         measureLabel5.text = drink?.strMeasure5
         measureLabel6.text = drink?.strMeasure6
         measureLabel7.text = drink?.strMeasure7
+    }
+    
+    func designComponents() {
+        featureView.backgroundColor = UIColor.systemGray5
+        featureView.layer.cornerRadius = 6
+        
+        imageView.layer.cornerRadius = 6
+        
+        ıngredientView.layer.cornerRadius = 6
+        ıngredientImageView.layer.cornerRadius = 6
+        
+        measureView.layer.cornerRadius = 6
+        measureImageView.layer.cornerRadius = 6
+        
+        recipeView.layer.cornerRadius = 6
+        
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
