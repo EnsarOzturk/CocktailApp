@@ -117,16 +117,19 @@ class DetailsViewController: UIViewController {
     }
     
     func designComponents() {
-        // ıngredientCarrigeLabel
-        
         featureView.layer.cornerRadius = 6
         
         imageView.layer.cornerRadius = 6
         
         ıngredientView.layer.cornerRadius = 6
         ıngredientImageView.layer.cornerRadius = 6
+        ıngredientView.layer.borderWidth = 1
+        ıngredientView.layer.borderColor = UIColor.black.cgColor
+        
         measureView.layer.cornerRadius = 6
         measureImageView.layer.cornerRadius = 6
+        measureView.layer.borderWidth = 1
+        measureView.layer.borderColor = UIColor.white.cgColor
         
         recipeView.layer.cornerRadius = 6
         
