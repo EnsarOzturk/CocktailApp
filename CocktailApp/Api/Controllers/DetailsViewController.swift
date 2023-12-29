@@ -17,6 +17,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var IBALabel: UILabel!
     @IBOutlet weak var alcoholicLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var featureView: UIView!
+    
     // ıngeredients
     @IBOutlet weak var ıngredientLabel1: UILabel!
     @IBOutlet weak var ıngredientLabel2: UILabel!
@@ -27,6 +29,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var ıngredientLabel7: UILabel!
     @IBOutlet weak var ıngredientLabel8: UILabel!
     @IBOutlet weak var ıngredientLabel9: UILabel!
+    @IBOutlet weak var ıngredientView: UIView!
+    @IBOutlet weak var ıngredientImageView: UIImageView!
+    
     // measure
     @IBOutlet weak var measureLabel1: UILabel!
     @IBOutlet weak var measureLabel2: UILabel!
@@ -35,7 +40,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var measureLabel5: UILabel!
     @IBOutlet weak var measureLabel6: UILabel!
     @IBOutlet weak var measureLabel7: UILabel!
-    
+    @IBOutlet weak var measureImageView: UIImageView!
     
     var cocktailId: String?
     var drink: DrinkDetail?
@@ -71,6 +76,28 @@ class DetailsViewController: UIViewController {
             
         }
         nameLabel.text = drink?.strDrink
+        categoryLabel.text = drink?.strCategory
+        IBALabel.text = drink?.strIBA ?? "-"
+        alcoholicLabel.text = drink?.strAlcoholic
+        dateLabel.text = drink?.dateModified
+        
+        ıngredientLabel1.text = drink?.strIngredient1
+        ıngredientLabel2.text = drink?.strIngredient2
+        ıngredientLabel3.text = drink?.strIngredient3
+        ıngredientLabel4.text = drink?.strIngredient4
+        ıngredientLabel5.text = drink?.strIngredient5
+        ıngredientLabel6.text = drink?.strIngredient6
+        ıngredientLabel7.text = drink?.strIngredient7
+        ıngredientLabel8.text = drink?.strIngredient8
+        ıngredientLabel9.text = drink?.strIngredient9
+        
+        measureLabel1.text = drink?.strMeasure1
+        measureLabel2.text = drink?.strMeasure2
+        measureLabel3.text = drink?.strMeasure3
+        measureLabel4.text = drink?.strMeasure4
+        measureLabel5.text = drink?.strMeasure5
+        measureLabel6.text = drink?.strMeasure6
+        measureLabel7.text = drink?.strMeasure7
     }
     
     @IBAction func recipeShowButton(_ sender: UIButton) {
