@@ -159,7 +159,18 @@ class DetailsViewController: UIViewController {
         configureFeaturesLabel(label: glassLabel)
         configureFeaturesLabel(label: dateLabel)
         
+        nameLabelDesign()
+        
     }
+    
+    func nameLabelDesign() {
+        nameLabel.layer.borderWidth = 0.2
+        nameLabel.layer.borderColor = UIColor.black.cgColor
+        nameLabel.shadowOffset = CGSize(width: 2, height: 2)
+        nameLabel.layer.shadowRadius = 1.0
+        nameLabel.layer.shadowOpacity = 0.8
+    }
+    
     
     func configureMeasureLabel(label: UILabel?) {
         label?.layer.borderWidth = 0.5
