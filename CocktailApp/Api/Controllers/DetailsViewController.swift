@@ -58,9 +58,11 @@ class DetailsViewController: UIViewController {
         
         fetchCocktailDetails()
         designComponents()
-        
+        navigationController?.navigationBar.backgroundColor = UIColor.white
+
+     
     }
-    
+
     func fetchCocktailDetails() {
         if let cocktailId = cocktailId {
             let endpoint = DetailEndpointItem.cocktailDetails(cocktailID: cocktailId)
@@ -114,16 +116,12 @@ class DetailsViewController: UIViewController {
     }
     
     func designComponents() {
-        featureView.backgroundColor = UIColor.systemGray5
         featureView.layer.cornerRadius = 6
         
         imageView.layer.cornerRadius = 6
         
         ıngredientView.layer.cornerRadius = 6
         ıngredientImageView.layer.cornerRadius = 6
-        
-        nameLabel.backgroundColor = UIColor.systemGray5
-        
         measureView.layer.cornerRadius = 6
         measureImageView.layer.cornerRadius = 6
         
@@ -150,22 +148,23 @@ class DetailsViewController: UIViewController {
         configureFeaturesLabel(label: categoryLabel)
         configureFeaturesLabel(label: IBALabel)
         configureFeaturesLabel(label: alcoholicLabel)
+        configureFeaturesLabel(label: glassLabel)
         configureFeaturesLabel(label: dateLabel)
         
     }
     
     func configureMeasureLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.5
+        label?.layer.borderWidth = 0.3
         label?.layer.borderColor = UIColor.white.cgColor
     }
     
     func configureIngredientLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.5
+        label?.layer.borderWidth = 0.3
         label?.layer.borderColor = UIColor.black.cgColor
     }
     
     func configureFeaturesLabel(label: UILabel?) {
-        label?.layer.borderWidth = 0.5
+        label?.layer.borderWidth = 0.3
         label?.layer.borderColor = UIColor.black.cgColor
     }
     
