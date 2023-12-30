@@ -10,7 +10,6 @@ import SDWebImage
 
 class DetailsViewController: UIViewController {
     
-    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cocktailInfoStackView: UIStackView!
@@ -26,10 +25,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         fetchCocktailDetails()
-        
         navigationController?.navigationBar.backgroundColor = UIColor.white
-        
-        
     }
     
     func fetchCocktailDetails() {
@@ -42,8 +38,8 @@ class DetailsViewController: UIViewController {
                         self?.drink = drink
                         DispatchQueue.main.async {
                             self?.prepareIngredients(ingredients: drink.ingredients.filter { $0 != "" })
+                            self?.prepareMeasurements(measurements: drink.measurements.filter { $0 != "" })
                         }
-                        
                     }
                 case .failure(let error):
                     print("Error cocktail details: \(error)")
@@ -59,8 +55,13 @@ class DetailsViewController: UIViewController {
             label.text = ingredient
             ingredientsStackView.addArrangedSubview(label)
         }
-        
-        
     }
     
+    func prepareMeasurements(measurements: [String]) {
+        for measurements in measurements {
+            var label = UILabel()
+            label.text = measurements
+            measureStackView.addArrangedSubview(label)
+        }
+    }
 }

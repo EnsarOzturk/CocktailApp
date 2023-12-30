@@ -62,7 +62,6 @@ struct CocktailDetail: Codable {
     let dateModified: String?
     
     var ingredients: [String] {
-        
         return [
             strIngredient1 ?? "",
             strIngredient2 ?? "",
@@ -79,6 +78,26 @@ struct CocktailDetail: Codable {
             strIngredient13 ?? "",
             strIngredient14 ?? "",
             strIngredient15 ?? ""
+        ]
+    }
+    
+    var measurements: [String] {
+        return [
+            strMeasure1 ?? "",
+            strMeasure2 ?? "",
+            strMeasure3 ?? "",
+            strMeasure4 ?? "",
+            strMeasure5 ?? "",
+            strMeasure6 ?? "",
+            strMeasure7 ?? "",
+            strMeasure8 ?? "",
+            strMeasure9 ?? "",
+            strMeasure10 ?? "",
+            strMeasure11 ?? "",
+            strMeasure12 ?? "",
+            strMeasure13 ?? "",
+            strMeasure14 ?? "",
+            strMeasure15 ?? ""
         ]
     }
 }
