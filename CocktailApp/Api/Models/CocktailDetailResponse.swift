@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct DetailResponse: Codable {
-    let drinks: [DrinkDetail]
+struct CocktailDetailResponse: Codable {
+    let drinks: [CocktailDetail]
 }
 
-struct DrinkDetail: Codable {
+struct CocktailDetail: Codable {
     let idDrink: String?
     let strDrink: String?
     let strCategory: String?
@@ -61,5 +61,27 @@ struct DrinkDetail: Codable {
     let strCreativeCommonsConfirmed: String?
     let dateModified: String?
     
+    var ingredients: [String] {
+        
+        return [
+            strIngredient1 ?? "",
+            strIngredient2 ?? "",
+            strIngredient3 ?? "",
+            strIngredient4 ?? "",
+            strIngredient5 ?? "",
+            strIngredient6 ?? "",
+            strIngredient7 ?? "",
+            strIngredient8 ?? "",
+            strIngredient9 ?? "",
+            strIngredient10 ?? "",
+            strIngredient11 ?? "",
+            strIngredient12 ?? "",
+            strIngredient13 ?? "",
+            strIngredient14 ?? "",
+            strIngredient15 ?? ""
+        ]
+    }
 }
+
+
 

@@ -59,8 +59,6 @@ class CategoryCell: UICollectionViewCell {
         label.textColor = UIColor.darkGray
         label.shadowColor = UIColor.systemGray4
         label.shadowOffset = CGSize(width: 1, height: 1)
-        label.layer.shadowOpacity = 0.2
-        label.layer.shadowRadius = 2
         
         // cell
         layer.borderWidth = 1.5
