@@ -39,6 +39,9 @@ class DetailsViewController: UIViewController {
                         DispatchQueue.main.async {
                             self?.prepareIngredients(ingredients: drink.ingredients.filter { $0 != "" })
                             self?.prepareMeasurements(measurements: drink.measurements.filter { $0 != "" })
+                            self?.prepareInformations(informations: drink.informations.filter { $0 != "" })
+                            self?.titleLabel.text = drink.strDrink
+                            self?.imageView.load(url: drink.strDrinkThumb)
                         }
                     }
                 case .failure(let error):
@@ -51,17 +54,25 @@ class DetailsViewController: UIViewController {
     func prepareIngredients(ingredients: [String]) {
         
         for ingredient in ingredients {
-            var label = UILabel()
+            let label = UILabel()
             label.text = ingredient
             ingredientsStackView.addArrangedSubview(label)
         }
     }
     
     func prepareMeasurements(measurements: [String]) {
-        for measurements in measurements {
-            var label = UILabel()
-            label.text = measurements
+        for measurement in measurements {
+            let label = UILabel()
+            label.text = measurement
             measureStackView.addArrangedSubview(label)
+        }
+    }
+    
+    func prepareInformations(informations: [String]) {
+        for information in informations {
+            let label = UILabel()
+            label.text = information
+            cocktailInfoStackView.addArrangedSubview(label)
         }
     }
 }

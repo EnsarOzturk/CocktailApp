@@ -100,6 +100,16 @@ struct CocktailDetail: Codable {
             strMeasure15 ?? ""
         ]
     }
+    
+    var informations: [String] {
+        return [
+        strCategory ?? "",
+        strIBA ?? "",
+        strAlcoholic ?? "",
+        strGlass ?? "",
+        dateModified ?? ""
+       ]
+    }
 }
 
 
