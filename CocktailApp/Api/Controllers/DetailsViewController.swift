@@ -15,7 +15,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet var cocktailInfoStackView: UIStackView!
     @IBOutlet var ingredientsStackView: UIStackView!
     @IBOutlet var measureStackView: UIStackView!
-    
+    @IBOutlet var recipesStackView: UIStackView!
+    @IBOutlet var recipeLabel: UILabel!
     
     var cocktailId: String?
     var drink: CocktailDetail?
@@ -42,6 +43,7 @@ class DetailsViewController: UIViewController {
                             self?.prepareInformations(informations: drink.informations.filter { $0 != "" })
                             self?.titleLabel.text = drink.strDrink
                             self?.imageView.load(url: drink.strDrinkThumb)
+                            self?.recipeLabel.text = drink.strInstructions
                         }
                     }
                 case .failure(let error):
