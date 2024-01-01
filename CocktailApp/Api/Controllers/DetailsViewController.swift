@@ -13,8 +13,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cocktailInfoStackView: UIStackView!
-    @IBOutlet var ingredientsStackView: UIStackView!
-    @IBOutlet var measureStackView: UIStackView!
+    @IBOutlet var contentsStackView: UIStackView!
     @IBOutlet var recipesStackView: UIStackView!
     @IBOutlet var recipeLabel: UILabel!
     
@@ -25,6 +24,9 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentsStackView.distribution = .fill
+        imageView.layer.cornerRadius = 4
+        titleLabel.font = UIFont(name: "Copperplate", size: 24)
         fetchCocktailDetails()
         navigationController?.navigationBar.backgroundColor = UIColor.white
     }
@@ -38,8 +40,7 @@ class DetailsViewController: UIViewController {
                     if let drink = response.drinks.first {
                         self?.drink = drink
                         DispatchQueue.main.async {
-                            self?.prepareIngredients(ingredients: drink.ingredients.filter { $0 != "" })
-                            self?.prepareMeasurements(measurements: drink.measurements.filter { $0 != "" })
+                            self?.prepareCocktailContents(contents: drink.cocktailContents.filter { $0 != "" })
                             self?.prepareInformations(informations: drink.informations.filter { $0 != "" })
                             self?.titleLabel.text = drink.strDrink
                             self?.imageView.load(url: drink.strDrinkThumb)
@@ -53,22 +54,17 @@ class DetailsViewController: UIViewController {
         }
     }
     
-    func prepareIngredients(ingredients: [String]) {
-        
-        for ingredient in ingredients {
+    func prepareCocktailContents(contents: [String]) {
+       
+        for content in contents {
             let label = UILabel()
-            label.text = ingredient
-            ingredientsStackView.addArrangedSubview(label)
+            label.text = content
+            label.numberOfLines = 0
+            contentsStackView.addArrangedSubview(label)
+            
         }
     }
-    
-    func prepareMeasurements(measurements: [String]) {
-        for measurement in measurements {
-            let label = UILabel()
-            label.text = measurement
-            measureStackView.addArrangedSubview(label)
-        }
-    }
+  
     
     func prepareInformations(informations: [String]) {
         for information in informations {

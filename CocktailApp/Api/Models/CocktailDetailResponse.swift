@@ -61,43 +61,23 @@ struct CocktailDetail: Codable {
     let strCreativeCommonsConfirmed: String?
     let dateModified: String?
     
-    var ingredients: [String] {
+    var cocktailContents: [String] {
         return [
-            strIngredient1 ?? "",
-            strIngredient2 ?? "",
-            strIngredient3 ?? "",
-            strIngredient4 ?? "",
-            strIngredient5 ?? "",
-            strIngredient6 ?? "",
-            strIngredient7 ?? "",
-            strIngredient8 ?? "",
-            strIngredient9 ?? "",
-            strIngredient10 ?? "",
-            strIngredient11 ?? "",
-            strIngredient12 ?? "",
-            strIngredient13 ?? "",
-            strIngredient14 ?? "",
-            strIngredient15 ?? ""
-        ]
-    }
-    
-    var measurements: [String] {
-        return [
-            strMeasure1 ?? "",
-            strMeasure2 ?? "",
-            strMeasure3 ?? "",
-            strMeasure4 ?? "",
-            strMeasure5 ?? "",
-            strMeasure6 ?? "",
-            strMeasure7 ?? "",
-            strMeasure8 ?? "",
-            strMeasure9 ?? "",
-            strMeasure10 ?? "",
-            strMeasure11 ?? "",
-            strMeasure12 ?? "",
-            strMeasure13 ?? "",
-            strMeasure14 ?? "",
-            strMeasure15 ?? ""
+            "\(strMeasure1 ?? "")  \(strIngredient1 ?? "")",
+            "\(strMeasure2 ?? "")  \(strIngredient2 ?? "")",
+            "\(strMeasure3 ?? "")  \(strIngredient3 ?? "")",
+            "\(strMeasure4 ?? "")  \(strIngredient4 ?? "")",
+            "\(strMeasure5 ?? "")  \(strIngredient5 ?? "")",
+            "\(strMeasure6 ?? "")  \(strIngredient6 ?? "")",
+            "\(strMeasure7 ?? "")  \(strIngredient7 ?? "")",
+            "\(strMeasure8 ?? "")  \(strIngredient8 ?? "")",
+            "\(strMeasure9 ?? "")  \(strIngredient9 ?? "")",
+            "\(strMeasure10 ?? "")  \(strIngredient10 ?? "")",
+            "\(strMeasure11 ?? "")  \(strIngredient11 ?? "")",
+            "\(strMeasure12 ?? "")  \(strIngredient12 ?? "")",
+            "\(strMeasure12 ?? "")  \(strIngredient13 ?? "")",
+            "\(strMeasure13 ?? "")  \(strIngredient14 ?? "")",
+            "\(strMeasure14 ?? "")  \(strIngredient15 ?? "")"
         ]
     }
     
@@ -108,9 +88,9 @@ struct CocktailDetail: Codable {
         strAlcoholic ?? "",
         strGlass ?? "",
         dateModified ?? ""
-       ]
+        ]
+        }
     }
-}
 
 
 

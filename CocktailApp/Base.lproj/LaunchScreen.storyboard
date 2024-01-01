@@ -16,35 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="TwX-xe-VD2">
-                                <rect key="frame" x="146.66666666666666" y="366" width="100" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="7V8-QS-yqz"/>
-                                    <constraint firstAttribute="width" constant="100" id="bmp-eG-DOx"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocktail App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF4-cK-MVJ">
-                                <rect key="frame" x="44" y="326" width="305" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cWn-GQ-DGn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="UF4-cK-MVJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="0XO-6e-Kit"/>
-                            <constraint firstItem="TwX-xe-VD2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6yw-H2-OgD"/>
-                            <constraint firstItem="TwX-xe-VD2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Dys-ir-4JC"/>
-                            <constraint firstItem="UF4-cK-MVJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="267" id="V9r-lx-6Mc"/>
-                            <constraint firstItem="TwX-xe-VD2" firstAttribute="top" secondItem="UF4-cK-MVJ" secondAttribute="bottom" id="XCG-hr-aVm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UF4-cK-MVJ" secondAttribute="trailing" constant="44" id="XS2-QL-OlO"/>
-                            <constraint firstItem="UF4-cK-MVJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ezI-mU-WJJ"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,7 +26,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

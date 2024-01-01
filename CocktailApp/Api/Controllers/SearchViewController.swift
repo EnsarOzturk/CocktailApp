@@ -29,12 +29,12 @@ class SearchViewController: UIViewController {
         
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
+        navigationController?.navigationBar.backgroundColor = UIColor.white
         title = "Search Cocktails"
         
         // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
-        tabBarController?.tabBar.tintColor = UIColor.darkGray
+        tabBarController?.tabBar.barTintColor = UIColor.white
+        tabBarController?.tabBar.tintColor = UIColor.black
         
     }
     

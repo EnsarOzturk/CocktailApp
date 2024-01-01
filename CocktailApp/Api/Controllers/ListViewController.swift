@@ -13,14 +13,12 @@ class ListViewController: UIViewController {
     private var drinks: [Drink] = []
     var selectedCategory: Category?
     private var listViewStyle: listViewStyle = .small
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationTitleAttributes()
         fetchCoctailsCategory()
-        // view
-        view.backgroundColor = UIColor.systemGray6
         
         // collectionView
         collectionView.dataSource = self
@@ -28,28 +26,32 @@ class ListViewController: UIViewController {
         collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
         collectionView.register(UINib(nibName: "BigCardCell", bundle: nil), forCellWithReuseIdentifier: BigCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-        collectionView.backgroundColor = UIColor.systemGray6
-        
+        collectionView.backgroundColor = UIColor.white
+        collectionView.indicatorStyle = .default
+        collectionView.showsVerticalScrollIndicator = false
+
         // navigation
         title = selectedCategory?.strCategory
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.tintColor = UIColor.darkGray
+        navigationController?.navigationBar.tintColor = UIColor.black
         
         // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
-        tabBarController?.tabBar.tintColor = UIColor.darkGray
+        tabBarController?.tabBar.barTintColor = UIColor.white
+        tabBarController?.tabBar.tintColor = UIColor.black
         
         // view
-        view.backgroundColor = UIColor.systemGray6
+        view.backgroundColor = UIColor.white
     }
+    
+
     
     private func navigationTitleAttributes() {
         if let titleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
                 var updatedAttributes = titleAttributes
-                updatedAttributes[.foregroundColor] = UIColor.darkGray
+                updatedAttributes[.foregroundColor] = UIColor.black
                 navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
             } else {
-                navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+                navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
             }
     }
     

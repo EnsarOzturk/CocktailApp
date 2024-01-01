@@ -19,19 +19,21 @@ class CategoryViewController: UIViewController{
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.systemGray6
+        collectionView.backgroundColor = UIColor.white
         
         // view
-        view.backgroundColor = UIColor.systemGray6
+        view.backgroundColor = UIColor.white
         
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Categories"
-        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
+        navigationController?.navigationBar.backgroundColor = UIColor.white
         
         // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.systemGray6
-        tabBarController?.tabBar.tintColor = UIColor.darkGray
+        tabBarController?.tabBar.barTintColor = UIColor.white
+        tabBarController?.tabBar.tintColor = UIColor.black
+        
+      
         
         // fetch network
         network.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { result in

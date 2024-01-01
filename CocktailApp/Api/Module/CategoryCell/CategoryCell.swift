@@ -58,7 +58,7 @@ class CategoryCell: UICollectionViewCell {
         layer.borderWidth = 0.4
         layer.borderColor = UIColor.systemGray5.cgColor
         layer.cornerRadius = 4
-        layer.backgroundColor = UIColor.systemGray6.cgColor
+        layer.backgroundColor = UIColor.white.cgColor
         
     }
 }

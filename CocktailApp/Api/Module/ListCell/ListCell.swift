@@ -25,22 +25,19 @@ class ListCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = UIColor.systemGray6
         // label
         label.textAlignment = .center
-        label.textColor = .darkGray
-        label.font = UIFont(name: "Copperplate", size: 15)
-        // imageView
-        imageView.layer.cornerRadius = 4
+        label.textColor = .black
+        label.font = UIFont(name: "Apple Symbols", size: 15)
         
         // view
-        view.layer.cornerRadius = 4
-        view.backgroundColor = UIColor.systemGray5
+        view.layer.cornerRadius = 0.2
         
         // cell
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 0.3
+        layer.borderColor = UIColor.systemGray4.cgColor
         layer.cornerRadius = 4
+        layer.backgroundColor = UIColor.systemGray6.cgColor
     }
 }
 
