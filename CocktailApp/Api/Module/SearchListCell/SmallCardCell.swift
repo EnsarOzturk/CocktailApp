@@ -30,13 +30,7 @@ class SmallCardCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .white
-        // view
-        view.layer.cornerRadius = 2
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.white.cgColor
-        // imageView
-        imageView.layer.cornerRadius = 4
-        
+
         // cell
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
