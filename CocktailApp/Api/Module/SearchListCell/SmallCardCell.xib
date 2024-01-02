@@ -20,12 +20,12 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-UJ-y97">
                         <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
                     </imageView>
-                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-2i-EPR">
-                        <rect key="frame" x="0.0" y="195" width="157" height="30"/>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-2i-EPR">
+                        <rect key="frame" x="0.0" y="200" width="157" height="25"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqD-Xb-6Kb">
-                                <rect key="frame" x="6" y="0.0" width="145" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
+                                <rect key="frame" x="6" y="0.0" width="145" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,7 +36,7 @@
                             <constraint firstItem="RqD-Xb-6Kb" firstAttribute="leading" secondItem="bQ6-2i-EPR" secondAttribute="leading" constant="6" id="DcP-Dp-1VM"/>
                             <constraint firstAttribute="bottom" secondItem="RqD-Xb-6Kb" secondAttribute="bottom" id="u28-fu-74R"/>
                             <constraint firstItem="RqD-Xb-6Kb" firstAttribute="top" secondItem="bQ6-2i-EPR" secondAttribute="top" id="wAu-Qz-8bh"/>
-                            <constraint firstAttribute="height" constant="30" id="zBE-RV-s5z"/>
+                            <constraint firstAttribute="height" constant="25" id="zBE-RV-s5z"/>
                         </constraints>
                     </view>
                 </subviews>

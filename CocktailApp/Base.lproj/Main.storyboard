@@ -124,29 +124,50 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="1033"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-BV-JyJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="804"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="810"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umH-qY-qYH" userLabel="TitleView">
-                                                <rect key="frame" x="16" y="8" width="361" height="44"/>
+                                                <rect key="frame" x="16" y="8" width="361" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-qH-7a3">
-                                                        <rect key="frame" x="16" y="8" width="329" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-qH-7a3">
+                                                        <rect key="frame" x="16" y="8" width="279" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="nVo-N1-mQz"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIX-iv-MnI">
+                                                        <rect key="frame" x="311" y="8" width="34" height="34"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="2sv-Kl-o8v"/>
+                                                            <constraint firstAttribute="height" constant="34" id="wgO-6U-ab5"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="favoriteButtonTapped:" destination="VxW-bQ-wca" eventType="touchUpInside" id="o7n-NC-WJo"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="5fh-Ee-0zF"/>
-                                                    <constraint firstItem="b1b-qH-7a3" firstAttribute="top" secondItem="umH-qY-qYH" secondAttribute="top" constant="8" id="PQc-GA-Jge"/>
-                                                    <constraint firstAttribute="trailing" secondItem="b1b-qH-7a3" secondAttribute="trailing" constant="16" id="U64-P4-haL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="b1b-qH-7a3" secondAttribute="bottom" constant="8" id="mgl-xc-WeJ"/>
-                                                    <constraint firstItem="b1b-qH-7a3" firstAttribute="leading" secondItem="umH-qY-qYH" secondAttribute="leading" constant="16" id="r6h-DK-pNf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="b1b-qH-7a3" secondAttribute="bottom" constant="8" id="1KB-eL-mpL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="5fh-Ee-0zF"/>
+                                                    <constraint firstItem="NIX-iv-MnI" firstAttribute="leading" secondItem="b1b-qH-7a3" secondAttribute="trailing" constant="16" id="SeA-ax-hMT"/>
+                                                    <constraint firstItem="b1b-qH-7a3" firstAttribute="top" secondItem="umH-qY-qYH" secondAttribute="top" constant="8" id="bg0-7w-h77"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NIX-iv-MnI" secondAttribute="trailing" constant="16" id="jwn-NO-J1I"/>
+                                                    <constraint firstItem="NIX-iv-MnI" firstAttribute="top" secondItem="umH-qY-qYH" secondAttribute="top" constant="8" id="q7O-nm-gZt"/>
+                                                    <constraint firstItem="b1b-qH-7a3" firstAttribute="leading" secondItem="umH-qY-qYH" secondAttribute="leading" constant="16" id="wam-x9-fhf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NIX-iv-MnI" secondAttribute="bottom" constant="8" id="zLg-Xt-ufi"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-PK-Nqi" userLabel="ImageContainerView">
-                                                <rect key="frame" x="16" y="60" width="361" height="220"/>
+                                                <rect key="frame" x="16" y="66" width="361" height="220"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEe-Ss-WEw">
                                                         <rect key="frame" x="8" y="8" width="150" height="204"/>
@@ -175,11 +196,11 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="300" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-uZ-fGy" userLabel="ContentsStackView">
-                                                <rect key="frame" x="16" y="288" width="361" height="300"/>
+                                                <rect key="frame" x="16" y="294" width="361" height="300"/>
                                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDU-TI-fPJ" userLabel="RecipesStackView">
-                                                <rect key="frame" x="16" y="596" width="361" height="200"/>
+                                                <rect key="frame" x="16" y="602" width="361" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-7o-HV9">
                                                         <rect key="frame" x="8" y="8" width="345" height="184"/>
@@ -319,6 +340,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="rectangle.split.2x2.fill" catalog="system" width="128" height="93"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>

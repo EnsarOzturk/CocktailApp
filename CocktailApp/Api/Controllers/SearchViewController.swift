@@ -24,12 +24,13 @@ class SearchViewController: UIViewController {
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
         collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+        collectionView.backgroundColor = UIColor.white
         searchUpdate()
-
-        
+ 
         // navigation
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor.white
+        navigationItem.hidesSearchBarWhenScrolling = false
         title = "Search Cocktails"
         
         // tabbar
@@ -50,8 +51,11 @@ class SearchViewController: UIViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Search Cocktails"
-        searchController.searchBar.tintColor = UIColor.systemGray
+        searchController.searchBar.tintColor = UIColor.black
+        searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
+        
+      
     }
     
     func fetchCocktails(for searchQuery: String) {

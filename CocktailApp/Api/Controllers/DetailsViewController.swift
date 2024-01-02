@@ -31,6 +31,10 @@ class DetailsViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = UIColor.white
     }
     
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+   
+    }
+   
     func fetchCocktailDetails() {
         if let cocktailId = cocktailId {
             let endpoint = DetailEndpointItem.cocktailDetails(cocktailID: cocktailId)

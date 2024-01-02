@@ -24,18 +24,10 @@ class SearchListCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .white
-        
-        //view
-        view.layer.cornerRadius = 4
-        view.layer.borderWidth = 0.25
-        view.layer.borderColor = UIColor.white.cgColor
-        
-        //imageView
-        imageView.layer.cornerRadius = 8
-        
+
         //cell
-        layer.borderWidth = 1
+        layer.borderWidth = 0.3
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 8
+        layer.cornerRadius = 4
     }
 }
