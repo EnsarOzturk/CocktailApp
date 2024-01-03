@@ -43,6 +43,8 @@
 		FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9862022B39BB7F0035A224 /* CategoryCell.xib */; };
 		FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */; };
 		FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */; };
+		FCDEBFE22B455CC90069976C /* RandomCocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */; };
+		FCDEBFE42B4575260069976C /* RandomCocktailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFE32B4575260069976C /* RandomCocktailService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		FC9862022B39BB7F0035A224 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailViewController.swift; sourceTree = "<group>"; };
 		FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailEndpointItem.swift; sourceTree = "<group>"; };
+		FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailResponse.swift; sourceTree = "<group>"; };
+		FCDEBFE32B4575260069976C /* RandomCocktailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
 				FC9861E42B399FB70035A224 /* ListResponse.swift */,
 				FC76B6A42B3D5E8500092762 /* CocktailDetailResponse.swift */,
+				FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9861E72B39A05F0035A224 /* NetworkManager.swift */,
+				FCDEBFE32B4575260069976C /* RandomCocktailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */,
+				FCDEBFE22B455CC90069976C /* RandomCocktailResponse.swift in Sources */,
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */,
 				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
@@ -344,6 +351,7 @@
 				FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
+				FCDEBFE42B4575260069976C /* RandomCocktailService.swift in Sources */,
 				FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */,
 				FC76B69C2B3C535500092762 /* SmallCardCell.swift in Sources */,
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
