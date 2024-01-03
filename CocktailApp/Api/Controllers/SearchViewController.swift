@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     var searchController: UISearchController!
     let network = NetworkManager()
     private var viewStyle: viewStyle = .big
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // collection
@@ -36,6 +36,7 @@ class SearchViewController: UIViewController {
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
         tabBarController?.tabBar.tintColor = UIColor.black
+
         
     }
     
@@ -55,7 +56,6 @@ class SearchViewController: UIViewController {
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
         
-      
     }
     
     func fetchCocktails(for searchQuery: String) {
@@ -182,5 +182,7 @@ enum listViewStyle {
     case big
     case small
 }
+
+
 
 

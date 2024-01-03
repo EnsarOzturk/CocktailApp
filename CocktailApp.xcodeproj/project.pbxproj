@@ -41,6 +41,7 @@
 		FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861FB2B39AC480035A224 /* URL+Extension.swift */; };
 		FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9862012B39BB7F0035A224 /* CategoryCell.swift */; };
 		FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9862022B39BB7F0035A224 /* CategoryCell.xib */; };
+		FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		FC9861FB2B39AC480035A224 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		FC9862012B39BB7F0035A224 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FC9862022B39BB7F0035A224 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				FC9861DB2B398EF00035A224 /* CategoryViewController.swift */,
 				FC9861DD2B399D120035A224 /* ListViewController.swift */,
 				FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */,
+				FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
 				FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
+				FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */,
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */,
 				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
