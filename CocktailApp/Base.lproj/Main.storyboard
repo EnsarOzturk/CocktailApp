@@ -98,7 +98,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DFl-wC-tKb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="SmallCard" style="done" id="8Ow-mq-FPz">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="8Ow-mq-FPz">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="viewStyleButtonTapped:" destination="BYZ-38-t0r" id="gU6-4I-yTB"/>
                             </connections>
@@ -262,8 +263,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GCS-8o-WEr">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.split.3x3.fill" catalog="system" id="w5n-PV-InV">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="rightBarButtonItem" id="w5n-PV-InV">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="viewStyleButtonTapped:" destination="Xfv-ZP-mfD" id="jA8-ex-nfx"/>
                             </connections>
@@ -404,10 +405,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SmallCard" width="24" height="24"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="questionmark.square.dashed" catalog="system" width="128" height="114"/>
-        <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

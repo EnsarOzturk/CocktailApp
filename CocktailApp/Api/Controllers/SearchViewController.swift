@@ -13,14 +13,14 @@ class SearchViewController: UIViewController {
     var filteredCocktails: [Cocktail] = []
     var searchController: UISearchController!
     let network = NetworkManager()
-    private var viewStyle: viewStyle = .big
+    private var viewStyle: listViewStyle = .small
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // collection
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = UIColor.systemGray6
+        collectionView.backgroundColor = UIColor.white
         collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
         collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
@@ -28,10 +28,12 @@ class SearchViewController: UIViewController {
         searchUpdate()
  
         // navigation
+        title = "Search Cocktails"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationItem.hidesSearchBarWhenScrolling = false
-        title = "Search Cocktails"
+        navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
+       
         
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
@@ -101,6 +103,14 @@ class SearchViewController: UIViewController {
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
         viewStyle = viewStyle == .big ? .small : .big
         collectionView.reloadData()
+        if viewStyle == .small {
+            sender.image = UIImage(named: "BigCard")
+            sender.tintColor = UIColor.black
+        } else {
+            sender.image = UIImage(named: "SmallCard")
+            sender.tintColor = UIColor.black
+        }
+        
     }
 }
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {

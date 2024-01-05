@@ -31,7 +31,8 @@ class BigCardCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .black
-        label.font = UIFont(name: "Apple Symbols", size: 17)
+        label.backgroundColor = UIColor.white
+        label.font = UIFont(name: "Apple Symbols", size: 20)
         
         
         // view
@@ -39,8 +40,8 @@ class BigCardCell: UICollectionViewCell {
         view.backgroundColor = UIColor.white
         
         // cell
-        layer.borderWidth = 0.2
-        layer.borderColor = UIColor.systemGray4.cgColor
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.systemGray5.cgColor
         layer.cornerRadius = 4
     }
 }

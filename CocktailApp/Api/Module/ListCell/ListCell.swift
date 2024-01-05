@@ -28,11 +28,10 @@ class ListCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .black
+        label.backgroundColor = UIColor.white
         label.font = UIFont(name: "Apple Symbols", size: 15)
-        
         // view
         view.layer.cornerRadius = 0.2
-        
         // cell
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.systemGray4.cgColor
