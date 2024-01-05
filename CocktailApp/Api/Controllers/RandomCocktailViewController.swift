@@ -46,7 +46,8 @@ class RandomCocktailViewController: UIViewController {
              switch result {
              case .success(let randomCocktailResponse):
                  if let randomCocktail = randomCocktailResponse.drinks.first {
-                    self?.updateUI(with: randomCocktail) }
+                    self?.updateUI(with: randomCocktail)
+                 }
              case .failure(let error):
                  self?.showError(message: "Error fetching random cocktail: \(error.localizedDescription)")
              }

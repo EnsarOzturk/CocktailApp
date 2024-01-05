@@ -13,10 +13,10 @@ class ListViewController: UIViewController {
     private var drinks: [Drink] = []
     var selectedCategory: Category?
     private var listViewStyle: listViewStyle = .small
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationTitleAttributes()
         fetchCoctailsCategory()
         
@@ -29,11 +29,13 @@ class ListViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.indicatorStyle = .default
         collectionView.showsVerticalScrollIndicator = false
-
+        
         // navigation
         title = selectedCategory?.strCategory
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = UIColor.black
+        navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
+
         
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
@@ -41,18 +43,17 @@ class ListViewController: UIViewController {
         
         // view
         view.backgroundColor = UIColor.white
+        
     }
-    
-
     
     private func navigationTitleAttributes() {
         if let titleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
-                var updatedAttributes = titleAttributes
-                updatedAttributes[.foregroundColor] = UIColor.black
-                navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
-            } else {
-                navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-            }
+            var updatedAttributes = titleAttributes
+            updatedAttributes[.foregroundColor] = UIColor.black
+            navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
+        } else {
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        }
     }
     
     func fetchCoctailsCategory() {
@@ -79,10 +80,17 @@ class ListViewController: UIViewController {
             }
         }
     }
-    
+
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
         listViewStyle = listViewStyle == .small ? .big : .small
-        collectionView.reloadData()
+           collectionView.reloadData()
+           if listViewStyle == .small {
+               sender.image = UIImage(named: "BigCard")
+               sender.tintColor = UIColor.black
+           } else {
+               sender.image = UIImage(named: "SmallCard")
+               sender.tintColor = UIColor.black
+           }
     }
 }
 
