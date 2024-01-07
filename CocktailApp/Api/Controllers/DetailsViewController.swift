@@ -23,6 +23,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DetailsViewController did load")
         
         contentsStackView.distribution = .fill
         imageView.layer.cornerRadius = 4

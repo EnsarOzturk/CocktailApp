@@ -18,13 +18,23 @@ class RandomCocktailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRandomCocktail()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.barTintColor = UIColor.black
+        tabBarController?.tabBar.tintColor = UIColor.white
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.barTintColor = UIColor.white
+        tabBarController?.tabBar.tintColor = UIColor.black
     }
     
     @IBAction func bringRandomButtonTapped(_ sender: UIButton) {
         startUpdatingCocktails()
     }
-    
+
     func startUpdatingCocktails() {
         timer?.invalidate()
         timer = nil
