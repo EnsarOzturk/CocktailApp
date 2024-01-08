@@ -12,7 +12,6 @@ import Alamofire
 class RandomCocktailService {
     func getRandomCocktail(completion: @escaping (Result<RandomCocktailResponse, Error>) -> Void) {
         let endpoint = RandomCocktailEndpointItem()
-
         AF.request(endpoint.url, method: endpoint.method).validate().responseDecodable(of: RandomCocktailResponse.self) { response in
             switch response.result {
             case .success(let data):

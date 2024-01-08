@@ -25,12 +25,14 @@ class RandomCocktailViewController: UIViewController {
         super.viewDidLoad()
         imageView.layer.borderWidth = 0.1
         imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.cornerRadius = 4.0
-        button.layer.borderWidth = 0.1
+        imageView.layer.cornerRadius = 2.0
+        button.layer.borderWidth = 0.2
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 40
         nameLabel.text = "Elderflower Caipirinha"
     }
+    
+    
     
     private func playSound() {
         guard let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: soundFileExtension) else {

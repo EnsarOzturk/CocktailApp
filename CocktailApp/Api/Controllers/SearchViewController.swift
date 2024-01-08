@@ -26,20 +26,15 @@ class SearchViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         collectionView.backgroundColor = UIColor.white
         searchUpdate()
- 
         // navigation
         title = "Search Cocktails"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
-       
-        
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
         tabBarController?.tabBar.tintColor = UIColor.black
-
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,7 +52,6 @@ class SearchViewController: UIViewController {
         searchController.searchBar.tintColor = UIColor.black
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
-        
     }
     
     func fetchCocktails(for searchQuery: String) {
@@ -90,15 +84,15 @@ class SearchViewController: UIViewController {
     func isFiltering() -> Bool {
             return searchController.isActive && !searchBarIsEmpty()
         }
+    
     func searchBarIsEmpty() -> Bool {
           return searchController.searchBar.text?.isEmpty ?? true
       }
+    
     func saveCocktailsToUserDefaults() {
             let data = try? JSONEncoder().encode(cocktails)
             UserDefaults.standard.set(data, forKey: "cocktails")
         }
-    
-    
     // viewStyleButton
     @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
         viewStyle = viewStyle == .big ? .small : .big
@@ -110,7 +104,6 @@ class SearchViewController: UIViewController {
             sender.image = UIImage(named: "SmallCard")
             sender.tintColor = UIColor.black
         }
-        
     }
 }
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -160,7 +153,6 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
     
-
 extension SearchViewController: UISearchResultsUpdating {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch viewStyle {

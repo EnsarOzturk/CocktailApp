@@ -9,27 +9,36 @@ import UIKit
 import SDWebImage
 
 class DetailsViewController: UIViewController {
-    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cocktailInfoStackView: UIStackView!
     @IBOutlet var contentsStackView: UIStackView!
     @IBOutlet var recipesStackView: UIStackView!
     @IBOutlet var recipeLabel: UILabel!
-    
     var cocktailId: String?
     var drink: CocktailDetail?
     let network = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("DetailsViewController did load")
         
         contentsStackView.distribution = .fill
-        imageView.layer.cornerRadius = 4
-        titleLabel.font = UIFont(name: "Copperplate", size: 24)
+        recipesStackView.alignment = .fill
+        recipesStackView.distribution = .fill
+        recipesStackView.layoutIfNeeded()
+        titleLabel.font = UIFont(name: "Copperplate", size: 25)
         fetchCocktailDetails()
         navigationController?.navigationBar.backgroundColor = UIColor.white
+        }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        recipesStackView.arrangedSubviews.forEach { subview in
+            if let label = subview as? UILabel {
+                label.preferredMaxLayoutWidth = recipesStackView.bounds.width
+            }
+        }
+        recipesStackView.layoutIfNeeded()
     }
 
     func fetchCocktailDetails() {
@@ -56,17 +65,14 @@ class DetailsViewController: UIViewController {
     }
     
     func prepareCocktailContents(contents: [String]) {
-       
         for content in contents {
             let label = UILabel()
             label.text = content
             label.numberOfLines = 0
             contentsStackView.addArrangedSubview(label)
-            
         }
     }
   
-    
     func prepareInformations(informations: [String]) {
         for information in informations {
             let label = UILabel()
@@ -74,4 +80,11 @@ class DetailsViewController: UIViewController {
             cocktailInfoStackView.addArrangedSubview(label)
         }
     }
+    
+    func prepareRecipeLabel(recipe: String) {
+          recipeLabel.text = recipe
+          recipeLabel.numberOfLines = 0
+          recipeLabel.sizeToFit()
+          recipesStackView.addArrangedSubview(recipeLabel)
+      }
 }

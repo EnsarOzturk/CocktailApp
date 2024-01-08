@@ -53,12 +53,10 @@ class CategoryCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         // cell
-        layer.borderWidth = 0.4
+        layer.borderWidth = 0.3
         layer.borderColor = UIColor.systemGray5.cgColor
         layer.cornerRadius = 4
         layer.backgroundColor = UIColor.white.cgColor
-        
     }
 }

@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="1033"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-BV-JyJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="810"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="760"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umH-qY-qYH" userLabel="TitleView">
                                                 <rect key="frame" x="16" y="8" width="361" height="50"/>
@@ -177,12 +177,12 @@
                                                     <constraint firstItem="VEe-Ss-WEw" firstAttribute="top" secondItem="tbb-PK-Nqi" secondAttribute="top" constant="8" id="rju-zn-P30"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="300" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-uZ-fGy" userLabel="ContentsStackView">
-                                                <rect key="frame" x="16" y="294" width="361" height="300"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-uZ-fGy" userLabel="ContentsStackView">
+                                                <rect key="frame" x="16" y="294" width="361" height="250"/>
                                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDU-TI-fPJ" userLabel="RecipesStackView">
-                                                <rect key="frame" x="16" y="602" width="361" height="200"/>
+                                                <rect key="frame" x="16" y="552" width="361" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-7o-HV9">
                                                         <rect key="frame" x="8" y="8" width="345" height="184"/>

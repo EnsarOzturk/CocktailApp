@@ -24,7 +24,6 @@ class SearchListCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .white
-
         //cell
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.lightGray.cgColor

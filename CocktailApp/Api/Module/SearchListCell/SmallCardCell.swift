@@ -12,7 +12,6 @@ class SmallCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    
     static let identifier = "SmallCardCell"
     
     func configure(with cocktail: Cocktail) {
@@ -22,7 +21,6 @@ class SmallCardCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func layoutSubviews() {
@@ -30,7 +28,6 @@ class SmallCardCell: UICollectionViewCell {
         // label
         label.textAlignment = .center
         label.textColor = .white
-
         // cell
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor

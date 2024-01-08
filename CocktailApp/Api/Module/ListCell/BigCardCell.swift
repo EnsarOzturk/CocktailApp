@@ -21,7 +21,6 @@ class BigCardCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     override func layoutSubviews() {
@@ -33,12 +32,9 @@ class BigCardCell: UICollectionViewCell {
         label.textColor = .black
         label.backgroundColor = UIColor.white
         label.font = UIFont(name: "Apple Symbols", size: 20)
-        
-        
         // view
         view.layer.cornerRadius = 4
         view.backgroundColor = UIColor.white
-        
         // cell
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.systemGray5.cgColor

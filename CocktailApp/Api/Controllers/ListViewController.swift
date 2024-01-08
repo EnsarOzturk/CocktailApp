@@ -19,7 +19,6 @@ class ListViewController: UIViewController {
         
         navigationTitleAttributes()
         fetchCoctailsCategory()
-        
         // collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -29,21 +28,16 @@ class ListViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.indicatorStyle = .default
         collectionView.showsVerticalScrollIndicator = false
-        
         // navigation
         title = selectedCategory?.strCategory
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = UIColor.black
         navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
-
-        
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
         tabBarController?.tabBar.tintColor = UIColor.black
-        
         // view
         view.backgroundColor = UIColor.white
-        
     }
     
     private func navigationTitleAttributes() {
@@ -72,7 +66,6 @@ class ListViewController: UIViewController {
                         self.collectionView.reloadData()
                     }
                 } else {
-                    print("API Response nil")
                 }
             case .failure(let error):
                 print(error)
