@@ -29,7 +29,7 @@ class RandomCocktailViewController: UIViewController {
         imageView.layer.cornerRadius = 2.0
         button.layer.borderWidth = 0.2
         button.layer.borderColor = UIColor.white.cgColor
-        button.layer.cornerRadius = 40
+        button.layer.cornerRadius = 30
         nameLabel.text = "Elderflower Caipirinha"
     }
     

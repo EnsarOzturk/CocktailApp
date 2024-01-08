@@ -28,7 +28,7 @@ class DetailsViewController: UIViewController {
         recipesStackView.layoutIfNeeded()
         recipesStackView.spacing = 2.0
         cocktailInfoStackView.spacing = 2.0
-        titleLabel.font = UIFont(name: "Copperplate", size: 25)
+        titleLabel.font = UIFont(name: "Arial", size: 25)
         navigationController?.navigationBar.tintColor = .black
         fetchCocktailDetails()
         

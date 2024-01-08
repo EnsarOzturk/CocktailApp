@@ -134,7 +134,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="nVo-N1-mQz"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -306,19 +306,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCv-XG-pCa">
-                                <rect key="frame" x="109" y="630" width="175" height="80"/>
+                                <rect key="frame" x="109" y="630" width="175" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="XQO-dA-8py"/>
+                                    <constraint firstAttribute="height" constant="60" id="XQO-dA-8py"/>
                                     <constraint firstAttribute="width" constant="175" id="ueO-fm-Cu9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Shuffle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="shuffle.circle" catalog="system" symbolScale="large" variableValue="1"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="bringRandomButtonTapped:" destination="VdT-V2-b0D" eventType="touchUpInside" id="kfU-tv-lth"/>
@@ -419,7 +417,6 @@
         <image name="defaultCocktail" width="700" height="700"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="questionmark.square.dashed" catalog="system" width="128" height="114"/>
-        <image name="shuffle.circle" catalog="system" width="128" height="123"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
