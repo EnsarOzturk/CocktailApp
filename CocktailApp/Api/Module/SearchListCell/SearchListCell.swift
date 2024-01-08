@@ -28,6 +28,6 @@ class SearchListCell: UICollectionViewCell {
         //cell
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 4
+        layer.cornerRadius = 2.0
     }
 }

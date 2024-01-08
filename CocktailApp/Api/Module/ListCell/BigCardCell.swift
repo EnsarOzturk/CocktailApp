@@ -42,6 +42,6 @@ class BigCardCell: UICollectionViewCell {
         // cell
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.systemGray5.cgColor
-        layer.cornerRadius = 4
+        layer.cornerRadius = 2.0
     }
 }

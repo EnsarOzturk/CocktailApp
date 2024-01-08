@@ -35,7 +35,7 @@ class ListCell: UICollectionViewCell {
         // cell
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.systemGray4.cgColor
-        layer.cornerRadius = 4
+        layer.cornerRadius = 2.0
         layer.backgroundColor = UIColor.systemGray6.cgColor
     }
 }

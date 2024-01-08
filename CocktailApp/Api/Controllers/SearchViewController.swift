@@ -69,7 +69,7 @@ class SearchViewController: UIViewController {
                     self?.saveCocktailsToUserDefaults()
                     self?.collectionView.reloadData()
                 case .failure(let error):
-                    print("Error fetching cocktails: \(error)")
+                    print("Error cocktails: \(error)")
                 }
             }
         }

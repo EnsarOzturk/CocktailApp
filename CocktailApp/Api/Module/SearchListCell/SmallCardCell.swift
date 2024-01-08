@@ -34,6 +34,6 @@ class SmallCardCell: UICollectionViewCell {
         // cell
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 4
+        layer.cornerRadius = 2.0
     }
 }
