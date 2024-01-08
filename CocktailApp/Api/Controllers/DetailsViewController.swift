@@ -26,10 +26,18 @@ class DetailsViewController: UIViewController {
         recipesStackView.alignment = .fill
         recipesStackView.distribution = .fill
         recipesStackView.layoutIfNeeded()
+        recipesStackView.spacing = 2.0
+        cocktailInfoStackView.spacing = 2.0
         titleLabel.font = UIFont(name: "Copperplate", size: 25)
+        navigationController?.navigationBar.tintColor = .black
         fetchCocktailDetails()
-        navigationController?.navigationBar.backgroundColor = UIColor.white
-        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -50,8 +58,8 @@ class DetailsViewController: UIViewController {
                     if let drink = response.drinks.first {
                         self?.drink = drink
                         DispatchQueue.main.async {
-                            self?.prepareCocktailContents(contents: drink.cocktailContents.filter { $0 != "" })
-                            self?.prepareInformations(informations: drink.informations.filter { $0 != "" })
+                            self?.prepareCocktailContents(contents: drink.cocktailContents.filter { $0 != " "})
+                            self?.prepareInformations(informations: drink.informations.filter { $0 != ""})
                             self?.titleLabel.text = drink.strDrink
                             self?.imageView.load(url: drink.strDrinkThumb)
                             self?.recipeLabel.text = drink.strInstructions
@@ -67,7 +75,7 @@ class DetailsViewController: UIViewController {
     func prepareCocktailContents(contents: [String]) {
         for content in contents {
             let label = UILabel()
-            label.text = content
+            label.text = "• \(content)"
             label.numberOfLines = 0
             contentsStackView.addArrangedSubview(label)
         }
@@ -76,15 +84,11 @@ class DetailsViewController: UIViewController {
     func prepareInformations(informations: [String]) {
         for information in informations {
             let label = UILabel()
-            label.text = information
+            label.text = "• \(information)"
             cocktailInfoStackView.addArrangedSubview(label)
         }
+        let view = UIView()
+        view.backgroundColor = .clear
+        cocktailInfoStackView.addArrangedSubview(view)
     }
-    
-    func prepareRecipeLabel(recipe: String) {
-          recipeLabel.text = recipe
-          recipeLabel.numberOfLines = 0
-          recipeLabel.sizeToFit()
-          recipesStackView.addArrangedSubview(recipeLabel)
-      }
 }

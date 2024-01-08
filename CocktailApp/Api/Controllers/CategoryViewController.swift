@@ -23,9 +23,7 @@ class CategoryViewController: UIViewController{
         // view
         view.backgroundColor = UIColor.white
         // navigation
-        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Categories"
-        navigationController?.navigationBar.backgroundColor = UIColor.white
         // tabbar
         tabBarController?.tabBar.barTintColor = UIColor.white
         tabBarController?.tabBar.tintColor = UIColor.black
@@ -42,6 +40,11 @@ class CategoryViewController: UIViewController{
             case .failure(let error): print(error)
           }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

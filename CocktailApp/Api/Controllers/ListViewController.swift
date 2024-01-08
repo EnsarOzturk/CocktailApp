@@ -30,14 +30,17 @@ class ListViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         // navigation
         title = selectedCategory?.strCategory
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.tintColor = UIColor.black
         navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
-        // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.white
-        tabBarController?.tabBar.tintColor = UIColor.black
+        
+        navigationController?.navigationBar.tintColor = .black
+        
         // view
         view.backgroundColor = UIColor.white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     private func navigationTitleAttributes() {

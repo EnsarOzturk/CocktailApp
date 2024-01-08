@@ -63,21 +63,21 @@ struct CocktailDetail: Codable {
     
     var cocktailContents: [String] {
         return [
-            "\(strMeasure1 ?? "")  \(strIngredient1 ?? "")",
-            "\(strMeasure2 ?? "")  \(strIngredient2 ?? "")",
-            "\(strMeasure3 ?? "")  \(strIngredient3 ?? "")",
-            "\(strMeasure4 ?? "")  \(strIngredient4 ?? "")",
-            "\(strMeasure5 ?? "")  \(strIngredient5 ?? "")",
-            "\(strMeasure6 ?? "")  \(strIngredient6 ?? "")",
-            "\(strMeasure7 ?? "")  \(strIngredient7 ?? "")",
-            "\(strMeasure8 ?? "")  \(strIngredient8 ?? "")",
-            "\(strMeasure9 ?? "")  \(strIngredient9 ?? "")",
-            "\(strMeasure10 ?? "")  \(strIngredient10 ?? "")",
-            "\(strMeasure11 ?? "")  \(strIngredient11 ?? "")",
-            "\(strMeasure12 ?? "")  \(strIngredient12 ?? "")",
-            "\(strMeasure12 ?? "")  \(strIngredient13 ?? "")",
-            "\(strMeasure13 ?? "")  \(strIngredient14 ?? "")",
-            "\(strMeasure14 ?? "")  \(strIngredient15 ?? "")"
+            "\(strMeasure1 ?? "") \(strIngredient1 ?? "")",
+            "\(strMeasure2 ?? "") \(strIngredient2 ?? "")",
+            "\(strMeasure3 ?? "") \(strIngredient3 ?? "")",
+            "\(strMeasure4 ?? "") \(strIngredient4 ?? "")",
+            "\(strMeasure5 ?? "") \(strIngredient5 ?? "")",
+            "\(strMeasure6 ?? "") \(strIngredient6 ?? "")",
+            "\(strMeasure7 ?? "") \(strIngredient7 ?? "")",
+            "\(strMeasure8 ?? "") \(strIngredient8 ?? "")",
+            "\(strMeasure9 ?? "") \(strIngredient9 ?? "")",
+            "\(strMeasure10 ?? "") \(strIngredient10 ?? "")",
+            "\(strMeasure11 ?? "") \(strIngredient11 ?? "")",
+            "\(strMeasure12 ?? "") \(strIngredient12 ?? "")",
+            "\(strMeasure12 ?? "") \(strIngredient13 ?? "")",
+            "\(strMeasure13 ?? "") \(strIngredient14 ?? "")",
+            "\(strMeasure14 ?? "") \(strIngredient15 ?? "")"
         ]
     }
     

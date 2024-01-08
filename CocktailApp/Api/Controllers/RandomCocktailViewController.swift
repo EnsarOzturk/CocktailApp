@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import Alamofire
 import AVFoundation
 
 class RandomCocktailViewController: UIViewController {
@@ -31,8 +32,6 @@ class RandomCocktailViewController: UIViewController {
         button.layer.cornerRadius = 40
         nameLabel.text = "Elderflower Caipirinha"
     }
-    
-    
     
     private func playSound() {
         guard let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: soundFileExtension) else {
@@ -68,9 +67,9 @@ class RandomCocktailViewController: UIViewController {
     func startUpdatingCocktails() {
         timer?.invalidate()
         timer = nil
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateRandomCocktail), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateRandomCocktail), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: .common)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             self?.timer?.invalidate()
             self?.timer = nil
             self?.stopSound()
@@ -85,13 +84,13 @@ class RandomCocktailViewController: UIViewController {
 
     func fetchRandomCocktail() {
          randomCocktailService.getRandomCocktail { [weak self] result in
-             switch result {
+            switch result {
              case .success(let randomCocktailResponse):
                  if let randomCocktail = randomCocktailResponse.drinks.first {
                     self?.updateUI(with: randomCocktail)
                  }
              case .failure(let error):
-                 self?.showError(message: "Error random cocktail: \(error.localizedDescription)")
+                 print( "Error random cocktail: \(error.localizedDescription)")
              }
          }
      }
@@ -102,12 +101,5 @@ class RandomCocktailViewController: UIViewController {
                imageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "defaultCocktail"))
            }
     }
-    
-    func showError(message: String) {
-         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-         alertController.addAction(okAction)
-         present(alertController, animated: true, completion: nil)
-     }
  }
 

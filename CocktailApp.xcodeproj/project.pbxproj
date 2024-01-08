@@ -159,10 +159,10 @@
 		FC9861D82B3987420035A224 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC9861D92B3987630035A224 /* SearchViewController.swift */,
 				FC9861DB2B398EF00035A224 /* CategoryViewController.swift */,
 				FC9861DD2B399D120035A224 /* ListViewController.swift */,
 				FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */,
+				FC9861D92B3987630035A224 /* SearchViewController.swift */,
 				FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */,
 			);
 			path = Controllers;
