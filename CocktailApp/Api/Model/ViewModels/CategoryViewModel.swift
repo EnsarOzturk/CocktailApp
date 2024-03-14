@@ -35,4 +35,8 @@ class CategoryViewModel {
            }
            return categories[index]
     }
+    
+    func numberOfCategories() -> Int {
+            return categories.count
+    }
 }
