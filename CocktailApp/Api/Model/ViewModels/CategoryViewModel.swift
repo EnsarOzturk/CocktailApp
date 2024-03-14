@@ -28,4 +28,11 @@ class CategoryViewModel {
             }
         }
     }
+    
+    func getCategory(at index: Int) -> Category? {
+           guard index >= 0, index < categories.count else {
+               return nil
+           }
+           return categories[index]
+    }
 }
