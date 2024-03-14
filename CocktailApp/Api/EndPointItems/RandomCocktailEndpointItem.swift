@@ -16,6 +16,6 @@ struct RandomCocktailEndpointItem: Endpoint {
     
     var method: HTTPMethod {
           return .get
-      }
+    }
 }
 

@@ -94,6 +94,7 @@ class RandomCocktailViewController: UIViewController {
              }
          }
      }
+    
     func updateUI(with cocktail: RandomCocktail) {
            nameLabel.text = cocktail.strDrink
         
