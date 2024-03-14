@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */; };
 		FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B68C2B3A0E3100092762 /* ListCell.swift */; };
 		FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B68D2B3A0E3100092762 /* ListCell.xib */; };
 		FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6912B3AE6B200092762 /* SearchListCell.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		FC76B68C2B3A0E3100092762 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		FC76B68D2B3A0E3100092762 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FC76B6912B3AE6B200092762 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC4ADEE02BA31410009429C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ADEE12BA31483009429C7 /* ViewModels */,
+				FC9861DF2B399F000035A224 /* Models */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC4ADEE12BA31483009429C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FC76B68B2B3A0E1E00092762 /* ListCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +165,7 @@
 			children = (
 				FC9861F72B39A74D0035A224 /* Utils */,
 				FC9861FD2B39AC8C0035A224 /* Api */,
+				FCBCECC72B4C059100EEB216 /* Sound */,
 				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
 				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
 				FC9861CA2B38C3E10035A224 /* Main.storyboard */,
@@ -223,10 +243,9 @@
 		FC9861FD2B39AC8C0035A224 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				FCBCECC72B4C059100EEB216 /* Sound */,
+				FC4ADEE02BA31410009429C7 /* Model */,
 				FC9861FE2B39ACC50035A224 /* Module */,
 				FC9861D82B3987420035A224 /* Controllers */,
-				FC9861DF2B399F000035A224 /* Models */,
 				FC9861E62B39A0400035A224 /* Service */,
 				FC9861EC2B39A13F0035A224 /* EndPointItems */,
 			);
@@ -363,6 +382,7 @@
 				FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
+				FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */,
 				FCDEBFE42B4575260069976C /* RandomCocktailService.swift in Sources */,
 				FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */,
 				FC76B69C2B3C535500092762 /* SmallCardCell.swift in Sources */,
