@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */; };
+		FC4ADEE52BA474EF009429C7 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */; };
 		FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B68C2B3A0E3100092762 /* ListCell.swift */; };
 		FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B68D2B3A0E3100092762 /* ListCell.xib */; };
 		FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6912B3AE6B200092762 /* SearchListCell.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		FC76B68C2B3A0E3100092762 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		FC76B68D2B3A0E3100092762 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FC76B6912B3AE6B200092762 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */,
+				FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
 				FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */,
 				FCDEBFE42B4575260069976C /* RandomCocktailService.swift in Sources */,
+				FC4ADEE52BA474EF009429C7 /* ListViewModel.swift in Sources */,
 				FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */,
 				FC76B69C2B3C535500092762 /* SmallCardCell.swift in Sources */,
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
