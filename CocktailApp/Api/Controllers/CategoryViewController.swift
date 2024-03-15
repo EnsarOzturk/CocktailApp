@@ -13,21 +13,24 @@ class CategoryViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // collection
-        viewModel = CategoryViewModel(networkManager: NetworkManager())
+        view.backgroundColor = UIColor.white
+        title = "Categories"
+        tabBarController?.tabBar.barTintColor = UIColor.white
+        tabBarController?.tabBar.tintColor = UIColor.black
+        setupCollectionView()
+        fetchCategories()
+    }
+    
+    private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.white
-        // view
-        view.backgroundColor = UIColor.white
-        // navigation
-        title = "Categories"
-        // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.white
-        tabBarController?.tabBar.tintColor = UIColor.black
-        // fetch network
+    }
+    
+    private func fetchCategories() {
+        viewModel = CategoryViewModel(networkManager: NetworkManager())
         viewModel.fetchCategories { [weak self] result in
                 guard let self = self else { return }
                 switch result {
@@ -65,8 +68,8 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let category = viewModel.getCategory(at: indexPath.row) {
                    listViewController(category: category)
-        }
     }
+}
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
@@ -86,6 +89,6 @@ extension CategoryViewController {
         let listVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
             listVC.selectedCategory = category
             navigationController?.pushViewController(listVC, animated: true)
-  }
+    }
 }
     
