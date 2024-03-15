@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CategoryViewModel {
     private let networkManager: NetworkManager

@@ -22,24 +22,24 @@ class CategoryViewController: UIViewController{
     }
     
     private func setupCollectionView() {
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.white
-    }
+            collectionView.dataSource = self
+            collectionView.delegate = self
+            collectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
+            collectionView.showsVerticalScrollIndicator = false
+            collectionView.backgroundColor = UIColor.white
+        }
     
     private func fetchCategories() {
         viewModel = CategoryViewModel(networkManager: NetworkManager())
         viewModel.fetchCategories { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success:
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                case .failure(let error):
-                    print("Error fetching categories: \(error)")
+              guard let self = self else { return }
+              switch result {
+              case .success:
+                  DispatchQueue.main.async {
+                      self.collectionView.reloadData()
+                  }
+              case .failure(let error):
+                  print("Error fetching categories: \(error)")
             }
         }
     }
@@ -57,7 +57,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as? CategoryCell else {
-            fatalError("Could not dequeue CategoryCell")
+            fatalError("error CategoryCell")
         }
             if let category = viewModel.getCategory(at: indexPath.row) {
                 cell.configure(category: category)
