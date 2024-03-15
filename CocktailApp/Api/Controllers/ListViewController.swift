@@ -9,17 +9,34 @@ import UIKit
 
 class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    private let network = NetworkManager()
-    private var drinks: [Drink] = []
-    var selectedCategory: Category?
+    private var viewModel: ListViewModel!
     private var listViewStyle: listViewStyle = .small
+    var selectedCategory: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionView()
+        viewModel = ListViewModel(networkManager: NetworkManager())
+        viewModel.selectedCategory = selectedCategory
+
+        viewModel.fetchDrinks { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .success:
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                        }
+                    case .failure(let error):
+                        print("Error fetching drinks: \(error)")
+                    }
+                }
+        
         navigationTitleAttributes()
-        fetchCoctailsCategory()
-        // collectionView
+        setupNavigation()
+    }
+    
+    private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
@@ -28,14 +45,14 @@ class ListViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.indicatorStyle = .default
         collectionView.showsVerticalScrollIndicator = false
-        // navigation
+    }
+    
+    private func setupNavigation() {
         title = selectedCategory?.strCategory
-        navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
-        
-        navigationController?.navigationBar.tintColor = .black
-        
-        // view
-        view.backgroundColor = UIColor.white
+            let viewStyleButton = UIBarButtonItem(image: UIImage(named: "BigCard"), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
+            navigationItem.rightBarButtonItem = viewStyleButton
+            navigationController?.navigationBar.tintColor = .black
+            view.backgroundColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,30 +67,6 @@ class ListViewController: UIViewController {
             navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
         } else {
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        }
-    }
-    
-    func fetchCoctailsCategory() {
-        guard let selectedCategory = selectedCategory,
-              let originalCategory = selectedCategory.strCategory else {
-            return
-        }
-        
-        let endpoint = ListEndpointItem(category: originalCategory.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-        network.request(type: ListResponse.self, item: endpoint) { result in
-            switch result {
-            case .success(let response):
-                if let drinks = response.drinks {
-                    self.drinks = drinks
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                } else {
-                }
-            case .failure(let error):
-                print(error)
-                endpoint.handle(error: error)
-            }
         }
     }
 
@@ -92,21 +85,20 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        drinks.count
+        return viewModel.numberOfDrinks()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let drink = viewModel.getDrink(at: indexPath.row) else {
+            return UICollectionViewCell()
+        }
         switch listViewStyle {
         case .small:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
-            let drink: Drink
-            drink = drinks[indexPath.row]
             cell.configure(drink: drink)
             return cell
         case .big:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigCardCell", for: indexPath) as! BigCardCell
-            let drink: Drink
-            drink = drinks[indexPath.row]
             cell.configure(drink: drink)
             return cell
         }
@@ -119,11 +111,12 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDrink = drinks[indexPath.row]
-            if let drinkId = selectedDrink.idDrink {
+        guard let selectedDrink = viewModel.getDrink(at: indexPath.row) else {
+                return
+            }
+        if let drinkId = selectedDrink.idDrink {
                 showDetailViewController(with: drinkId)
-            } else {
-    }
+            }
 }
     
     func showDetailViewController(with drinkId: String) {
