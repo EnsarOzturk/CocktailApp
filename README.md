@@ -15,6 +15,7 @@
 
 ## Libraries
 - [Alamofire](https://github.com/Alamofire/Alamofire)
+- [SDWebImage](https://github.com/SDWebImage/SDWebImage)
 
 #
 
