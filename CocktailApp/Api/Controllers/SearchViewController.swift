@@ -22,51 +22,51 @@ class SearchViewController: UIViewController {
            configureNavigationBar()
            fetchCocktails(for: "")
        }
+    
+    private func setupViewModel() {
+        viewModel = SearchViewModel(networkManager: network)
+    }
 
-       private func setupViewModel() {
-           viewModel = SearchViewModel(networkManager: network)
-       }
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = .white
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+        collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
+        collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
+    }
 
-       private func setupCollectionView() {
-           collectionView.dataSource = self
-           collectionView.delegate = self
-           collectionView.backgroundColor = .white
-           collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-           collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
-           collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
-       }
+    private func setupSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search Cocktails"
+        searchController.searchBar.tintColor = .black
+        searchController.searchBar.backgroundColor = .white
+        navigationItem.searchController = searchController
+    }
 
-       private func setupSearchController() {
-           let searchController = UISearchController(searchResultsController: nil)
-           searchController.searchResultsUpdater = self
-           searchController.searchBar.placeholder = "Search Cocktails"
-           searchController.searchBar.tintColor = .black
-           searchController.searchBar.backgroundColor = .white
-           navigationItem.searchController = searchController
-       }
+    private func fetchCocktails(for searchQuery: String) {
+        viewModel.fetchCocktails { [weak self] result in
+            switch result {
+            case .success:
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Error fetching cocktails: \(error)")
+            }
+        }
+    }
 
-       private func fetchCocktails(for searchQuery: String) {
-           viewModel.fetchCocktails { [weak self] result in
-               switch result {
-               case .success:
-                   DispatchQueue.main.async {
-                       self?.collectionView.reloadData()
-                   }
-               case .failure(let error):
-                   print("Error fetching cocktails: \(error)")
-               }
-           }
-       }
-
-       private func configureNavigationBar() {
-           title = "Search Cocktails"
-           navigationController?.navigationBar.prefersLargeTitles = true
-           navigationController?.navigationBar.backgroundColor = .white
-           navigationItem.hidesSearchBarWhenScrolling = false
-           navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "BigCard"), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
-           tabBarController?.tabBar.barTintColor = .white
-           tabBarController?.tabBar.tintColor = .black
-       }
+    private func configureNavigationBar() {
+        title = "Search Cocktails"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "BigCard"), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
+        tabBarController?.tabBar.barTintColor = .white
+        tabBarController?.tabBar.tintColor = .black
+    }
 
        @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
            viewModel.toggleViewStyle()
@@ -76,7 +76,7 @@ class SearchViewController: UIViewController {
                   sender.image = UIImage(named: "BigCard")
               } else {
                   sender.image = UIImage(named: "SmallCard")
-              }
+            }
        }
    }
 
@@ -100,6 +100,7 @@ class SearchViewController: UIViewController {
                
            return cell
        }
+       
        
            func showDetailViewController(with drinkId: String) {
                let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -137,5 +138,5 @@ class SearchViewController: UIViewController {
            guard let searchText = searchController.searchBar.text else { return }
            viewModel.filterCocktailsForSearchText(searchText)
            fetchCocktails(for: searchText)
-       }
-   }
+    }
+}

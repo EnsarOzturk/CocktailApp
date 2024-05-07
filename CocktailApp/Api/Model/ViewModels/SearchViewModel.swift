@@ -9,10 +9,10 @@ import Foundation
 
 class SearchViewModel {
     let networkManager: NetworkManager
-       var cocktails: [Cocktail] = []
-       var filteredCocktails: [Cocktail] = []
-       var searchText: String = ""
-        var viewStyle: ListViewStyle = .small
+    var cocktails: [Cocktail] = []
+    var filteredCocktails: [Cocktail] = []
+    var searchText: String = ""
+    var viewStyle: ListViewStyle = .small
        
        init(networkManager: NetworkManager) {
            self.networkManager = networkManager
@@ -32,24 +32,24 @@ class SearchViewModel {
         }
     }
     
-       func filterCocktailsForSearchText(_ searchText: String) {
-           self.searchText = searchText
-           filteredCocktails = cocktails.filter { $0.strDrink.lowercased().contains(searchText.lowercased()) }
-       }
+    func filterCocktailsForSearchText(_ searchText: String) {
+        self.searchText = searchText
+        filteredCocktails = cocktails.filter { $0.strDrink.lowercased().contains(searchText.lowercased()) }
+    }
+    
+    func getCocktail(at index: Int) -> Cocktail {
+        return isFiltering ? filteredCocktails[index] : cocktails[index]
+    }
        
-       func getCocktail(at index: Int) -> Cocktail {
-           return isFiltering ? filteredCocktails[index] : cocktails[index]
-       }
+    var numberOfItems: Int {
+        return isFiltering ? filteredCocktails.count : cocktails.count
+    }
        
-       var numberOfItems: Int {
-           return isFiltering ? filteredCocktails.count : cocktails.count
-       }
+    var isFiltering: Bool {
+        return !searchText.isEmpty
+    }
        
-       var isFiltering: Bool {
-           return !searchText.isEmpty
-       }
-       
-       func toggleViewStyle() {
-           viewStyle = (viewStyle == .big) ? .small : .big
-       }
+    func toggleViewStyle() {
+        viewStyle = (viewStyle == .big) ? .small : .big
+    }
 }
