@@ -16,16 +16,18 @@ class CategoryViewModel {
         self.networkManager = networkManager
     }
     
-    func fetchCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
+    func fetchCategories(completion: @escaping (Result<[Category], NetworkError>) -> Void) {
         networkManager.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { result in
             switch result {
             case .success(let response):
                 if let categories = response.drinks {
                     self.categories = categories
                     completion(.success(categories))
+                } else {
+                    completion(.failure(.noData))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure(NetworkError.requestFailed))
             }
         }
     }

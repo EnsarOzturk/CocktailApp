@@ -21,7 +21,7 @@ class ListViewModel {
             selectedCategory = category
     }
     
-    func fetchDrinks(completion: @escaping (Result<[Drink], Error>) -> Void) {
+    func fetchDrinks(completion: @escaping (Result<[Drink], NetworkError>) -> Void) {
         guard let selectedCategory = selectedCategory,
               let originalCategory = selectedCategory.strCategory else {
             return
@@ -34,9 +34,11 @@ class ListViewModel {
                 if let drinks = response.drinks {
                     self.drinks = drinks
                     completion(.success(drinks))
+                } else {
+                    completion(.failure(.noData))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure(NetworkError.requestFailed))
                 endpoint.handle(error: error)
             }
         }

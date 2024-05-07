@@ -9,182 +9,133 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var cocktails: [Cocktail] = []
-    var filteredCocktails: [Cocktail] = []
-    var searchController: UISearchController!
+    
+    var viewModel: SearchViewModel!
     let network = NetworkManager()
-    private var viewStyle: listViewStyle = .small
+    private var viewStyle: ListViewStyle = .small
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // collection
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.backgroundColor = UIColor.white
-        collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
-        collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
-        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-        collectionView.backgroundColor = UIColor.white
-        searchUpdate()
-        // navigation
-        title = "Search Cocktails"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = UIColor.white
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.rightBarButtonItem?.image = UIImage(named: "BigCard")
-        // tabbar
-        tabBarController?.tabBar.barTintColor = UIColor.white
-        tabBarController?.tabBar.tintColor = UIColor.black
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           setupViewModel()
+           setupCollectionView()
+           setupSearchController()
+           configureNavigationBar()
+           fetchCocktails(for: "")
+       }
 
-        if !isFiltering() {
-            fetchCocktails(for: "")
-        }
-    }
-    
-    private func searchUpdate() {
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Search Cocktails"
-        searchController.searchBar.tintColor = UIColor.black
-        searchController.searchBar.backgroundColor = UIColor.white
-        navigationItem.searchController = searchController
-    }
-    
-    func fetchCocktails(for searchQuery: String) {
-        let endpoint = SearchEndpointItem.cocktailName(name: searchQuery)
-            network.request(type: SearchResponse.self, item: endpoint) { [weak self] result in
-                switch result {
-                case .success(let response):
-                    self?.cocktails = response.drinks
-                    self?.saveCocktailsToUserDefaults()
-                    self?.collectionView.reloadData()
-                case .failure(let error):
-                    print("Error cocktails: \(error)")
-                }
-            }
-        }
-    
-    func filterContentForSearchText(_ searchText: String) {
-          filteredCocktails = cocktails.filter { $0.strDrink.lowercased().contains(searchText.lowercased()) }
-          collectionView.reloadData()
-      }
-    // user defaults
-    func loadCocktailsFromUserDefaults() {
-          if let data = UserDefaults.standard.data(forKey: "cocktails") {
-              let cocktails = try? JSONDecoder().decode([Cocktail].self, from: data)
-              self.cocktails = cocktails ?? []
-              collectionView.reloadData()
+       private func setupViewModel() {
+           viewModel = SearchViewModel(networkManager: network)
+       }
+
+       private func setupCollectionView() {
+           collectionView.dataSource = self
+           collectionView.delegate = self
+           collectionView.backgroundColor = .white
+           collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+           collectionView.register(UINib(nibName: "SearchListCell", bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
+           collectionView.register(UINib(nibName: "SmallCardCell", bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
+       }
+
+       private func setupSearchController() {
+           let searchController = UISearchController(searchResultsController: nil)
+           searchController.searchResultsUpdater = self
+           searchController.searchBar.placeholder = "Search Cocktails"
+           searchController.searchBar.tintColor = .black
+           searchController.searchBar.backgroundColor = .white
+           navigationItem.searchController = searchController
+       }
+
+       private func fetchCocktails(for searchQuery: String) {
+           viewModel.fetchCocktails { [weak self] result in
+               switch result {
+               case .success:
+                   DispatchQueue.main.async {
+                       self?.collectionView.reloadData()
+                   }
+               case .failure(let error):
+                   print("Error fetching cocktails: \(error)")
+               }
+           }
+       }
+
+       private func configureNavigationBar() {
+           title = "Search Cocktails"
+           navigationController?.navigationBar.prefersLargeTitles = true
+           navigationController?.navigationBar.backgroundColor = .white
+           navigationItem.hidesSearchBarWhenScrolling = false
+           navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "BigCard"), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
+           tabBarController?.tabBar.barTintColor = .white
+           tabBarController?.tabBar.tintColor = .black
+       }
+
+       @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
+           viewModel.toggleViewStyle()
+           collectionView.reloadData()
+           sender.image = viewModel.viewStyle == .big ? UIImage(named: "BigCard") : UIImage(named: "SmallCard")
+           if viewModel.viewStyle == .small {
+                  sender.image = UIImage(named: "BigCard")
+              } else {
+                  sender.image = UIImage(named: "SmallCard")
+              }
+       }
+   }
+
+   extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+           return viewModel.numberOfItems
+       }
+
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+           let cellIdentifier = viewModel.viewStyle == .big ? SearchListCell.identifier : SmallCardCell.identifier
+           guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? UICollectionViewCell else {
+               fatalError("Unable to dequeue cell")
+           }
+               
+           let cocktail = viewModel.getCocktail(at: indexPath.item)
+           if let searchListCell = cell as? SearchListCell {
+               searchListCell.configure(with: cocktail)
+           } else if let smallCardCell = cell as? SmallCardCell {
+               smallCardCell.configure(with: cocktail)
+           }
+               
+           return cell
+       }
+       
+           func showDetailViewController(with drinkId: String) {
+               let storyboard = UIStoryboard(name: "Main", bundle: nil)
+               if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+                   detailVC.cocktailId = drinkId
+                   navigationController?.pushViewController(detailVC, animated: true)
+               }
+           }
+
+       func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+           let selectedCocktail = viewModel.getCocktail(at: indexPath.item)
+           showDetailViewController(with: selectedCocktail.idDrink)
+       }
+
+       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+           switch viewModel.viewStyle {
+           case .big:
+               let width = (UIScreen.main.bounds.width - 24) / 2
+               let height = width / 2 * 3
+               return CGSize(width: width, height: height)
+           case .small:
+               let width = (UIScreen.main.bounds.width - 32) / 3
+               let height = width / 2 * 3
+               return CGSize(width: width, height: height)
+           }
+       }
+       
+       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+              return 8
           }
-      }
-    
-    func isFiltering() -> Bool {
-            return searchController.isActive && !searchBarIsEmpty()
-        }
-    
-    func searchBarIsEmpty() -> Bool {
-          return searchController.searchBar.text?.isEmpty ?? true
-      }
-    
-    func saveCocktailsToUserDefaults() {
-            let data = try? JSONEncoder().encode(cocktails)
-            UserDefaults.standard.set(data, forKey: "cocktails")
-        }
-    // viewStyleButton
-    @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
-        viewStyle = viewStyle == .big ? .small : .big
-        collectionView.reloadData()
-        if viewStyle == .small {
-            sender.image = UIImage(named: "BigCard")
-            sender.tintColor = UIColor.black
-        } else {
-            sender.image = UIImage(named: "SmallCard")
-            sender.tintColor = UIColor.black
-        }
-    }
-}
-extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if isFiltering() {
-                    return filteredCocktails.count
-                }
-                return cocktails.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch viewStyle {
-        case .big:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchListCell.identifier, for: indexPath) as! SearchListCell
-            let cocktail: Cocktail
-            if isFiltering() {
-            cocktail = filteredCocktails[indexPath.item]
-        } else {
-            cocktail = cocktails[indexPath.item]
-        }
-            cell.configure(with: cocktail)
-            return cell
-        case .small:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCardCell.identifier, for: indexPath) as! SmallCardCell
-            let cocktail: Cocktail
-            if isFiltering() {
-            cocktail = filteredCocktails[indexPath.item]
-        } else {
-            cocktail = cocktails[indexPath.item]
-        }
-            cell.configure(with: cocktail)
-            return cell
-    }
-  }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDrink = cocktails[indexPath.row]
-        showDetailViewController(with: selectedDrink.idDrink)
-    }
-   
-    func showDetailViewController(with drinkId: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
-            detailVC.cocktailId = drinkId
-            navigationController?.pushViewController(detailVC, animated: true)
-        }
-    }
-}
-    
-extension SearchViewController: UISearchResultsUpdating {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch viewStyle {
-        case .big:
-            let width = (UIScreen.main.bounds.width - 24) / 2
-            let height = width / 2 * 3
-            return CGSize(width: width, height: height)
-        case .small:
-            let width = (UIScreen.main.bounds.width - 32) / 3
-            let height = width / 2 * 3
-            return CGSize(width: width, height: height)
-        }
-    }
-}
+   }
 
-extension SearchViewController: UICollectionViewDelegateFlowLayout {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else { return }
-                filterContentForSearchText(searchText)
-                fetchCocktails(for: searchText)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-}
-
-enum listViewStyle {
-    case big
-    case small
-}
-
-
-
-
+   extension SearchViewController: UISearchResultsUpdating {
+       func updateSearchResults(for searchController: UISearchController) {
+           guard let searchText = searchController.searchBar.text else { return }
+           viewModel.filterCocktailsForSearchText(searchText)
+           fetchCocktails(for: searchText)
+       }
+   }

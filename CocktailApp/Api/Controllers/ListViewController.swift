@@ -10,7 +10,7 @@ import UIKit
 class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private var viewModel: ListViewModel!
-    private var listViewStyle: listViewStyle = .small
+    private var listViewStyle: viewStyle = .small
     var selectedCategory: Category?
     
     override func viewDidLoad() {
