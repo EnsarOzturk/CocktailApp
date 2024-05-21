@@ -17,7 +17,6 @@
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [SDWebImage](https://github.com/SDWebImage/SDWebImage)
 
-#
 
 ## 👤 About Author
 Ensar Öztürk, [ozturkkensar@gmail.com](mailto:ozturkkensar@gmail.com)
