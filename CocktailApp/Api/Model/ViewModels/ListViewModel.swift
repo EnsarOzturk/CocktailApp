@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class ListViewModel {
     private let networkManager: NetworkManager
     private var drinks: [Drink] = []

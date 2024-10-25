@@ -14,16 +14,16 @@ class SearchViewModel {
     var searchText: String = ""
     var viewStyle: ListViewStyle = .small
        
-       init(networkManager: NetworkManager) {
-           self.networkManager = networkManager
-       }
-            
-    func fetchCocktails(completion: @escaping (Result<Void, Error>) -> Void) {
-        let endpoint = SearchEndpointItem.cocktailName(name: searchText)
+    init(networkManager: NetworkManager) {
+        self.networkManager = networkManager
+    }
+    
+    func fetchCocktails(searchQuery: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        let endpoint = searchQuery.isEmpty ? SearchEndpointItem.popularCocktails : SearchEndpointItem.cocktailName(name: searchQuery)
         networkManager.request(type: SearchResponse.self, item: endpoint) { [weak self] result in
             switch result {
             case .success(let response):
-                let drinks = response.drinks ?? []
+                let drinks = response.drinks
                 self?.cocktails = drinks
                 completion(.success(()))
             case .failure(let error):

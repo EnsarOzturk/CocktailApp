@@ -12,6 +12,7 @@ enum SearchEndpointItem: Endpoint {
     case cocktailName(name: String)
     case cocktailFirstLetter(letter: String)
     case cocktailCategory(category: String)
+    case popularCocktails
 
     var path: String {
         switch self {
@@ -21,6 +22,8 @@ enum SearchEndpointItem: Endpoint {
             return "/search.php?f=\(letter)"
         case .cocktailCategory(let category):
             return "/filter.php?c=\(category)"
+        case .popularCocktails:
+            return "/filter.php?c=Cocktail"
         }
     }
 }

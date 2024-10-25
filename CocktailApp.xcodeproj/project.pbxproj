@@ -48,6 +48,9 @@
 		FCB79E332BE3A5650078563F /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E322BE3A5650078563F /* RandomViewModel.swift */; };
 		FCC35FAE2BE7AAB500D56EAB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */; };
 		FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */; };
+		FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */; };
+		FCDE84972CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */; };
+		FCDE84992CCBBA3500DD39EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84982CCBBA3500DD39EF /* ContentView.swift */; };
 		FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */; };
 		FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */; };
 		FCDEBFE22B455CC90069976C /* RandomCocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */; };
@@ -96,6 +99,9 @@
 		FCB79E322BE3A5650078563F /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
 		FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyle.swift; sourceTree = "<group>"; };
+		FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		FCDE84982CCBBA3500DD39EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailViewController.swift; sourceTree = "<group>"; };
 		FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailEndpointItem.swift; sourceTree = "<group>"; };
 		FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailResponse.swift; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 				FC9861CD2B38C3E30035A224 /* Assets.xcassets */,
 				FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */,
 				FC9861D22B38C3E30035A224 /* Info.plist */,
+				FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */,
+				FCDE84982CCBBA3500DD39EF /* ContentView.swift */,
 			);
 			path = CocktailApp;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */,
 				FC9861D92B3987630035A224 /* SearchViewController.swift */,
 				FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */,
+				FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -380,11 +389,13 @@
 			files = (
 				FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */,
 				FC9861E82B39A05F0035A224 /* NetworkManager.swift in Sources */,
+				FCDE84972CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift in Sources */,
 				FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */,
 				FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */,
 				FC76B6A32B3D5D8B00092762 /* DetailsViewController.swift in Sources */,
 				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
+				FCDE84992CCBBA3500DD39EF /* ContentView.swift in Sources */,
 				FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */,
@@ -412,6 +423,7 @@
 				FC76B6A52B3D5E8500092762 /* CocktailDetailResponse.swift in Sources */,
 				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
+				FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

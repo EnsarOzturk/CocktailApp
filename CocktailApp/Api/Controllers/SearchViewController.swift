@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     var viewModel: SearchViewModel!
     let network = NetworkManager()
     private var viewStyle: ListViewStyle = .small
+    private var previousScrollOffset: CGFloat = 0.0
 
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -46,7 +47,7 @@ class SearchViewController: UIViewController {
     }
 
     private func fetchCocktails(for searchQuery: String) {
-        viewModel.fetchCocktails { [weak self] result in
+        viewModel.fetchCocktails(searchQuery: searchQuery) { [weak self] result in
             switch result {
             case .success:
                 DispatchQueue.main.async {

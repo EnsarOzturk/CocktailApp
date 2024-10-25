@@ -91,6 +91,3 @@ struct CocktailDetail: Codable {
         ]
         }
     }
-
-
-
