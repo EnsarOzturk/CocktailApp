@@ -22,7 +22,7 @@
                     <connections>
                         <segue destination="NSM-TK-bSN" kind="relationship" relationship="viewControllers" id="wTR-a3-00F"/>
                         <segue destination="dIm-2U-YUh" kind="relationship" relationship="viewControllers" id="WL0-v2-Ivd"/>
-                        <segue destination="k4c-it-gha" kind="relationship" relationship="viewControllers" id="xCE-Xf-TDQ"/>
+                        <segue destination="gE0-aw-2tB" kind="relationship" relationship="viewControllers" id="4PP-wU-llQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjJ-W8-rnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -279,16 +279,16 @@
             </objects>
             <point key="canvasLocation" x="868" y="-644"/>
         </scene>
-        <!--Random Cocktail View Controller-->
+        <!--View-->
         <scene sceneID="sS9-ly-dnF">
             <objects>
-                <viewController id="VdT-V2-b0D" customClass="RandomCocktailViewController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VdT-V2-b0D" customClass="View" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVs-3y-Foc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultCocktail" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-30-KdS">
-                                <rect key="frame" x="109" y="254" width="175" height="240"/>
+                                <rect key="frame" x="109" y="210" width="175" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="P7z-fe-UZj"/>
@@ -296,7 +296,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ht-Us-C9L">
-                                <rect key="frame" x="109" y="500" width="175" height="50"/>
+                                <rect key="frame" x="109" y="456" width="175" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="32g-dN-RMA"/>
                                     <constraint firstAttribute="height" constant="50" id="7Vv-FY-hEK"/>
@@ -306,7 +306,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCv-XG-pCa">
-                                <rect key="frame" x="109" y="630" width="175" height="60"/>
+                                <rect key="frame" x="109" y="586" width="175" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XQO-dA-8py"/>
@@ -318,9 +318,6 @@
                                 <state key="normal" title="Shuffle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="bringRandomButtonTapped:" destination="VdT-V2-b0D" eventType="touchUpInside" id="kfU-tv-lth"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sGz-hL-stW"/>
@@ -340,15 +337,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m4C-t4-H7W"/>
-                    <connections>
-                        <outlet property="button" destination="QCv-XG-pCa" id="KzR-AD-cSE"/>
-                        <outlet property="imageView" destination="qX4-30-KdS" id="j39-o5-JKz"/>
-                        <outlet property="nameLabel" destination="8ht-Us-C9L" id="W9b-fz-iQL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zle-oR-LYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="99"/>
+            <point key="canvasLocation" x="-331" y="134"/>
+        </scene>
+        <!--Luck-->
+        <scene sceneID="4dE-EC-Q2k">
+            <objects>
+                <viewController storyboardIdentifier="RandomCocktailViewController" id="gE0-aw-2tB" customClass="RandomCocktailViewController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C2Q-Pp-n1k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lj6-Gy-dhE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Luck" image="questionmark" catalog="system" id="Tlg-Yg-usE"/>
+                    <navigationItem key="navigationItem" id="7iG-iU-gEi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJc-qh-NMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1321" y="134"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="0UV-fO-7dq">
@@ -408,30 +417,11 @@
             </objects>
             <point key="canvasLocation" x="-140" y="-644"/>
         </scene>
-        <!--Luck-->
-        <scene sceneID="KtU-l9-UcO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k4c-it-gha" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Luck" image="questionmark.square.dashed" catalog="system" id="wkX-QE-Abi"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sSf-xn-Azx">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VdT-V2-b0D" kind="relationship" relationship="rootViewController" id="sDY-wr-A6B"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeE-4Q-R1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-141" y="99"/>
-        </scene>
     </scenes>
     <resources>
         <image name="defaultCocktail" width="700" height="700"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="questionmark.square.dashed" catalog="system" width="128" height="114"/>
+        <image name="questionmark" catalog="system" width="94" height="128"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
