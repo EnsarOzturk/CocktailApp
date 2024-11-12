@@ -11,7 +11,7 @@ final class LaunchScreenViewController: UIViewController {
     }()
     
     var emitterLayer: CAEmitterLayer!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +30,7 @@ final class LaunchScreenViewController: UIViewController {
         // Görünümü başlat
         setupEmitter()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -62,7 +62,7 @@ final class LaunchScreenViewController: UIViewController {
     
     private func animateGlass() {
         // Bardak görünümünü döndür
-        UIView.animate(withDuration: 1.0, delay: 0, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0, options: [.curveEaseInOut], animations: {
             self.glassImageView.transform = CGAffineTransform(rotationAngle: .pi)
         }) { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() - 1) {
@@ -77,7 +77,7 @@ final class LaunchScreenViewController: UIViewController {
     }
     
     private func animateParticles() {
-        let duration: TimeInterval = 1.5
+        let duration: TimeInterval = 1
         let moveDown = CABasicAnimation(keyPath: "emitterPosition.y")
         moveDown.fromValue = view.bounds.height / 2 + 50
         moveDown.toValue = view.bounds.height + 50
@@ -93,12 +93,15 @@ final class LaunchScreenViewController: UIViewController {
     }
     
     private func showMainScreen() {
-        // Animasyon sonrası ana ekran geçişi
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
-            tabBarController.modalTransitionStyle = .crossDissolve
-            tabBarController.modalPresentationStyle = .fullScreen
-            self.present(tabBarController, animated: true, completion: nil)
+            print("Geçiş Başladı") // Log ekle
+            
+            // Create TabBarController programmatically
+            let tabBarController = TabBarController() // This is your custom UITabBarController class
+            
+            // Set TabBarController as the new root view controller
+            if let window = self.view.window {
+                window.rootViewController = tabBarController
+                window.makeKeyAndVisible()
         }
     }
 }

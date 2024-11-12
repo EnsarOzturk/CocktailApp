@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2D24BE2CE3A1C700C8DEE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */; };
+		FC2D24C02CE3A1E000C8DEE5 /* Identifier+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */; };
 		FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */; };
 		FC4ADEE52BA474EF009429C7 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */; };
 		FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B68C2B3A0E3100092762 /* ListCell.swift */; };
@@ -49,8 +51,6 @@
 		FCC35FAE2BE7AAB500D56EAB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */; };
 		FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */; };
 		FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */; };
-		FCDE84972CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */; };
-		FCDE84992CCBBA3500DD39EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84982CCBBA3500DD39EF /* ContentView.swift */; };
 		FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */; };
 		FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */; };
 		FCDEBFE22B455CC90069976C /* RandomCocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */; };
@@ -58,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Identifier+Extension.swift"; sourceTree = "<group>"; };
 		FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		FC76B68C2B3A0E3100092762 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
@@ -100,8 +102,6 @@
 		FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyle.swift; sourceTree = "<group>"; };
 		FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewControllerRepresentable.swift; sourceTree = "<group>"; };
-		FCDE84982CCBBA3500DD39EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailViewController.swift; sourceTree = "<group>"; };
 		FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailEndpointItem.swift; sourceTree = "<group>"; };
 		FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailResponse.swift; sourceTree = "<group>"; };
@@ -191,8 +191,7 @@
 				FC9861CD2B38C3E30035A224 /* Assets.xcassets */,
 				FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */,
 				FC9861D22B38C3E30035A224 /* Info.plist */,
-				FCDE84962CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift */,
-				FCDE84982CCBBA3500DD39EF /* ContentView.swift */,
+				FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */,
 			);
 			path = CocktailApp;
 			sourceTree = "<group>";
@@ -260,6 +259,7 @@
 				FC9861F92B39A8630035A224 /* UIImage+Extension.swift */,
 				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
 				FC76B6952B3C248800092762 /* UIImageView+Extension.swift */,
+				FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,13 +389,11 @@
 			files = (
 				FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */,
 				FC9861E82B39A05F0035A224 /* NetworkManager.swift in Sources */,
-				FCDE84972CCBB9BC00DD39EF /* LaunchScreenViewControllerRepresentable.swift in Sources */,
 				FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */,
 				FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */,
 				FC76B6A32B3D5D8B00092762 /* DetailsViewController.swift in Sources */,
 				FC9861E52B399FB70035A224 /* ListResponse.swift in Sources */,
 				FC9861DC2B398EF00035A224 /* CategoryViewController.swift in Sources */,
-				FCDE84992CCBBA3500DD39EF /* ContentView.swift in Sources */,
 				FC76B6A72B3D60B600092762 /* DetailEndpointItem.swift in Sources */,
 				FC9861C52B38C3E10035A224 /* AppDelegate.swift in Sources */,
 				FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */,
@@ -421,9 +419,11 @@
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC76B6A52B3D5E8500092762 /* CocktailDetailResponse.swift in Sources */,
+				FC2D24BE2CE3A1C700C8DEE5 /* TabBarController.swift in Sources */,
 				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
 				FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */,
+				FC2D24C02CE3A1E000C8DEE5 /* Identifier+Extension.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
