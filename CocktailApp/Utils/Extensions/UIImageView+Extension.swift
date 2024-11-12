@@ -1,9 +1,3 @@
-//
-//  UIImageView+Extension.swift
-//  CocktailApp
-//
-//  Created by Ensar on 27.12.2023.
-//
 
 import Foundation
 import SDWebImage

@@ -1,3 +1,4 @@
+
 import UIKit
 
 final class LaunchScreenViewController: UIViewController {
@@ -62,7 +63,7 @@ final class LaunchScreenViewController: UIViewController {
     
     private func animateGlass() {
         // Bardak görünümünü döndür
-        UIView.animate(withDuration: 1.0, delay: 0, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0, options: [.curveEaseInOut], animations: {
             self.glassImageView.transform = CGAffineTransform(rotationAngle: .pi)
         }) { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() - 1) {
@@ -77,7 +78,7 @@ final class LaunchScreenViewController: UIViewController {
     }
     
     private func animateParticles() {
-        let duration: TimeInterval = 1.5
+        let duration: TimeInterval = 1
         let moveDown = CABasicAnimation(keyPath: "emitterPosition.y")
         moveDown.fromValue = view.bounds.height / 2 + 50
         moveDown.toValue = view.bounds.height + 50

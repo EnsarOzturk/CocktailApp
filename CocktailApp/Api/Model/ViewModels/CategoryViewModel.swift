@@ -1,44 +1,52 @@
-//
-//  CategoryViewModel.swift
-//  CocktailApp
-//
-//  Created by Ensar on 14.03.2024.
-//
 
 import Foundation
+import Alamofire
 
-class CategoryViewModel {
+protocol CategoryViewModelProtocol: AnyObject {
+    var categories: [Category] { get }
+    var didUpdateCategories: ((Result<Void, NetworkError>) -> Void)? { get set }
+    
+    func fetchCategories()
+    func getCategory(at index: Int) -> Category?
+    func numberOfCategories() -> Int
+}
+
+final class CategoryViewModel: CategoryViewModelProtocol {
     private let networkManager: NetworkManager
-    private var categories: [Category] = []
+    private(set) var categories: [Category] = []
+    
+    var didUpdateCategories: ((Result<Void, NetworkError>) -> Void)?
     
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
     
-    func fetchCategories(completion: @escaping (Result<[Category], NetworkError>) -> Void) {
-        networkManager.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { result in
+    func fetchCategories() {
+        networkManager.request(type: CategoryResponse.self, item: CategoryEndpointItem()) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
-                if let categories = response.drinks {
-                    self.categories = categories
-                    completion(.success(categories))
+                if let fetchedCategories = response.drinks {
+                    self.categories = fetchedCategories
+                    self.didUpdateCategories?(.success(()))
                 } else {
-                    completion(.failure(.noData))
+                    self.didUpdateCategories?(.failure(.noData))
                 }
-            case .failure(let error):
-                completion(.failure(NetworkError.requestFailed))
+            case .failure:
+                self.didUpdateCategories?(.failure(.requestFailed))
             }
         }
     }
     
     func getCategory(at index: Int) -> Category? {
-           guard index >= 0, index < categories.count else {
-               return nil
-           }
-           return categories[index]
+        guard index >= 0, index < categories.count else {
+            return nil
+        }
+        return categories[index]
     }
     
     func numberOfCategories() -> Int {
-            return categories.count
+        return categories.count
     }
 }
+

@@ -1,151 +1,128 @@
-//
-//  ListViewController.swift
-//  CocktailApp
-//
-//  Created by Ensar on 25.12.2023.
-//
 
 import UIKit
 
-class ListViewController: UIViewController {
+final class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    private var viewModel: ListViewModel!
-    private var listViewStyle: viewStyle = .small
-    var selectedCategory: Category?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var viewModel: ListViewModelProtocol!
+        private var listViewStyle: viewStyle = .small
+        var selectedCategory: Category?
         
-        setupCollectionView()
-        viewModel = ListViewModel(networkManager: NetworkManager())
-        viewModel.selectedCategory = selectedCategory
-
-        viewModel.fetchDrinks { [weak self] result in
-                    guard let self = self else { return }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            setupCollectionView()
+            setupBindings()
+            
+            viewModel.selectedCategory = selectedCategory
+            viewModel.fetchDrinks()
+            
+            navigationTitleAttributes()
+            setupNavigation()
+        }
+        
+        private func setupBindings() {
+            viewModel.didUpdateDrinks = { [weak self] result in
+                DispatchQueue.main.async {
                     switch result {
                     case .success:
-                        DispatchQueue.main.async {
-                            self.collectionView.reloadData()
-                        }
+                        self?.collectionView.reloadData()
                     case .failure(let error):
                         print("Error fetching drinks: \(error)")
+                        // Handle the error, e.g., show an alert
                     }
                 }
+            }
+        }
         
-        navigationTitleAttributes()
-        setupNavigation()
-    }
-    
-    private func setupCollectionView() {
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
-        collectionView.register(UINib(nibName: "BigCardCell", bundle: nil), forCellWithReuseIdentifier: BigCardCell.identifier)
-        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-        collectionView.backgroundColor = UIColor.white
-        collectionView.indicatorStyle = .default
-        collectionView.showsVerticalScrollIndicator = false
-    }
-    
-    private func setupNavigation() {
-        title = selectedCategory?.strCategory
+        private func setupCollectionView() {
+            collectionView.dataSource = self
+            collectionView.delegate = self
+            collectionView.register(UINib(nibName: "ListCell", bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
+            collectionView.register(UINib(nibName: "BigCardCell", bundle: nil), forCellWithReuseIdentifier: BigCardCell.identifier)
+            collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+            collectionView.backgroundColor = .white
+            collectionView.showsVerticalScrollIndicator = false
+        }
+        
+        private func setupNavigation() {
+            title = selectedCategory?.strCategory
             let viewStyleButton = UIBarButtonItem(image: UIImage(named: "BigCard"), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
             navigationItem.rightBarButtonItem = viewStyleButton
             navigationController?.navigationBar.tintColor = .black
-            view.backgroundColor = UIColor.white
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = false
-    }
-    
-    private func navigationTitleAttributes() {
-        if let titleAttributes = navigationController?.navigationBar.largeTitleTextAttributes {
-            var updatedAttributes = titleAttributes
-            updatedAttributes[.foregroundColor] = UIColor.black
-            navigationController?.navigationBar.largeTitleTextAttributes = updatedAttributes
-        } else {
+        }
+        
+        private func navigationTitleAttributes() {
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         }
-    }
-
-    @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
-        listViewStyle = listViewStyle == .small ? .big : .small
-           collectionView.reloadData()
-           if listViewStyle == .small {
-               sender.image = UIImage(named: "BigCard")
-               sender.tintColor = UIColor.black
-           } else {
-               sender.image = UIImage(named: "SmallCard")
-               sender.tintColor = UIColor.black
-           }
-    }
-}
-
-extension ListViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfDrinks()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let drink = viewModel.getDrink(at: indexPath.row) else {
-            return UICollectionViewCell()
+        
+        @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {
+            listViewStyle = listViewStyle == .small ? .big : .small
+            collectionView.reloadData()
+            
+            let buttonImage = listViewStyle == .small ? "BigCard" : "SmallCard"
+            sender.image = UIImage(named: buttonImage)
         }
-        switch listViewStyle {
-        case .small:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
-            cell.configure(drink: drink)
-            return cell
-        case .big:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigCardCell", for: indexPath) as! BigCardCell
-            cell.configure(drink: drink)
-            return cell
+        
+        // Inject view model (e.g., in app setup or via a coordinator)
+        func configure(viewModel: ListViewModelProtocol) {
+            self.viewModel = viewModel
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-}
 
-extension ListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let selectedDrink = viewModel.getDrink(at: indexPath.row) else {
-                return
+    extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return viewModel.numberOfDrinks()
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let drink = viewModel.getDrink(at: indexPath.row) else {
+                return UICollectionViewCell()
             }
-        if let drinkId = selectedDrink.idDrink {
-                showDetailViewController(with: drinkId)
+            
+            switch listViewStyle {
+            case .small:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
+                cell.configure(drink: drink)
+                return cell
+            case .big:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigCardCell", for: indexPath) as! BigCardCell
+                cell.configure(drink: drink)
+                return cell
             }
-}
-    
-    func showDetailViewController(with drinkId: String) {
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           
-           if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
-               detailVC.cocktailId = drinkId
-               navigationController?.pushViewController(detailVC, animated: true)
-           } else {
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            guard let selectedDrink = viewModel.getDrink(at: indexPath.row) else { return }
+            showDetailViewController(with: selectedDrink.idDrink ?? "")
+        }
+        
+        func showDetailViewController(with drinkId: String) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+            detailVC.cocktailId = drinkId
+            navigationController?.pushViewController(detailVC, animated: true)
         }
     }
-}
 
-extension ListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch listViewStyle {
-        case .small:
-            let width = (UIScreen.main.bounds.width - 32) / 3
-            let height = width / 2 * 3
-            return CGSize(width: width, height: height)
-        case .big:
-            let width = (UIScreen.main.bounds.width - 24) / 2
-            let height = width / 2 * 3
+    extension ListViewController: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width: CGFloat
+            let height: CGFloat
+            
+            switch listViewStyle {
+            case .small:
+                width = (UIScreen.main.bounds.width - 32) / 3
+                height = width / 2 * 3
+            case .big:
+                width = (UIScreen.main.bounds.width - 24) / 2
+                height = width / 2 * 3
+            }
+            
             return CGSize(width: width, height: height)
         }
     }
-}
 
-enum viewStyle {
-    case small
-    case big
-}
+    enum viewStyle {
+        case small
+        case big
+    }

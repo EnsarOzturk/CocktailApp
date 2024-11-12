@@ -1,9 +1,3 @@
-//
-//  RandomCocktailEndpointItem.swift
-//  CocktailApp
-//
-//  Created by Ensar on 3.01.2024.
-//
 
 import Foundation
 import Alamofire

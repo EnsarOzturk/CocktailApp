@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,14 +18,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-UJ-y97">
-                        <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="200"/>
                     </imageView>
                     <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-2i-EPR">
                         <rect key="frame" x="0.0" y="200" width="157" height="25"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqD-Xb-6Kb">
                                 <rect key="frame" x="6" y="0.0" width="145" height="25"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,11 +43,11 @@
             </view>
             <viewLayoutGuide key="safeArea" id="9uU-d9-KwM"/>
             <constraints>
+                <constraint firstItem="bQ6-2i-EPR" firstAttribute="top" secondItem="g1h-UJ-y97" secondAttribute="bottom" id="0pZ-gv-VFZ"/>
                 <constraint firstAttribute="trailing" secondItem="bQ6-2i-EPR" secondAttribute="trailing" id="2t2-3P-iOg"/>
                 <constraint firstItem="bQ6-2i-EPR" firstAttribute="leading" secondItem="WKk-D8-n91" secondAttribute="leading" id="XXF-3B-hH8"/>
                 <constraint firstItem="g1h-UJ-y97" firstAttribute="leading" secondItem="WKk-D8-n91" secondAttribute="leading" id="Y29-Wf-hHv"/>
                 <constraint firstItem="g1h-UJ-y97" firstAttribute="top" secondItem="WKk-D8-n91" secondAttribute="top" id="fST-LJ-4OY"/>
-                <constraint firstAttribute="bottom" secondItem="g1h-UJ-y97" secondAttribute="bottom" id="l67-RJ-A2Z"/>
                 <constraint firstAttribute="bottom" secondItem="bQ6-2i-EPR" secondAttribute="bottom" id="mhV-qJ-zZy"/>
                 <constraint firstAttribute="trailing" secondItem="g1h-UJ-y97" secondAttribute="trailing" id="w5F-u7-bqG"/>
             </constraints>

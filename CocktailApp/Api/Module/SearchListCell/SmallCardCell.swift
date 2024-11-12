@@ -1,36 +1,32 @@
-//
-//  SmallCardCell.swift
-//  CocktailApp
-//
-//  Created by Ensar on 27.12.2023.
-//
 
 import UIKit
 import SDWebImage
 
-class SmallCardCell: UICollectionViewCell {
+final class SmallCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    static let identifier = "SmallCardCell"
     
     func configure(with cocktail: Cocktail) {
         imageView.setImage(with: cocktail.strDrinkThumb)
         label.text = cocktail.strDrink
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
-        // label
+        updateUI()
+    }
+    
+    private func updateUI() {
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
+        label.backgroundColor = .white
+        view.backgroundColor = .white
+        // image
+        imageView.contentMode = .scaleAspectFill
         // cell
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 2.0
+        layer.borderWidth = 0.4
+        layer.borderColor = UIColor.systemGray4.cgColor
+        layer.cornerRadius = 3.0
     }
 }

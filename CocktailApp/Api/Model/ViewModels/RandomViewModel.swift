@@ -1,37 +1,43 @@
 
-//  RandomViewModel.swift
-//  CocktailApp
-//
-//  Created by Ensar on 2.05.2024.
-//
 import Foundation
-import Combine
+import Alamofire
 
-class RandomCocktailViewModel: ObservableObject {
+final class RandomCocktailViewModel {
     private let randomCocktailService: RandomCocktailService
-    @Published var randomCocktail: RandomCocktail? // SwiftUI'yi güncellemeyi sağlayan değişiklik
+    var randomCocktail: RandomCocktail?
 
     init(randomCocktailService: RandomCocktailService) {
         self.randomCocktailService = randomCocktailService
     }
 
-    func fetchRandomCocktail(completion: ((Result<RandomCocktail, Error>) -> Void)? = nil) {
-        randomCocktailService.getRandomCocktail { [weak self] result in
+    // Fetch a random cocktail from the service
+    func fetchRandomCocktail(completion: @escaping (Result<RandomCocktail, NetworkError>) -> Void) {
+        randomCocktailService.getRandomCocktail { result in
             switch result {
             case .success(let randomCocktailResponse):
+                // Ensure we have a drink
                 if let randomCocktail = randomCocktailResponse.drinks.first {
-                    DispatchQueue.main.async {
-                        self?.randomCocktail = randomCocktail
-                        completion?(.success(randomCocktail))
-                    }
+                    self.randomCocktail = randomCocktail
+                    completion(.success(randomCocktail))
                 } else {
-                    completion?(.failure(NetworkError.noData))
+                    completion(.failure(.noData)) // No data found
                 }
             case .failure(let error):
-                completion?(.failure(error))
+                // Handle Alamofire errors
+                if let afError = error as? AFError {
+                    switch afError {
+                    case .invalidURL:
+                        completion(.failure(.invalidParameters))
+                    case .responseSerializationFailed:
+                        completion(.failure(.requestFailed))
+                    default:
+                        completion(.failure(.requestFailed))
+                    }
+                } else {
+                    completion(.failure(.requestFailed)) // Generic error
+                }
             }
         }
     }
 }
-
 

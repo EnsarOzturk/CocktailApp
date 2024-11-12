@@ -1,18 +1,16 @@
-//
-//  SearchListCell.swift
-//  CocktailApp
-//
-//  Created by Ensar on 26.12.2023.
-//
 
 import UIKit
 import SDWebImage
 
-class SearchListCell: UICollectionViewCell {
+final class SearchListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    static let identifier = "SearchListCell"
+    
+    struct Constant {
+        static let borderWidth: Double = 0.4
+        static let cornerRadius: Double = 3.0
+    }
     
     func configure(with cocktail: Cocktail) {
         imageView.setImage(with: cocktail.strDrinkThumb)
@@ -21,12 +19,19 @@ class SearchListCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        // label
+        updateUI()
+    }
+    
+    private func updateUI() {
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
+        label.backgroundColor = .white
+        view.backgroundColor = .white
+        // image
+        imageView.contentMode = .scaleAspectFill
         //cell
-        layer.borderWidth = 0.3
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 2.0
+        layer.borderWidth = Constant.borderWidth
+        layer.cornerRadius = Constant.cornerRadius
+        layer.borderColor = UIColor.systemGray4.cgColor
     }
 }

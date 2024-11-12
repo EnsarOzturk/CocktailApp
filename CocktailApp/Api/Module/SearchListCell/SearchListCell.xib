@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UnL-Ra-7Gh">
-                        <rect key="frame" x="0.0" y="0.0" width="157" height="225"/>
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="195"/>
                     </imageView>
                     <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPQ-bv-b2F">
                         <rect key="frame" x="0.0" y="195" width="157" height="30"/>
@@ -43,13 +43,13 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="mPQ-bv-b2F" firstAttribute="top" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" id="49v-i1-hLw"/>
                 <constraint firstAttribute="trailing" secondItem="UnL-Ra-7Gh" secondAttribute="trailing" id="Eiv-JZ-rTe"/>
                 <constraint firstItem="UnL-Ra-7Gh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LwY-Xl-sG3"/>
                 <constraint firstAttribute="bottom" secondItem="mPQ-bv-b2F" secondAttribute="bottom" id="OkI-Ta-fb9"/>
                 <constraint firstAttribute="trailing" secondItem="mPQ-bv-b2F" secondAttribute="trailing" id="dkd-b6-K43"/>
                 <constraint firstItem="UnL-Ra-7Gh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hWu-5F-4oq"/>
                 <constraint firstItem="mPQ-bv-b2F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j7i-j5-8Na"/>
-                <constraint firstAttribute="bottom" secondItem="UnL-Ra-7Gh" secondAttribute="bottom" id="rEs-eb-18F"/>
             </constraints>
             <size key="customSize" width="157" height="225"/>
             <connections>

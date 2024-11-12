@@ -1,56 +1,61 @@
-//
-//  ListViewModel.swift
-//  CocktailApp
-//
-//  Created by Ensar on 15.03.2024.
-//
 
 import Foundation
+import Alamofire
 
-class ListViewModel {
+protocol ListViewModelProtocol: AnyObject {
+    var selectedCategory: Category? { get set }
+    var drinks: [Drink] { get }
+    var didUpdateDrinks: ((Result<Void, NetworkError>) -> Void)? { get set }
+    
+    func fetchDrinks()
+    func getDrink(at index: Int) -> Drink?
+    func numberOfDrinks() -> Int
+}
+
+final class ListViewModel: ListViewModelProtocol {
     private let networkManager: NetworkManager
-    private var drinks: [Drink] = []
+    private(set) var drinks: [Drink] = []
     var selectedCategory: Category?
+    
+    var didUpdateDrinks: ((Result<Void, NetworkError>) -> Void)?
     
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
     
-    func setSelectedCategory(_ category: Category) {
-            selectedCategory = category
-    }
-    
-    func fetchDrinks(completion: @escaping (Result<[Drink], NetworkError>) -> Void) {
+    func fetchDrinks() {
         guard let selectedCategory = selectedCategory,
               let originalCategory = selectedCategory.strCategory else {
+            didUpdateDrinks?(.failure(.invalidParameters))
             return
         }
         
         let endpoint = ListEndpointItem(category: originalCategory.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-        networkManager.request(type: ListResponse.self, item: endpoint) { result in
+        networkManager.request(type: ListResponse.self, item: endpoint) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
-                if let drinks = response.drinks {
-                    self.drinks = drinks
-                    completion(.success(drinks))
+                if let fetchedDrinks = response.drinks {
+                    self.drinks = fetchedDrinks
+                    self.didUpdateDrinks?(.success(()))
                 } else {
-                    completion(.failure(.noData))
+                    self.didUpdateDrinks?(.failure(.noData))
                 }
-            case .failure(let error):
-                completion(.failure(NetworkError.requestFailed))
-                endpoint.handle(error: error)
+            case .failure:
+                self.didUpdateDrinks?(.failure(.requestFailed))
             }
         }
-    }
-    
-    func numberOfDrinks() -> Int {
-            return drinks.count
     }
     
     func getDrink(at index: Int) -> Drink? {
         guard index >= 0, index < drinks.count else {
             return nil
         }
-            return drinks[index]
+        return drinks[index]
+    }
+    
+    func numberOfDrinks() -> Int {
+        return drinks.count
     }
 }
+

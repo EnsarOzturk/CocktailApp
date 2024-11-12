@@ -1,16 +1,9 @@
-//
-//  CategoryCell.swift
-//  CocktailApp
-//
-//  Created by Ensar on 25.12.2023.
-//
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
+final class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    static let identifier = "CategoryCell"
     
     func configure(category: Category) {
         // label
@@ -53,10 +46,14 @@ class CategoryCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        updateUI()
+    }
+    
+    private func updateUI() {
         // cell
-        layer.borderWidth = 0.3
+        layer.borderWidth = 0.2
         layer.borderColor = UIColor.systemGray5.cgColor
-        layer.cornerRadius = 4
+        layer.cornerRadius = 6
         layer.backgroundColor = UIColor.white.cgColor
     }
 }
