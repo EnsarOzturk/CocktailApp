@@ -12,19 +12,18 @@ class ListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    static let identifier = "ListCell"
   
     func configure(drink: Drink) {
         imageView.setImage(with: drink.strDrinkThumb)
         label.text = drink.strDrink
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
+        updateUI()
+    }
+    
+    private func updateUI() {
         // label
         label.textAlignment = .center
         label.textColor = .black

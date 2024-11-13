@@ -12,32 +12,38 @@ class BigCardCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    static let identifier = "BigCardCell"
+    
+    struct Constants {
+        static let labelFont: String = "Apple Symbols"
+        static let labelSize: Double = 20
+        static let borderWidth: Double = 0.5
+        static let cornerRadius: Double = 2.0
+        static let viewRadius: Double = 4
+    }
     
     func configure(drink: Drink) {
         imageView.setImage(with: drink.strDrinkThumb)
         label.text = drink.strDrink
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        updateUI()
+    }
+    
+    private func updateUI() {
         backgroundColor = UIColor.white
         // label
         label.textAlignment = .center
         label.textColor = .black
         label.backgroundColor = UIColor.white
-        label.font = UIFont(name: "Apple Symbols", size: 20)
+        label.font = UIFont(name: Constants.labelFont, size: Constants.labelSize)
         // view
-        view.layer.cornerRadius = 4
+        view.layer.cornerRadius = Constants.viewRadius
         view.backgroundColor = UIColor.white
         // cell
-        layer.borderWidth = 0.5
+        layer.borderWidth = Constants.borderWidth
         layer.borderColor = UIColor.systemGray5.cgColor
-        layer.cornerRadius = 2.0
+        layer.cornerRadius = Constants.cornerRadius
     }
 }

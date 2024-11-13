@@ -2,6 +2,26 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
+    
+    struct Constants {
+        static let storyBoard: String = "Main"
+        // viewControllerID
+        static let categoryVC: String = "CategoryViewController"
+        static let searchVC: String = "SearchViewController"
+        static let randomVC: String = "RandomCocktailViewController"
+        // title
+        static let categoryTitle: String = "Categories"
+        static let searchTitle: String = "Search"
+        static let randomTitle: String = "Random"
+        // image
+        static let categoryImage: String = "house"
+        static let searchImage: String = "magnifyingglass"
+        static let randomImage: String = "questionmark.app"
+        // tag
+        static let houseTag: Int = 0
+        static let searchTag: Int = 1
+        static let randomTag: Int = 2
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,25 +30,21 @@ final class TabBarController: UITabBarController {
     }
     
     private func initiateTabbarViewControllers() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        // TabBarItem bilgilerini tutan bir yapı
+        let storyBoard = UIStoryboard(name: Constants.storyBoard, bundle: nil)
+        // TabBarItem
         let tabbarItems: [(viewControllerID: String, viewControllerType: UIViewController.Type, title: String, imageName: String, tag: Int)] = [
-            ("CategoryViewController", CategoryViewController.self, "Categories", "house", 0),
-            ("SearchViewController", SearchViewController.self, "Search", "magnifyingglass", 1),
-            ("RandomCocktailViewController", RandomCocktailViewController.self, "Random", "questionmark.app", 2)
+            (Constants.categoryVC, CategoryViewController.self, Constants.categoryTitle, Constants.categoryImage, Constants.houseTag),
+            (Constants.searchVC, SearchViewController.self, Constants.searchTitle, Constants.searchImage, Constants.searchTag),
+            (Constants.randomVC, RandomCocktailViewController.self, Constants.randomTitle, Constants.randomImage, Constants.randomTag)
         ]
         
         var viewControllers: [UIViewController] = []
         
-        // Her bir tab için ilgili view controller'ı oluşturup düzenliyoruz
         for tabbarItem in tabbarItems {
             let viewController = storyBoard.instantiateViewController(withIdentifier: tabbarItem.viewControllerID)
             
             if let categoriesVC = viewController as? CategoryViewController {
                 let categoriesViewModel = CategoryViewModel(networkManager: NetworkManager())
-//                categoriesVC.configure(viewModel: categoriesViewModel)
-                print("CategoryViewController'a ViewModel atandı.")
             }
            
             let navigationController = UINavigationController(rootViewController: viewController)

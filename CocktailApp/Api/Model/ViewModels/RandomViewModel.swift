@@ -1,13 +1,8 @@
-//
-//  RandomViewModel.swift
-//  CocktailApp
-//
-//  Created by Ensar on 2.05.2024.
-//
 
 import Foundation
+import Alamofire
 
-class RandomCocktailViewModel {
+final class RandomCocktailViewModel {
     private let randomCocktailService: RandomCocktailService
     var randomCocktail: RandomCocktail?
 
@@ -15,18 +10,32 @@ class RandomCocktailViewModel {
         self.randomCocktailService = randomCocktailService
     }
 
-    func fetchRandomCocktail(completion: @escaping (Result<RandomCocktail, Error>) -> Void) {
+    // Fetch a random cocktail from the service
+    func fetchRandomCocktail(completion: @escaping (Result<RandomCocktail, NetworkError>) -> Void) {
         randomCocktailService.getRandomCocktail { result in
             switch result {
             case .success(let randomCocktailResponse):
+                // Ensure we have a drink
                 if let randomCocktail = randomCocktailResponse.drinks.first {
                     self.randomCocktail = randomCocktail
                     completion(.success(randomCocktail))
                 } else {
-                    completion(.failure(NetworkError.noData))
+                    completion(.failure(.noData)) // No data found
                 }
             case .failure(let error):
-                completion(.failure(NetworkError.requestFailed))
+                // Handle Alamofire errors
+                if let afError = error as? AFError {
+                    switch afError {
+                    case .invalidURL:
+                        completion(.failure(.invalidParameters))
+                    case .responseSerializationFailed:
+                        completion(.failure(.requestFailed))
+                    default:
+                        completion(.failure(.requestFailed))
+                    }
+                } else {
+                    completion(.failure(.requestFailed)) // Generic error
+                }
             }
         }
     }

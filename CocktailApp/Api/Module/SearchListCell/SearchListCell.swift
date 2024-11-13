@@ -12,7 +12,11 @@ class SearchListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var view: UIView!
-    static let identifier = "SearchListCell"
+    
+    struct Constants {
+        static let borderWidth: Double = 0.3
+        static let cornerRadius: Double = 2.0
+    }
     
     func configure(with cocktail: Cocktail) {
         imageView.setImage(with: cocktail.strDrinkThumb)
@@ -21,12 +25,16 @@ class SearchListCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        updateUI()
+    }
+    
+    private func updateUI() {
         // label
         label.textAlignment = .center
         label.textColor = .white
-        //cell
-        layer.borderWidth = 0.3
+        // cell
+        layer.borderWidth = Constants.borderWidth
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 2.0
+        layer.cornerRadius = Constants.cornerRadius
     }
 }
