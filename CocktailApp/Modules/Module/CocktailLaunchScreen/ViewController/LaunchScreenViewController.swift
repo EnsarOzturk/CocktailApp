@@ -3,10 +3,11 @@ import UIKit
 final class LaunchScreenViewController: UIViewController {
     
     struct Constants {
+        //constraint
         static let widthAnchor: Double = 100
         static let centerYAnchor: Double = -50
         static let heightAnchor: Double = 300
-        
+        //image
         static let imageNamed: String = "empty_glass"
         // Animations
         static let particleName: String = "particle"
@@ -14,6 +15,10 @@ final class LaunchScreenViewController: UIViewController {
         static let emitterheight: Double = 1
         static let emitterForKey: String = "moveDown"
         static let moveDownKeyPath: String = "emitterPosition.y"
+        //label
+        static let footerLabelText: String = "Product by Ensar Ozturk"
+        static let footerLabelFont: String = "Apple Symbols"
+        static let footerLabelSize: Double = 16
     }
     
     // Açılış ekranımda görüntülenecek bardak görüntüsü
@@ -28,8 +33,6 @@ final class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Görünüm arka planını ve resim görünümünü ekleme
         view.backgroundColor = .white
         view.addSubview(glassImageView)
         setupProductLabel()
@@ -40,7 +43,6 @@ final class LaunchScreenViewController: UIViewController {
             glassImageView.widthAnchor.constraint(equalToConstant: Constants.widthAnchor),
             glassImageView.heightAnchor.constraint(equalToConstant: Constants.heightAnchor)
         ])
-        
         // Görünümü başlat
         setupEmitter()
     }
@@ -51,10 +53,9 @@ final class LaunchScreenViewController: UIViewController {
     }
     
     private func setupProductLabel() {
-
         let footerLabel = UILabel()
-        footerLabel.text = "Product by Ensar Ozturk"
-        footerLabel.font = UIFont(name: "Apple Symbols", size: 16)
+        footerLabel.text = Constants.footerLabelText
+        footerLabel.font = UIFont(name: Constants.footerLabelText, size: Constants.footerLabelSize)
         footerLabel.textColor = .darkGray // Adjust the color as needed
         footerLabel.textAlignment = .center
         footerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -65,14 +66,12 @@ final class LaunchScreenViewController: UIViewController {
             footerLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
         ])
     }
-
     
     private func setupEmitter() {
         emitterLayer = CAEmitterLayer()
         emitterLayer.emitterPosition = CGPoint(x: view.bounds.midX, y: view.bounds.height / 2 + 50)
         emitterLayer.emitterSize = CGSize(width: Constants.emitterwidth, height: Constants.emitterheight)
         emitterLayer.emitterShape = .rectangle
-        
         // Parçacık özelliklerini yapılandır
         let particle = CAEmitterCell()
         particle.contents = UIImage(named: Constants.particleName)?.cgImage
@@ -86,7 +85,7 @@ final class LaunchScreenViewController: UIViewController {
         
         emitterLayer.emitterCells = [particle]
         view.layer.addSublayer(emitterLayer)
-        emitterLayer.birthRate = 0 // Başlangıçta hiçbir parçacık yayılmaz
+        emitterLayer.birthRate = 0 // Başlangıçta parçacık yayılmaz
     }
     
     private func animateGlass() {
@@ -123,9 +122,8 @@ final class LaunchScreenViewController: UIViewController {
     
     private func showMainScreen() {
         // Create TabBarController
-        let tabBarController = TabBarController() // This is your custom UITabBarController class
-            
-        // Set TabBarController as the new root view controller
+        let tabBarController = TabBarController()
+
         if let window = self.view.window {
             window.rootViewController = tabBarController
             window.makeKeyAndVisible()
