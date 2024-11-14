@@ -30,42 +30,95 @@ final class DetailsViewController: UIViewController {
     }
     
     private func setupUI() {
+        // Title Label Styling
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 24)
+        titleLabel.textColor = UIColor(named: "primaryTextColor") ?? .darkGray
+        titleLabel.backgroundColor = .clear
         
-        titleLabel.font = UIFont(name: "Arial", size: 25)
-        titleLabel.backgroundColor = .systemBackground
-        titleView.layer.borderWidth = 0.2
-        titleView.backgroundColor = .systemBackground
-        titleView.layer.borderColor = UIColor.lightGray.cgColor
-        titleView.layer.cornerRadius = 4.0
+        // Title View Styling
+        titleView.layer.borderWidth = 0.5
+        titleView.backgroundColor = UIColor(named: "secondaryBackgroundColor") ?? .white
+        titleView.layer.borderColor = UIColor(named: "borderColor")?.cgColor ?? UIColor.lightGray.cgColor
+        titleView.layer.cornerRadius = 6.0
         
-        cocktailInfoStackView.spacing = 2.0
-        cocktailInfoStackView.backgroundColor = .systemBackground
-        cocktailInfoStackView.layer.cornerRadius = 4.0
-        cocktailInfoStackView.layer.borderColor = UIColor.lightGray.cgColor
-        cocktailInfoStackView.layer.borderWidth = 0.2
+        // Cocktail Info StackView Styling
+        cocktailInfoStackView.spacing = 8.0
+        cocktailInfoStackView.backgroundColor = UIColor(named: "secondaryBackgroundColor") ?? .white
+      
+        // Image View Styling
+        imageView.layer.cornerRadius = 8.0
+        imageView.clipsToBounds = true
+        imageView.layer.borderColor = UIColor(named: "borderColor")?.cgColor ?? UIColor.clear.cgColor
+        imageView.layer.borderWidth = 0.3
         
-        imageView.layer.cornerRadius = 4.0
-        imageContentView.layer.borderWidth = 0.2
-        imageContentView.layer.borderColor = UIColor.lightGray.cgColor
-        imageContentView.backgroundColor = .systemBackground
+        // Image Content View Styling
+        imageContentView.layer.cornerRadius = 6.0
+        imageContentView.layer.borderWidth = 0.5
+        imageContentView.layer.borderColor = UIColor(named: "borderColor")?.cgColor ?? UIColor.lightGray.cgColor
+        imageContentView.backgroundColor = UIColor(named: "secondaryBackgroundColor") ?? .white
         
+        // Contents StackView Styling
         contentsStackView.distribution = .fill
-        contentsStackView.backgroundColor = .systemBackground
-        contentsStackView.layer.borderWidth = 0.2
-        contentsStackView.layer.borderColor = UIColor.lightGray.cgColor
-        contentsStackView.layer.cornerRadius = 4.0
+        contentsStackView.backgroundColor = UIColor(named: "secondaryBackgroundColor") ?? .white
+        contentsStackView.layer.borderWidth = 0.5
+        contentsStackView.layer.borderColor = UIColor(named: "borderColor")?.cgColor ?? UIColor.lightGray.cgColor
+        contentsStackView.layer.cornerRadius = 6.0
         
+        // Recipes StackView Styling
         recipesStackView.alignment = .fill
         recipesStackView.distribution = .fill
-        recipesStackView.spacing = 2.0
-        recipesStackView.backgroundColor = .systemBackground
-        recipesStackView.layer.borderWidth = 0.2
-        recipesStackView.layer.borderColor = UIColor.lightGray.cgColor
-        recipesStackView.layer.cornerRadius = 4.0
+        recipesStackView.spacing = 8.0
+        recipesStackView.backgroundColor = UIColor(named: "secondaryBackgroundColor") ?? .white
+        recipesStackView.layer.borderWidth = 0.5
+        recipesStackView.layer.borderColor = UIColor(named: "borderColor")?.cgColor ?? UIColor.lightGray.cgColor
+        recipesStackView.layer.cornerRadius = 6.0
         
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.tintColor = .black
+        // Background and Navigation Bar
+        view.backgroundColor = UIColor(named: "primaryBackgroundColor") ?? .systemBackground
+        navigationController?.navigationBar.tintColor = UIColor(named: "accentColor") ?? .black
     }
+
+    
+//    private func setupUI() {
+//        titleLabel.font = UIFont(name: "Arial", size: 25)
+//        titleLabel.backgroundColor = .systemBackground
+//        
+//        titleView.layer.borderWidth = 0.2
+//        titleView.backgroundColor = .systemBackground
+//        titleView.layer.borderColor = UIColor.lightGray.cgColor
+//        titleView.layer.cornerRadius = 4.0
+//        
+//        
+//        cocktailInfoStackView.spacing = 2.0
+//        cocktailInfoStackView.backgroundColor = .systemBackground
+//        cocktailInfoStackView.layer.cornerRadius = 4.0
+//        cocktailInfoStackView.layer.borderColor = UIColor.lightGray.cgColor
+//        cocktailInfoStackView.layer.borderWidth = 0.2
+//        
+//        imageView.layer.cornerRadius = 4.0
+//       
+//        imageContentView.layer.cornerRadius = 4.0
+//        imageContentView.layer.borderWidth = 0.2
+//        imageContentView.layer.borderColor = UIColor.lightGray.cgColor
+//        imageContentView.backgroundColor = .systemBackground
+//        
+//        contentsStackView.distribution = .fill
+//        contentsStackView.backgroundColor = .systemBackground
+//        contentsStackView.layer.borderWidth = 0.2
+//        contentsStackView.layer.borderColor = UIColor.lightGray.cgColor
+//        contentsStackView.layer.cornerRadius = 4.0
+//        
+//        recipesStackView.alignment = .fill
+//        recipesStackView.distribution = .fill
+//        recipesStackView.spacing = 2.0
+//        recipesStackView.backgroundColor = .systemBackground
+//        recipesStackView.layer.borderWidth = 0.2
+//        recipesStackView.layer.borderColor = UIColor.lightGray.cgColor
+//        recipesStackView.layer.cornerRadius = 4.0
+//        
+//        view.backgroundColor = .systemBackground
+//        navigationController?.navigationBar.tintColor = .black
+//    }
     
         
     override func viewWillAppear(_ animated: Bool) {
