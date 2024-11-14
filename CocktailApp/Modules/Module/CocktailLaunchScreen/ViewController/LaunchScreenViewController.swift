@@ -32,7 +32,7 @@ final class LaunchScreenViewController: UIViewController {
         // Görünüm arka planını ve resim görünümünü ekleme
         view.backgroundColor = .white
         view.addSubview(glassImageView)
-        
+        setupProductLabel()
         // Bardak görünümü için kısıtlamalar
         NSLayoutConstraint.activate([
             glassImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -49,6 +49,23 @@ final class LaunchScreenViewController: UIViewController {
         super.viewDidAppear(animated)
         animateGlass()
     }
+    
+    private func setupProductLabel() {
+
+        let footerLabel = UILabel()
+        footerLabel.text = "Product by Ensar Ozturk"
+        footerLabel.font = UIFont(name: "Apple Symbols", size: 16)
+        footerLabel.textColor = .darkGray // Adjust the color as needed
+        footerLabel.textAlignment = .center
+        footerLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(footerLabel)
+        
+        NSLayoutConstraint.activate([
+            footerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            footerLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+        ])
+    }
+
     
     private func setupEmitter() {
         emitterLayer = CAEmitterLayer()
