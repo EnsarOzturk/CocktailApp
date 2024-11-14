@@ -9,20 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Tzx-TP-8PG">
-            <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="chj-gT-Aqf" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yjR-77-C84">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JjJ-W8-rnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1114" y="-644"/>
-        </scene>
         <!--Category View Controller-->
         <scene sceneID="0Bw-gI-7fg">
             <objects>
@@ -59,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4b-63-cGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-1413"/>
+            <point key="canvasLocation" x="-164" y="-1318"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -104,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-1413"/>
+            <point key="canvasLocation" x="1772" y="-1318"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="83e-B4-BSw">
@@ -190,11 +176,11 @@
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="nvW-BV-JyJ" secondAttribute="bottom" id="47F-Hl-GQE"/>
                                     <constraint firstItem="nvW-BV-JyJ" firstAttribute="width" secondItem="ryo-Ju-P0R" secondAttribute="width" id="FxT-XK-vst"/>
@@ -218,15 +204,17 @@
                     <connections>
                         <outlet property="cocktailInfoStackView" destination="ouz-7u-OXu" id="jRR-bn-F0g"/>
                         <outlet property="contentsStackView" destination="I6p-uZ-fGy" id="nZp-RE-R3v"/>
+                        <outlet property="imageContentView" destination="tbb-PK-Nqi" id="wut-81-BSr"/>
                         <outlet property="imageView" destination="VEe-Ss-WEw" id="oWn-EX-SwI"/>
                         <outlet property="recipeLabel" destination="fdS-7o-HV9" id="Jyg-wp-m19"/>
                         <outlet property="recipesStackView" destination="PDU-TI-fPJ" id="p8I-jA-lIY"/>
                         <outlet property="titleLabel" destination="b1b-qH-7a3" id="Iak-40-04V"/>
+                        <outlet property="titleView" destination="umH-qY-qYH" id="Q1Q-bJ-LkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVj-aV-wPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717" y="-1318"/>
+            <point key="canvasLocation" x="3779" y="-1318"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="tCw-wf-Ekm">
@@ -271,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnS-Ri-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-644"/>
+            <point key="canvasLocation" x="772" y="-1318"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="0UV-fO-7dq">
@@ -286,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lK-sO-wIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1119" y="-1453"/>
+            <point key="canvasLocation" x="-1135" y="-1318"/>
         </scene>
         <!--Random Cocktail View Controller-->
         <scene sceneID="Jjq-R5-Hgd">
@@ -346,15 +334,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udw-YF-Bwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="134"/>
+            <point key="canvasLocation" x="2746" y="-1318"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

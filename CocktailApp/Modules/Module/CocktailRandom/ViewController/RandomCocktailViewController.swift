@@ -7,20 +7,20 @@ struct RandomConstants {
     static let buttonTitle: String = "Shuffle"
     static let buttonBorderWidth: Double = 0.6
     //image
-    static let defaultCocktail: String = "defaultCocktail"
+    static let defaultCocktail: String = "MeasureBackground"
     static let imageRadius: Double = 16
     static let imageShadowRadius: Double = 5
     static let imageShadowWidth: Double = 0
     static let imageShadowHeight: Double = 4
     static let imageShadowOpacity: Double = 0.3
     static let imageAlpha: Double = 0.0
-    static let imageBorderWidth: Double = 0.1
+    static let imageBorderWidth: Double = 0.5
     //label
     static let labelFont: String = "HelveticaNeue-Bold"
-    static let labeltext: String = "Elderflower Caipirinha"
+    static let labeltext: String = ""
     static let labelSize: Double = 24
     static let labelRadius: Double = 10
-    static let labelColorAlpha: Double = 0.5
+    static let labelColorAlpha: Double = 0.6
     static let labelAlpha: Double = 0.0
     //view
     static let viewColor: String = "darkBackground"
@@ -96,6 +96,9 @@ final class RandomCocktailViewController: UIViewController {
     
     private func updateView() {
         view.backgroundColor = UIColor(named: RandomConstants.viewColor)
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.tintColor = .white
+        title = "Random Cocktail"
     }
         
     // Configure tab bar appearance when view appears

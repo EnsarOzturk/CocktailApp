@@ -10,7 +10,9 @@ import SDWebImage
 
 final class DetailsViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var titleView: UIView!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageContentView: UIView!
     @IBOutlet var cocktailInfoStackView: UIStackView!
     @IBOutlet var contentsStackView: UIStackView!
     @IBOutlet var recipesStackView: UIStackView!
@@ -28,12 +30,40 @@ final class DetailsViewController: UIViewController {
     }
     
     private func setupUI() {
+        
+        titleLabel.font = UIFont(name: "Arial", size: 25)
+        titleLabel.backgroundColor = .systemBackground
+        titleView.layer.borderWidth = 0.2
+        titleView.backgroundColor = .systemBackground
+        titleView.layer.borderColor = UIColor.lightGray.cgColor
+        titleView.layer.cornerRadius = 4.0
+        
+        cocktailInfoStackView.spacing = 2.0
+        cocktailInfoStackView.backgroundColor = .systemBackground
+        cocktailInfoStackView.layer.cornerRadius = 4.0
+        cocktailInfoStackView.layer.borderColor = UIColor.lightGray.cgColor
+        cocktailInfoStackView.layer.borderWidth = 0.2
+        
+        imageView.layer.cornerRadius = 4.0
+        imageContentView.layer.borderWidth = 0.2
+        imageContentView.layer.borderColor = UIColor.lightGray.cgColor
+        imageContentView.backgroundColor = .systemBackground
+        
         contentsStackView.distribution = .fill
+        contentsStackView.backgroundColor = .systemBackground
+        contentsStackView.layer.borderWidth = 0.2
+        contentsStackView.layer.borderColor = UIColor.lightGray.cgColor
+        contentsStackView.layer.cornerRadius = 4.0
+        
         recipesStackView.alignment = .fill
         recipesStackView.distribution = .fill
         recipesStackView.spacing = 2.0
-        cocktailInfoStackView.spacing = 2.0
-        titleLabel.font = UIFont(name: "Arial", size: 25)
+        recipesStackView.backgroundColor = .systemBackground
+        recipesStackView.layer.borderWidth = 0.2
+        recipesStackView.layer.borderColor = UIColor.lightGray.cgColor
+        recipesStackView.layer.cornerRadius = 4.0
+        
+        view.backgroundColor = .systemBackground
         navigationController?.navigationBar.tintColor = .black
     }
     

@@ -12,7 +12,7 @@ final class TabBarController: UITabBarController {
         // title
         static let categoryTitle: String = "Categories"
         static let searchTitle: String = "Search"
-        static let randomTitle: String = "Random"
+        static let randomTitle: String = "Luck"
         // image
         static let categoryImage: String = "house"
         static let searchImage: String = "magnifyingglass"
