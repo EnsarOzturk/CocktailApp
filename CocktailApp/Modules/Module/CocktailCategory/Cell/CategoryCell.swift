@@ -12,7 +12,7 @@ final class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     
     struct CellConstants {
-        static let borderWidth: Double = 0.3
+        static let borderWidth: Double = 0.2
         static let cornerRadius: Double = 4
     }
     

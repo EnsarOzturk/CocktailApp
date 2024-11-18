@@ -33,7 +33,7 @@ extension UIColor {
             if traitCollection.userInterfaceStyle == .dark {
                 return .white // Koyu modda gri sınır
             } else {
-                return .systemGray5 // Açık modda daha açık gri sınır
+                return .darkGray // Açık modda daha açık gri sınır
             }
         }
     }
@@ -80,7 +80,7 @@ extension UIColor {
     
     static var customTextColor: UIColor {
         return UIColor { traitCollection in
-            return traitCollection.userInterfaceStyle == .dark ? .white : .white
+            return traitCollection.userInterfaceStyle == .dark ? .white : .black
         }
     }
     
