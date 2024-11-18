@@ -19,7 +19,7 @@ struct ViewConstants {
     static let main: String = "Main"
     static let listVcIdentifier: String = "ListViewController"
     //cell
-    static let LineSpacing: Double = 8
+    static let lineSpacing: Double = 4
 }
 
 final class CategoryViewController: UIViewController {
@@ -32,6 +32,7 @@ final class CategoryViewController: UIViewController {
         setupCollectionView()
         viewModel = CategoryViewModel(networkManager: NetworkManager(), view: self)
         viewModel.fetchCategories()
+        
     }
     
     private func setupCollectionView() {
@@ -39,14 +40,14 @@ final class CategoryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: ViewConstants.categoryCell, bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = .customBackgroundColor
     }
     
     private func setupView() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .customBackgroundColor
         title = ViewConstants.title
-        tabBarController?.tabBar.barTintColor = UIColor.white
-        tabBarController?.tabBar.tintColor = UIColor.black
+        tabBarController?.tabBar.barTintColor = .customBackgroundColor
+        tabBarController?.tabBar.tintColor = .customLabelColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,16 +78,20 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
 }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        Constants.lineSpacing
+        ViewConstants.lineSpacing
     }
 }
 
 extension CategoryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 48) / 3
-        let height = width / 2 * 3
+        let width = (UIScreen.main.bounds.width - 48) / 3 // 3 sütun
+        let height = width * 1.6 // Yüksekliği artır
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4) // Alt boşluk eklendi
+        }
 }
 
 extension CategoryViewController: CategoryViewProtocol {

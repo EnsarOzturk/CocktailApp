@@ -28,18 +28,27 @@ class ListCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            updateUI() // UI'yi tekrar düzenle
+        }
+    }
+    
     private func updateUI() {
+        backgroundColor = UIColor.secondarySystemBackground
         // label
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.textColor = .black
-        label.backgroundColor = UIColor.white
+        label.textColor = .label
+        label.backgroundColor = UIColor.secondarySystemBackground
         label.font = UIFont(name: "Apple Symbols", size: 15)
         // view
+        view.backgroundColor = UIColor.secondarySystemBackground
         view.layer.cornerRadius = 0.2
         // cell
         layer.borderWidth = 0.5
-        layer.borderColor = UIColor.systemGray4.cgColor
+        layer.borderColor = UIColor.customBorderColor.cgColor
         layer.cornerRadius = 2.0
         layer.backgroundColor = UIColor.systemGray6.cgColor
     }

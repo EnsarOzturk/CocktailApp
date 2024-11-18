@@ -37,20 +37,27 @@ class BigCardCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            updateUI() // UI'yi tekrar düzenle
+        }
+    }
+    
     private func updateUI() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.secondarySystemBackground
         // label
+        label.backgroundColor = UIColor.secondarySystemBackground
         label.textAlignment = .center
         label.numberOfLines = Constants.numberOfLines
-        label.textColor = .black
-        label.backgroundColor = UIColor.white
+        label.textColor = .label
         label.font = UIFont(name: Constants.labelFont, size: Constants.labelSize)
         // view
+        view.backgroundColor = UIColor.secondarySystemBackground
         view.layer.cornerRadius = Constants.viewRadius
-        view.backgroundColor = UIColor.white
         // cell
         layer.borderWidth = Constants.borderWidth
-        layer.borderColor = UIColor.systemGray5.cgColor
+        layer.borderColor = UIColor.customBorderColor.cgColor
         layer.cornerRadius = Constants.cornerRadius
     }
 }

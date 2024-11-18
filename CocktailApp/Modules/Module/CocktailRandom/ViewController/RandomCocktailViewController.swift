@@ -23,7 +23,7 @@ struct RandomConstants {
     static let labelColorAlpha: Double = 0.6
     static let labelAlpha: Double = 0.0
     //view
-    static let viewColor: String = "darkBackground"
+    static let viewColor: UIColor = UIColor.white
     //animations
     static let withDuration: Double = 0.2
     static let transformScaleX: Double = 0.9
@@ -57,14 +57,21 @@ final class RandomCocktailViewController: UIViewController {
         updateImage()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            updateUI()
+        }
+    }
+    
     private func updateImage() {
         imageView.layer.borderWidth = RandomConstants.imageBorderWidth
-        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderColor = UIColor.randomBorderColor.cgColor
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = RandomConstants.imageRadius
-        imageView.layer.masksToBounds = true  // Rounded corners
-        imageView.layer.shadowColor = UIColor.black.cgColor
+        imageView.layer.masksToBounds = true
+        imageView.layer.shadowColor = UIColor.randomBorderColor.cgColor
         imageView.layer.shadowOffset = CGSize(width: RandomConstants.imageShadowWidth, height: RandomConstants.imageShadowHeight)
         imageView.layer.shadowOpacity = Float(RandomConstants.imageShadowOpacity)
         imageView.layer.shadowRadius = RandomConstants.imageShadowRadius
@@ -75,10 +82,10 @@ final class RandomCocktailViewController: UIViewController {
     
     private func updateButton() {
         button.layer.borderWidth = RandomConstants.buttonBorderWidth
-        button.layer.borderColor = UIColor.white.cgColor
-        button.backgroundColor = UIColor.black
+        button.layer.borderColor = UIColor.randomBorderColor.cgColor
+        button.backgroundColor = .randomBackgroundColor
         button.setTitle(RandomConstants.buttonTitle, for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.randomTextColor, for: .normal)
         
         // Make the button circular
         let buttonSize = min(button.frame.size.width, button.frame.size.height)
@@ -87,32 +94,27 @@ final class RandomCocktailViewController: UIViewController {
     
     private func updateLabel() {
         nameLabel.font = UIFont(name: RandomConstants.labelFont, size: RandomConstants.labelSize)
-        nameLabel.textColor = UIColor.white
-        nameLabel.backgroundColor = UIColor.black.withAlphaComponent(RandomConstants.labelColorAlpha)
+        nameLabel.textColor = .randomTextColor
+        nameLabel.backgroundColor = .randomBackgroundColor
         nameLabel.layer.cornerRadius = RandomConstants.labelRadius
         nameLabel.layer.masksToBounds = true
         nameLabel.text = RandomConstants.labeltext
     }
     
     private func updateView() {
-        view.backgroundColor = UIColor(named: RandomConstants.viewColor)
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.tintColor = .white
+        view.backgroundColor = .randomBackgroundColor
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .randomTextColor
+        navigationController?.navigationBar.backgroundColor = .randomBackgroundColor
         title = "Random Cocktail"
     }
         
-    // Configure tab bar appearance when view appears
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.barTintColor = UIColor.black
-        tabBarController?.tabBar.tintColor = UIColor.white
-    }
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            tabBarController?.tabBar.barTintColor = .randomBackgroundColor
+            tabBarController?.tabBar.tintColor = .randomTextColor
+        }
     
-    // Reset tab bar appearance when view disappears
-    override func viewWillDisappear(_ animated: Bool) {
-        tabBarController?.tabBar.barTintColor = UIColor.white
-        tabBarController?.tabBar.tintColor = UIColor.black
-    }
 
     // Button action to shuffle and update cocktail
     @IBAction func bringRandomButtonTapped(_ sender: UIButton) {

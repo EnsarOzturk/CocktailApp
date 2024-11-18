@@ -33,14 +33,24 @@ final class SmallCardCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            updateUI() // UI'yi tekrar düzenle
+        }
+    }
+
+    
     private func updateUI() {
-        // label
+        // Label
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .customTextColor // Dinamik text rengi
         label.numberOfLines = 0
-        // cell
+        
+        // Cell
         layer.borderWidth = Constants.borderWidth
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderColor = UIColor.customBorderColor.cgColor // Dinamik border rengi
         layer.cornerRadius = Constants.cornerRadius
+        backgroundColor = .customBackgroundColor // Arka plan rengi
     }
 }

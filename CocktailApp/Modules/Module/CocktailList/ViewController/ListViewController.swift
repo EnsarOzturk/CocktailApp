@@ -51,14 +51,21 @@ final class ListViewController: UIViewController {
     }
     
     private func fetchDrinks() {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
         viewModel.fetchDrinks { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
+                activityIndicator.stopAnimating()
+                activityIndicator.removeFromSuperview()
                 
                 switch result {
-                    case .success:
-                    self.collectionView.reloadData() 
-                    case .failure(let error):
+                case .success:
+                    self.collectionView.reloadData()
+                case .failure(let error):
                     self.displayError(error.localizedDescription)
                 }
             }
@@ -71,7 +78,7 @@ final class ListViewController: UIViewController {
         collectionView.register(UINib(nibName: Constants.listCellIdentifier, bundle: nil), forCellWithReuseIdentifier: ListCell.identifier)
         collectionView.register(UINib(nibName: Constants.bigCellIdentifier, bundle: nil), forCellWithReuseIdentifier: BigCardCell.identifier)
         collectionView.contentInset = UIEdgeInsets(top: Constants.top, left: Constants.left, bottom: Constants.button, right: Constants.right)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.systemBackground
         collectionView.indicatorStyle = .default
         collectionView.showsVerticalScrollIndicator = false
     }
@@ -79,14 +86,22 @@ final class ListViewController: UIViewController {
     private func setupNavigation() {
         title = selectedCategory?.strCategory
         let viewStyleButton = UIBarButtonItem(image: UIImage(named: Constants.bigCard), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
-            navigationItem.rightBarButtonItem = viewStyleButton
-            navigationController?.navigationBar.tintColor = .black
-            view.backgroundColor = UIColor.white
+        navigationItem.rightBarButtonItem = viewStyleButton
+
+        // Large title ve normal title renkleri
+        navigationController?.navigationBar.tintColor = .label
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .foregroundColor: UIColor.label
+        ]
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.label
+        ]
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
+        setupNavigation()
     }
     
     private func navigationTitleAttributes() {
@@ -104,10 +119,10 @@ final class ListViewController: UIViewController {
            collectionView.reloadData()
            if listViewStyle == .small {
                sender.image = UIImage(named: Constants.bigCard)
-               sender.tintColor = UIColor.black
+               sender.tintColor = UIColor.label
            } else {
                sender.image = UIImage(named: Constants.smallCard)
-               sender.tintColor = UIColor.black
+               sender.tintColor = UIColor.label
            }
         }
     }

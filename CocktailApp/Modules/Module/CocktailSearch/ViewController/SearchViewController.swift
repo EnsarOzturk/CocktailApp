@@ -47,7 +47,7 @@ final class SearchViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .customBackgroundColor
         collectionView.contentInset = UIEdgeInsets(top: SearchConstants.top, left: SearchConstants.left, bottom: SearchConstants.left, right: SearchConstants.right)
         collectionView.register(UINib(nibName: SearchConstants.searchListCell, bundle: nil), forCellWithReuseIdentifier: SearchListCell.identifier)
         collectionView.register(UINib(nibName: SearchConstants.smallCardCell, bundle: nil), forCellWithReuseIdentifier: SmallCardCell.identifier)
@@ -57,10 +57,31 @@ final class SearchViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = SearchConstants.searchPlaceholder
-        searchController.searchBar.tintColor = .black
-        searchController.searchBar.backgroundColor = .white
+        searchController.searchBar.tintColor = .customTextColor
+        searchController.searchBar.backgroundColor = .customBackgroundColor
+        searchController.searchBar.searchTextField.textColor = .customTextColor
+        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: SearchConstants.searchPlaceholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.customPlaceholderColor]
+        )
         navigationItem.searchController = searchController
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            // Renkleri güncelle
+            collectionView.backgroundColor = .customBackgroundColor
+            navigationController?.navigationBar.backgroundColor = .customNavigationBarColor
+            navigationController?.navigationBar.largeTitleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.customTextColor
+            ]
+            tabBarController?.tabBar.barTintColor = .customBackgroundColor
+            tabBarController?.tabBar.tintColor = .customTextColor
+            collectionView.reloadData()
+        }
+    }
+
 
     private func fetchCocktails(for searchQuery: String) {
         viewModel.fetchCocktails(searchQuery: searchQuery) { [weak self] result in
@@ -78,12 +99,18 @@ final class SearchViewController: UIViewController {
     private func configureNavigationBar() {
         title = SearchConstants.title
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.backgroundColor = .customNavigationBarColor
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customTextColor]
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: SearchConstants.bigCard), style: .plain, target: self, action: #selector(viewStyleButtonTapped(_:)))
-        navigationItem.rightBarButtonItem?.tintColor = .black
-        tabBarController?.tabBar.barTintColor = .white
-        tabBarController?.tabBar.tintColor = .black
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: SearchConstants.bigCard),
+            style: .plain,
+            target: self,
+            action: #selector(viewStyleButtonTapped(_:))
+        )
+        navigationItem.rightBarButtonItem?.tintColor = .customTextColor
+        tabBarController?.tabBar.barTintColor = .customBackgroundColor
+        tabBarController?.tabBar.tintColor = .customTextColor
     }
 
        @IBAction func viewStyleButtonTapped(_ sender: UIBarButtonItem) {

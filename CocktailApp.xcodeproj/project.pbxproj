@@ -48,6 +48,7 @@
 		FCB79E2F2BE3A51D0078563F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E2E2BE3A51D0078563F /* DetailViewModel.swift */; };
 		FCB79E312BE3A5550078563F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E302BE3A5550078563F /* SearchViewModel.swift */; };
 		FCB79E332BE3A5650078563F /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E322BE3A5650078563F /* RandomViewModel.swift */; };
+		FCBC2FEE2CEB54D90086F12F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */; };
 		FCC35FAE2BE7AAB500D56EAB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */; };
 		FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */; };
 		FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */; };
@@ -99,6 +100,7 @@
 		FCB79E2E2BE3A51D0078563F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FCB79E302BE3A5550078563F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		FCB79E322BE3A5650078563F /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
+		FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyle.swift; sourceTree = "<group>"; };
 		FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
 				FC76B6952B3C248800092762 /* UIImageView+Extension.swift */,
 				FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */,
+				FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
 				FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */,
+				FCBC2FEE2CEB54D90086F12F /* UIColor+Extension.swift in Sources */,
 				FC2D24C02CE3A1E000C8DEE5 /* Identifier+Extension.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);

@@ -60,10 +60,12 @@ final class CategoryCell: UICollectionViewCell {
     }
     
     private func updateUI() {
+        // label
+        label.textColor = .customLabelColor
         // cell
         layer.borderWidth = CellConstants.borderWidth
-        layer.borderColor = UIColor.systemGray5.cgColor
+        layer.borderColor = UIColor.customBorderColor.cgColor
         layer.cornerRadius = CellConstants.cornerRadius
-        layer.backgroundColor = UIColor.white.cgColor
+        layer.backgroundColor = UIColor.customCellBackgroundColor.cgColor
     }
 }

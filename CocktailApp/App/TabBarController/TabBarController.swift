@@ -27,6 +27,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         initiateTabbarViewControllers()
+        configureTabBarAppearance()
     }
     
     private func initiateTabbarViewControllers() {
@@ -53,5 +54,37 @@ final class TabBarController: UITabBarController {
                 viewControllers.append(navigationController)
         }
             self.viewControllers = viewControllers
+    }
+    
+    private func configureTabBarAppearance() {
+        let appearance = UITabBarAppearance()
+        
+        // Arka plan rengini belirle
+        appearance.backgroundColor = UIColor.customTabBarBackgroundColor
+        
+        // Seçili ikon ve başlık rengi
+        appearance.stackedLayoutAppearance.selected.iconColor = UIColor.customTabBarTintColor
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
+            .foregroundColor: UIColor.customTabBarTintColor
+        ]
+        
+        // Seçili olmayan ikon ve başlık rengi
+        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.systemGray
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
+            .foregroundColor: UIColor.systemGray
+        ]
+        
+        // TabBar'a görünümü uygula
+        tabBar.standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            tabBar.scrollEdgeAppearance = appearance
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            configureTabBarAppearance()
+        }
     }
 }
