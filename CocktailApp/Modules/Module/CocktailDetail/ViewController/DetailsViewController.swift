@@ -36,7 +36,7 @@ final class DetailsViewController: UIViewController {
         titleLabel.backgroundColor = .clear
 
         // Title View Styling
-        titleView.layer.borderWidth = 0.5
+        titleView.layer.borderWidth = 0.2
         titleView.backgroundColor = UIColor.detailCellBackgroundColor// Dinamik arka plan rengi
         titleView.layer.borderColor = UIColor.customBorderColor.cgColor // Dinamik sınır rengi
         titleView.layer.cornerRadius = 6.0
@@ -49,18 +49,18 @@ final class DetailsViewController: UIViewController {
         imageView.layer.cornerRadius = 8.0
         imageView.clipsToBounds = true
         imageView.layer.borderColor = UIColor.separator.cgColor // Dinamik sınır rengi
-        imageView.layer.borderWidth = 0.3
+        imageView.layer.borderWidth = 0.2
 
         // Image Content View Styling
         imageContentView.layer.cornerRadius = 6.0
-        imageContentView.layer.borderWidth = 0.5
+        imageContentView.layer.borderWidth = 0.2
         imageContentView.layer.borderColor = UIColor.customBorderColor.cgColor // Dinamik sınır rengi
         imageContentView.backgroundColor = UIColor.detailCellBackgroundColor // Dinamik arka plan rengi
 
         // Contents StackView Styling
         contentsStackView.distribution = .fill
         contentsStackView.backgroundColor = UIColor.detailCellBackgroundColor // Dinamik arka plan rengi
-        contentsStackView.layer.borderWidth = 0.5
+        contentsStackView.layer.borderWidth = 0.2
         contentsStackView.layer.borderColor = UIColor.customBorderColor.cgColor // Dinamik sınır rengi
         contentsStackView.layer.cornerRadius = 6.0
 
@@ -69,7 +69,7 @@ final class DetailsViewController: UIViewController {
         recipesStackView.distribution = .fill
         recipesStackView.spacing = 8.0
         recipesStackView.backgroundColor = UIColor.detailCellBackgroundColor // Dinamik arka plan rengi
-        recipesStackView.layer.borderWidth = 0.5
+        recipesStackView.layer.borderWidth = 0.2
         recipesStackView.layer.borderColor = UIColor.customBorderColor.cgColor // Dinamik sınır rengi
         recipesStackView.layer.cornerRadius = 6.0
 
