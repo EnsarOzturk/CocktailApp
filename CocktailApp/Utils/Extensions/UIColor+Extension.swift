@@ -84,6 +84,18 @@ extension UIColor {
         }
     }
     
+    static var searchTextColor: UIColor {
+        return UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .white : .white
+        }
+    }
+    
+    static var navigationTitleTextColor: UIColor {
+        return UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .white : .black
+        }
+    }
+    
     static var customNavigationBarColor: UIColor {
         return UIColor { traitCollection in
             return traitCollection.userInterfaceStyle == .dark ? .black : .white

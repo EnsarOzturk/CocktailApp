@@ -99,14 +99,22 @@ final class DetailsViewController: UIViewController {
     }
    
     private func fetchCocktailDetails() {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
         viewModel.fetchCocktailDetails { [weak self] result in
-            switch result {
-            case .success(let drink):
+            DispatchQueue.main.async {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+                switch result {
+                case .success(let drink):
                 DispatchQueue.main.async {
                     self?.configureView(with: drink)
                 }
-            case .failure(let error):
+                case .failure(let error):
                 print("Error fetching cocktail details: \(error)")
+                }
             }
         }
     }

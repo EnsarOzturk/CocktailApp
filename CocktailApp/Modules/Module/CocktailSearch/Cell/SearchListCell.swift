@@ -43,7 +43,7 @@ final class SearchListCell: UICollectionViewCell {
     private func updateUI() {
         // Label
         label.textAlignment = .center
-        label.textColor = .customTextColor // Dinamik text rengi
+        label.textColor = .searchTextColor // Dinamik text rengi
         label.numberOfLines = 0
         
         // Cell

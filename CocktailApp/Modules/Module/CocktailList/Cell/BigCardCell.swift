@@ -47,13 +47,13 @@ class BigCardCell: UICollectionViewCell {
     private func updateUI() {
         backgroundColor = UIColor.secondarySystemBackground
         // label
-        label.backgroundColor = UIColor.secondarySystemBackground
+        label.backgroundColor = UIColor.customCellBackgroundColor
         label.textAlignment = .center
         label.numberOfLines = Constants.numberOfLines
         label.textColor = .label
         label.font = UIFont(name: Constants.labelFont, size: Constants.labelSize)
         // view
-        view.backgroundColor = UIColor.secondarySystemBackground
+        view.backgroundColor = UIColor.customCellBackgroundColor
         view.layer.cornerRadius = Constants.viewRadius
         // cell
         layer.borderWidth = Constants.borderWidth

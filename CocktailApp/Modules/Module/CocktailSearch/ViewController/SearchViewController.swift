@@ -12,7 +12,7 @@ struct SearchConstants {
     static let left: Double = 8
     static let bottom: Double = 0
     static let right: Double = 8
-    static let title: String = "Search Cocktails"
+    static let title: String = "Search Drinks"
     static let searchListCell: String = "SearchListCell"
     static let smallCardCell: String = "SmallCardCell"
     static let searchPlaceholder: String = "Search Cocktails"
@@ -66,11 +66,11 @@ final class SearchViewController: UIViewController {
         )
         navigationItem.searchController = searchController
     }
-    
+
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-            // Renkleri güncelle
+            // Arka plan rengini güncelle
             collectionView.backgroundColor = .customBackgroundColor
             navigationController?.navigationBar.backgroundColor = .customNavigationBarColor
             navigationController?.navigationBar.largeTitleTextAttributes = [
@@ -82,25 +82,34 @@ final class SearchViewController: UIViewController {
         }
     }
 
-
     private func fetchCocktails(for searchQuery: String) {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
         viewModel.fetchCocktails(searchQuery: searchQuery) { [weak self] result in
-            switch result {
-            case .success:
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+                switch result {
+                    case .success:
+                    DispatchQueue.main.async {
                     self?.collectionView.reloadData()
+                    }
+                    case .failure(let error):
+                    print("Error fetching cocktails: \(error)")
                 }
-            case .failure(let error):
-                print("Error fetching cocktails: \(error)")
             }
         }
     }
+        
 
     private func configureNavigationBar() {
         title = SearchConstants.title
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .customNavigationBarColor
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customTextColor]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.navigationTitleTextColor]
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: SearchConstants.bigCard),
@@ -108,7 +117,7 @@ final class SearchViewController: UIViewController {
             target: self,
             action: #selector(viewStyleButtonTapped(_:))
         )
-        navigationItem.rightBarButtonItem?.tintColor = .customTextColor
+        navigationItem.rightBarButtonItem?.tintColor = .navigationTitleTextColor
         tabBarController?.tabBar.barTintColor = .customBackgroundColor
         tabBarController?.tabBar.tintColor = .customTextColor
     }

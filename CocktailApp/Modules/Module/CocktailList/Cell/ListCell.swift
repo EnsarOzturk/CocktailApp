@@ -41,10 +41,10 @@ class ListCell: UICollectionViewCell {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .label
-        label.backgroundColor = UIColor.secondarySystemBackground
+        label.backgroundColor = UIColor.customCellBackgroundColor
         label.font = UIFont(name: "Apple Symbols", size: 15)
         // view
-        view.backgroundColor = UIColor.secondarySystemBackground
+        view.backgroundColor = UIColor.customCellBackgroundColor
         view.layer.cornerRadius = 0.2
         // cell
         layer.borderWidth = 0.5

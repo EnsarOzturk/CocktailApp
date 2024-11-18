@@ -103,7 +103,7 @@ final class RandomCocktailViewController: UIViewController {
     
     private func updateView() {
         view.backgroundColor = .randomBackgroundColor
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.tintColor = .randomTextColor
         navigationController?.navigationBar.backgroundColor = .randomBackgroundColor
         title = "Random Cocktail"
@@ -162,12 +162,20 @@ final class RandomCocktailViewController: UIViewController {
     }
     // Update the random cocktail data
     @objc func updateRandomCocktail() {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
         viewModel.fetchRandomCocktail { [weak self] result in
-            switch result {
-            case .success(let randomCocktail):
-                self?.updateUI(with: randomCocktail)
-            case .failure(let error):
+            DispatchQueue.main.async {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+                switch result {
+                case .success(let randomCocktail):
+                    self?.updateUI(with: randomCocktail)
+                case .failure(let error):
                 print("Error fetching random cocktail: \(error.localizedDescription)")
+                }
             }
         }
     }
