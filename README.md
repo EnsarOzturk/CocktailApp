@@ -5,6 +5,7 @@
 ## 🔎 Preview
 <p float="left">
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/main/Screenshots/Categories.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/main/Screenshots/CategoriesDarkMode.png" width="200" />
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/main/Screenshots/List.png" width="200" /> 
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/main/Screenshots/ListBig.png" width="200" /> 
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/main/Screenshots/Search.png" width="200"/>
