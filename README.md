@@ -7,6 +7,7 @@ They can also choose their lucky drink using the random cocktail screen.
 
 <p float="left">
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="200" />
+ 
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/List.png" width="200" /> 
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/ListBigCard" width="200"/>
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Search.png" width="200" />
