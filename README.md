@@ -15,7 +15,6 @@ They can also choose their lucky drink using the random cocktail screen.
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Random.gif" width="200" />
 </p>
 
-
 ## 📚 Libraries
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [SDWebImage](https://github.com/SDWebImage/SDWebImage)
