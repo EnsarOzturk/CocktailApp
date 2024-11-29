@@ -1,7 +1,5 @@
 <h1 align="center">🍸 CocktailApp (using MVC, MVVM)</h1>
  
- --
- 
 This application is a cocktail app developed using the Swift programming language. Users can list drinks in different categories with different cards, filter drinks by categories, search by drink names, and access drink recipes.
 They can also choose their lucky drink using the random cocktail screen.
 
