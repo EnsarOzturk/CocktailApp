@@ -4,7 +4,7 @@
 ## 🔎 Preview
 ### 1. Ana Ekran
 <div style="text-align: center">
-  <img src="Screenshots/Categories.png" alt="Ana Ekran" width="200"/>
+  <img src="Screenshot/Categories.png" alt="Ana Ekran" width="200"/>
   <p></strong> Bu, uygulamanın ana ekranını gösterir.</p>
 </div>
 
