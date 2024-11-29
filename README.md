@@ -1,4 +1,4 @@
-# 🍸 CocktailApp (using MVC, MVVM)
+ 🍸 CocktailApp (using MVC, MVVM)
  
  ---
  
