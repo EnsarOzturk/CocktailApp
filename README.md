@@ -5,7 +5,15 @@
 ### 1. Ana Ekran
 <div style="text-align: center">
   <img src="Screenshot/Categories.png" alt="Ana Ekran" width="200"/>
-  <p></strong> Bu, uygulamanın ana ekranını gösterir.</p>
+  <p></strong> Category Screen </p>
+</div>
+
+---
+
+### 2. Detay Sayfası
+<div style="text-align: center">
+  <img src="Screenshot/CategoriesDarkMode.png" alt="Detay Sayfası" width="200"/>
+  <p></strong> Dark Mode </p>
 </div>
 
 ---
