@@ -3,22 +3,16 @@
 
 ## 🔎 Preview
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
- <div style="text-align: center; width: 45%;">
-  <img src="Screenshot/Categories.png" alt="Ana Ekran" width="100%"/>
-  <p></strong> Category Screen </p>
-</div>
-
- <div style="text-align: center; width: 45%;">
-  <img src="Screenshot/CategoriesDarkMode.png" alt="Detay Sayfası" width="100%"/>
-  <p></strong> Dark Mode </p>
-</div>
-
- <div style="text-align: center; width: 45%;">
-  <img src="Screenshot/List.png" alt="Detay Sayfası" width="100%"/>
-  <p></strong> Dark Mode </p>
-</div>
+<p float="left">
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/CategoriesDarkMode.png" width="200" /> 
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/List.png" width="200" /> 
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/ListBigCard" width="200"/>
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Search.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Searching.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Detail.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Random.gif" width="200" />
+</p>
 
 ## 📚 Libraries
 - [Alamofire](https://github.com/Alamofire/Alamofire)
