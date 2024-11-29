@@ -4,14 +4,14 @@
 ## 🔎 Preview
 
 <p float="left">
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="150" />
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/CategoriesDarkMode.png" width="150" /> 
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/List.png" width="150" /> 
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/ListBigCard" width="150"/>
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Search.png" width="150" />
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Searching.png" width="150" />
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Detail.png" width="150" />
-  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Random.gif" width="150" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/CategoriesDarkMode.png" width="200" /> 
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/List.png" width="200" /> 
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/ListBigCard" width="200"/>
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Search.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Searching.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Detail.png" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Random.gif" width="200" />
 </p>
 
 ## 📚 Libraries
