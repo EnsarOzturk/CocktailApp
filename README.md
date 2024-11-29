@@ -6,12 +6,17 @@
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
  <div style="text-align: center; width: 45%;">
-  <img src="Screenshot/Categories.png" alt="Ana Ekran" width="200"/>
+  <img src="Screenshot/Categories.png" alt="Ana Ekran" width="100%"/>
   <p></strong> Category Screen </p>
 </div>
 
  <div style="text-align: center; width: 45%;">
-  <img src="Screenshot/CategoriesDarkMode.png" alt="Detay Sayfası" width="200"/>
+  <img src="Screenshot/CategoriesDarkMode.png" alt="Detay Sayfası" width="100%"/>
+  <p></strong> Dark Mode </p>
+</div>
+
+ <div style="text-align: center; width: 45%;">
+  <img src="Screenshot/List.png" alt="Detay Sayfası" width="100%"/>
   <p></strong> Dark Mode </p>
 </div>
 
