@@ -1,6 +1,9 @@
 # 🍸 CocktailApp (using MVC, MVVM)
  
-This application is a cocktail app developed using the Swift programming language. Users can list drinks in different categories with different cards, filter drinks by categories, search by drink names, and access drink recipes
+ ---
+ 
+This application is a cocktail app developed using the Swift programming language. Users can list drinks in different categories with different cards, filter drinks by categories, search by drink names, and access drink recipes.
+They can also choose their lucky drink using the random cocktail screen.
 
 ## 🔎 Preview
 
@@ -13,6 +16,7 @@ This application is a cocktail app developed using the Swift programming languag
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Detail.png" width="200" />
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Random.gif" width="200" />
 </p>
+
 
 ## 📚 Libraries
 - [Alamofire](https://github.com/Alamofire/Alamofire)
