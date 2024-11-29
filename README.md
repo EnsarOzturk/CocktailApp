@@ -1,5 +1,5 @@
 <h1 align="center">
-  <span style="font-size: 48px;">
+  <span style="font-size: 56px;">
     <span style="color: red;">C</span>
     <span style="color: orange;">o</span>
     <span style="color: yellow;">c</span>
