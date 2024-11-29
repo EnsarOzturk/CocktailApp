@@ -9,7 +9,7 @@
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/ListBigCard" width="200"/>
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/Search.png" width="200" />
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/Searching.png" width="200" />
-    <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/Detail" width="200" />
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/Detail.png" width="200" />
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshots/Random.gif" width="200" />
 </p>
 
