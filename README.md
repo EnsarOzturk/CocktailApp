@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # 🍸 CocktailApp (using MVC, MVVM)
  This application is a cocktail app developed using the Swift programming language. Users can list drinks in different categories with different cards, filter drinks by categories, search by drink names, and access drink recipes
@@ -6,6 +7,18 @@
 <p float="left">
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="200" />
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/CategoriesDarkMode.png" width="200" /> 
+=======
+<h1 align="center">🍸 CocktailApp (using MVC, MVVM)</h1>
+ 
+This application is a cocktail app developed using the Swift programming language. Users can list drinks in different categories with different cards, filter drinks by categories, search by drink names, and access drink recipes.
+They can also choose their lucky drink using the random cocktail screen.
+
+## 🔎 Preview
+
+<p float="left">
+  <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Categories.png" width="200" />
+ 
+>>>>>>> 005e6343ab2d8c0311ab9c4aca25d68a3698c409
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/List.png" width="200" /> 
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/ListBigCard" width="200"/>
   <img src="https://github.com/EnsarOzturk/CocktailApp/blob/mvvm/Screenshot/Search.png" width="200" />

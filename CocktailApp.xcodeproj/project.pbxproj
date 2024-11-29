@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2D24BE2CE3A1C700C8DEE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */; };
+		FC2D24C02CE3A1E000C8DEE5 /* Identifier+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */; };
+		FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */; };
+		FC4ADEE52BA474EF009429C7 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */; };
 		FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B68C2B3A0E3100092762 /* ListCell.swift */; };
 		FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC76B68D2B3A0E3100092762 /* ListCell.xib */; };
 		FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC76B6912B3AE6B200092762 /* SearchListCell.swift */; };
@@ -41,7 +45,13 @@
 		FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861FB2B39AC480035A224 /* URL+Extension.swift */; };
 		FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9862012B39BB7F0035A224 /* CategoryCell.swift */; };
 		FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9862022B39BB7F0035A224 /* CategoryCell.xib */; };
-		FCBCECCD2B4C0E7900EEB216 /* Suffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCBCECCC2B4C0E7900EEB216 /* Suffle.mp3 */; };
+		FCB79E2F2BE3A51D0078563F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E2E2BE3A51D0078563F /* DetailViewModel.swift */; };
+		FCB79E312BE3A5550078563F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E302BE3A5550078563F /* SearchViewModel.swift */; };
+		FCB79E332BE3A5650078563F /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB79E322BE3A5650078563F /* RandomViewModel.swift */; };
+		FCBC2FEE2CEB54D90086F12F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */; };
+		FCC35FAE2BE7AAB500D56EAB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */; };
+		FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */; };
+		FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */; };
 		FCDEBFDE2B455AD20069976C /* RandomCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */; };
 		FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */; };
 		FCDEBFE22B455CC90069976C /* RandomCocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */; };
@@ -49,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Identifier+Extension.swift"; sourceTree = "<group>"; };
+		FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		FC76B68C2B3A0E3100092762 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		FC76B68D2B3A0E3100092762 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FC76B6912B3AE6B200092762 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
@@ -83,7 +97,13 @@
 		FC9861FB2B39AC480035A224 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		FC9862012B39BB7F0035A224 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FC9862022B39BB7F0035A224 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
-		FCBCECCC2B4C0E7900EEB216 /* Suffle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Suffle.mp3; path = ../../../../../../Downloads/Suffle.mp3; sourceTree = "<group>"; };
+		FCB79E2E2BE3A51D0078563F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FCB79E302BE3A5550078563F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FCB79E322BE3A5650078563F /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
+		FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyle.swift; sourceTree = "<group>"; };
+		FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailViewController.swift; sourceTree = "<group>"; };
 		FCDEBFDF2B455BE60069976C /* RandomCocktailEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailEndpointItem.swift; sourceTree = "<group>"; };
 		FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCocktailResponse.swift; sourceTree = "<group>"; };
@@ -103,18 +123,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC76B68B2B3A0E1E00092762 /* ListCell */ = {
+		FC2D24C12CE4C75600C8DEE5 /* CocktailCategory */ = {
 			isa = PBXGroup;
 			children = (
-				FC76B68C2B3A0E3100092762 /* ListCell.swift */,
-				FC76B68D2B3A0E3100092762 /* ListCell.xib */,
-				FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */,
-				FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */,
+				FC2D24C92CE4C89D00C8DEE5 /* Cell */,
+				FC2D24C82CE4C89000C8DEE5 /* Response */,
+				FC2D24C62CE4C86F00C8DEE5 /* ViewController */,
+				FC2D24C72CE4C87E00C8DEE5 /* ViewModel */,
 			);
-			path = ListCell;
+			path = CocktailCategory;
 			sourceTree = "<group>";
 		};
-		FC76B6902B3AE67D00092762 /* SearchListCell */ = {
+		FC2D24C22CE4C76400C8DEE5 /* CocktailList */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24D52CE4C9C500C8DEE5 /* Cell */,
+				FC2D24D42CE4C9BF00C8DEE5 /* Response */,
+				FC2D24D32CE4C9BA00C8DEE5 /* ViewModel */,
+				FC2D24D22CE4C9B300C8DEE5 /* ViewController */,
+			);
+			path = CocktailList;
+			sourceTree = "<group>";
+		};
+		FC2D24C32CE4C7B600C8DEE5 /* CocktailSearch */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24D12CE4C9A000C8DEE5 /* Cell */,
+				FC2D24D02CE4C99800C8DEE5 /* Response */,
+				FC2D24CF2CE4C99100C8DEE5 /* ViewModel */,
+				FC2D24CE2CE4C97F00C8DEE5 /* ViewController */,
+			);
+			path = CocktailSearch;
+			sourceTree = "<group>";
+		};
+		FC2D24C42CE4C7D400C8DEE5 /* CocktailRandom */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24D72CE4CB7300C8DEE5 /* Service */,
+				FC2D24CC2CE4C8E900C8DEE5 /* Response */,
+				FC2D24CB2CE4C8DF00C8DEE5 /* ViewModel */,
+				FC2D24CA2CE4C8CF00C8DEE5 /* ViewController */,
+			);
+			path = CocktailRandom;
+			sourceTree = "<group>";
+		};
+		FC2D24C52CE4C7EE00C8DEE5 /* CocktailLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24D62CE4CB5600C8DEE5 /* ViewController */,
+			);
+			path = CocktailLaunchScreen;
+			sourceTree = "<group>";
+		};
+		FC2D24C62CE4C86F00C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861DB2B398EF00035A224 /* CategoryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24C72CE4C87E00C8DEE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ADEE22BA31597009429C7 /* CategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC2D24C82CE4C89000C8DEE5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FC2D24C92CE4C89D00C8DEE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC9862012B39BB7F0035A224 /* CategoryCell.swift */,
+				FC9862022B39BB7F0035A224 /* CategoryCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC2D24CA2CE4C8CF00C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24CB2CE4C8DF00C8DEE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCB79E322BE3A5650078563F /* RandomViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC2D24CC2CE4C8E900C8DEE5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FC2D24CE2CE4C97F00C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861D92B3987630035A224 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24CF2CE4C99100C8DEE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCB79E302BE3A5550078563F /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC2D24D02CE4C99800C8DEE5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861E02B399F270035A224 /* SearchResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FC2D24D12CE4C9A000C8DEE5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				FC76B6912B3AE6B200092762 /* SearchListCell.swift */,
@@ -122,7 +264,163 @@
 				FC76B69A2B3C535500092762 /* SmallCardCell.swift */,
 				FC76B69B2B3C535500092762 /* SmallCardCell.xib */,
 			);
-			path = SearchListCell;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC2D24D22CE4C9B300C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861DD2B399D120035A224 /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24D32CE4C9BA00C8DEE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ADEE42BA474EF009429C7 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC2D24D42CE4C9BF00C8DEE5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861E42B399FB70035A224 /* ListResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FC2D24D52CE4C9C500C8DEE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC76B68C2B3A0E3100092762 /* ListCell.swift */,
+				FC76B68D2B3A0E3100092762 /* ListCell.xib */,
+				FC76B69E2B3CC2FB00092762 /* BigCardCell.swift */,
+				FC76B69F2B3CC2FB00092762 /* BigCardCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC2D24D62CE4CB5600C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE84942CCA507A00DD39EF /* LaunchScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24D72CE4CB7300C8DEE5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FCDEBFE32B4575260069976C /* RandomCocktailService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FC2D24D82CE4CB8C00C8DEE5 /* CocktailDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24DB2CE4CC5200C8DEE5 /* Response */,
+				FC2D24DA2CE4CBA300C8DEE5 /* ViewModel */,
+				FC2D24D92CE4CB9B00C8DEE5 /* ViewController */,
+			);
+			path = CocktailDetail;
+			sourceTree = "<group>";
+		};
+		FC2D24D92CE4CB9B00C8DEE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC2D24DA2CE4CBA300C8DEE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCB79E2E2BE3A51D0078563F /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC2D24DB2CE4CC5200C8DEE5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FC76B6A42B3D5E8500092762 /* CocktailDetailResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FC2D24DC2CE4D14800C8DEE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24E12CE4D40500C8DEE5 /* Manager */,
+				FC2D24E22CE4D42600C8DEE5 /* Error */,
+				FC9861EC2B39A13F0035A224 /* EndPointItems */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FC2D24DD2CE4D19800C8DEE5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861FE2B39ACC50035A224 /* Module */,
+				FC2D24DC2CE4D14800C8DEE5 /* Network */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FC2D24E12CE4D40500C8DEE5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861E72B39A05F0035A224 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FC2D24E22CE4D42600C8DEE5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				FCC35FAD2BE7AAB500D56EAB /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		FC2D24E32CE4D48C00C8DEE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861CD2B38C3E30035A224 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC2D24E42CE4D5C800C8DEE5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
+				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
+				FC9861CA2B38C3E10035A224 /* Main.storyboard */,
+				FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */,
+				FC2D24E62CE4D67C00C8DEE5 /* TabBarController */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FC2D24E52CE4D64B00C8DEE5 /* ViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				FCC35FAF2BEA42BC00D56EAB /* ListViewStyle.swift */,
+			);
+			path = ViewStyle;
+			sourceTree = "<group>";
+		};
+		FC2D24E62CE4D67C00C8DEE5 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D24BD2CE3A1C700C8DEE5 /* TabBarController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		FC9861B82B38C3E10035A224 = {
@@ -144,49 +442,13 @@
 		FC9861C32B38C3E10035A224 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
-				FC9861F72B39A74D0035A224 /* Utils */,
-				FC9861FD2B39AC8C0035A224 /* Api */,
-				FC9861C42B38C3E10035A224 /* AppDelegate.swift */,
-				FC9861C62B38C3E10035A224 /* SceneDelegate.swift */,
-				FC9861CA2B38C3E10035A224 /* Main.storyboard */,
-				FC9861CD2B38C3E30035A224 /* Assets.xcassets */,
-				FC9861CF2B38C3E30035A224 /* LaunchScreen.storyboard */,
 				FC9861D22B38C3E30035A224 /* Info.plist */,
+				FC9861F72B39A74D0035A224 /* Utils */,
+				FC2D24E42CE4D5C800C8DEE5 /* App */,
+				FC2D24DD2CE4D19800C8DEE5 /* Modules */,
+				FC2D24E32CE4D48C00C8DEE5 /* Resources */,
 			);
 			path = CocktailApp;
-			sourceTree = "<group>";
-		};
-		FC9861D82B3987420035A224 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				FC9861DB2B398EF00035A224 /* CategoryViewController.swift */,
-				FC9861DD2B399D120035A224 /* ListViewController.swift */,
-				FC76B6A22B3D5D8B00092762 /* DetailsViewController.swift */,
-				FC9861D92B3987630035A224 /* SearchViewController.swift */,
-				FCDEBFDD2B455AD20069976C /* RandomCocktailViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		FC9861DF2B399F000035A224 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FC9861E02B399F270035A224 /* SearchResponse.swift */,
-				FC9861E22B399F850035A224 /* CategoryResponse.swift */,
-				FC9861E42B399FB70035A224 /* ListResponse.swift */,
-				FC76B6A42B3D5E8500092762 /* CocktailDetailResponse.swift */,
-				FCDEBFE12B455CC90069976C /* RandomCocktailResponse.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FC9861E62B39A0400035A224 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				FC9861E72B39A05F0035A224 /* NetworkManager.swift */,
-				FCDEBFE32B4575260069976C /* RandomCocktailService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		FC9861EC2B39A13F0035A224 /* EndPointItems */ = {
@@ -216,48 +478,24 @@
 				FC9861F92B39A8630035A224 /* UIImage+Extension.swift */,
 				FC9861FB2B39AC480035A224 /* URL+Extension.swift */,
 				FC76B6952B3C248800092762 /* UIImageView+Extension.swift */,
+				FC2D24BF2CE3A1E000C8DEE5 /* Identifier+Extension.swift */,
+				FCBC2FED2CEB54D90086F12F /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FC9861FD2B39AC8C0035A224 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				FCBCECC72B4C059100EEB216 /* Sound */,
-				FC9861FE2B39ACC50035A224 /* Module */,
-				FC9861D82B3987420035A224 /* Controllers */,
-				FC9861DF2B399F000035A224 /* Models */,
-				FC9861E62B39A0400035A224 /* Service */,
-				FC9861EC2B39A13F0035A224 /* EndPointItems */,
-			);
-			path = Api;
 			sourceTree = "<group>";
 		};
 		FC9861FE2B39ACC50035A224 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				FC76B6902B3AE67D00092762 /* SearchListCell */,
-				FC76B68B2B3A0E1E00092762 /* ListCell */,
-				FC9862002B39BB5B0035A224 /* CategoryCell */,
+				FC2D24E52CE4D64B00C8DEE5 /* ViewStyle */,
+				FC2D24C12CE4C75600C8DEE5 /* CocktailCategory */,
+				FC2D24C22CE4C76400C8DEE5 /* CocktailList */,
+				FC2D24C32CE4C7B600C8DEE5 /* CocktailSearch */,
+				FC2D24D82CE4CB8C00C8DEE5 /* CocktailDetail */,
+				FC2D24C42CE4C7D400C8DEE5 /* CocktailRandom */,
+				FC2D24C52CE4C7EE00C8DEE5 /* CocktailLaunchScreen */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		FC9862002B39BB5B0035A224 /* CategoryCell */ = {
-			isa = PBXGroup;
-			children = (
-				FC9862012B39BB7F0035A224 /* CategoryCell.swift */,
-				FC9862022B39BB7F0035A224 /* CategoryCell.xib */,
-			);
-			path = CategoryCell;
-			sourceTree = "<group>";
-		};
-		FCBCECC72B4C059100EEB216 /* Sound */ = {
-			isa = PBXGroup;
-			children = (
-				FCBCECCC2B4C0E7900EEB216 /* Suffle.mp3 */,
-			);
-			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +570,6 @@
 				FC76B69D2B3C535500092762 /* SmallCardCell.xib in Resources */,
 				FC76B6A12B3CC2FB00092762 /* BigCardCell.xib in Resources */,
 				FC76B6942B3AE6B200092762 /* SearchListCell.xib in Resources */,
-				FCBCECCD2B4C0E7900EEB216 /* Suffle.mp3 in Resources */,
 				FC9862042B39BB7F0035A224 /* CategoryCell.xib in Resources */,
 				FC76B68F2B3A0E3100092762 /* ListCell.xib in Resources */,
 			);
@@ -345,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC35FB02BEA42BC00D56EAB /* ListViewStyle.swift in Sources */,
 				FC9861E82B39A05F0035A224 /* NetworkManager.swift in Sources */,
 				FC76B6932B3AE6B200092762 /* SearchListCell.swift in Sources */,
 				FC9861FA2B39A8630035A224 /* UIImage+Extension.swift in Sources */,
@@ -358,20 +596,30 @@
 				FC9861F02B39A5DE0035A224 /* SearchEndpointItem.swift in Sources */,
 				FC76B6A02B3CC2FB00092762 /* BigCardCell.swift in Sources */,
 				FC9861F62B39A6DD0035A224 /* ListEndpointItem.swift in Sources */,
+				FCB79E2F2BE3A51D0078563F /* DetailViewModel.swift in Sources */,
 				FC9861EE2B39A1610035A224 /* Endpoint.swift in Sources */,
 				FC9861FC2B39AC480035A224 /* URL+Extension.swift in Sources */,
+				FCB79E332BE3A5650078563F /* RandomViewModel.swift in Sources */,
+				FCC35FAE2BE7AAB500D56EAB /* NetworkError.swift in Sources */,
 				FCDEBFE02B455BE60069976C /* RandomCocktailEndpointItem.swift in Sources */,
 				FC9861E32B399F850035A224 /* CategoryResponse.swift in Sources */,
+				FCB79E312BE3A5550078563F /* SearchViewModel.swift in Sources */,
 				FC9861F22B39A6280035A224 /* CategoryEndpointItem.swift in Sources */,
+				FC4ADEE32BA31597009429C7 /* CategoryViewModel.swift in Sources */,
 				FCDEBFE42B4575260069976C /* RandomCocktailService.swift in Sources */,
+				FC4ADEE52BA474EF009429C7 /* ListViewModel.swift in Sources */,
 				FC76B68E2B3A0E3100092762 /* ListCell.swift in Sources */,
 				FC76B69C2B3C535500092762 /* SmallCardCell.swift in Sources */,
 				FC9862032B39BB7F0035A224 /* CategoryCell.swift in Sources */,
 				FC9861E12B399F270035A224 /* SearchResponse.swift in Sources */,
 				FC9861DA2B3987640035A224 /* SearchViewController.swift in Sources */,
 				FC76B6A52B3D5E8500092762 /* CocktailDetailResponse.swift in Sources */,
+				FC2D24BE2CE3A1C700C8DEE5 /* TabBarController.swift in Sources */,
 				FC76B6962B3C248800092762 /* UIImageView+Extension.swift in Sources */,
 				FC9861DE2B399D120035A224 /* ListViewController.swift in Sources */,
+				FCDE84952CCA507A00DD39EF /* LaunchScreenViewController.swift in Sources */,
+				FCBC2FEE2CEB54D90086F12F /* UIColor+Extension.swift in Sources */,
+				FC2D24C02CE3A1E000C8DEE5 /* Identifier+Extension.swift in Sources */,
 				FC9861C72B38C3E10035A224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,24 +765,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95TP2MMC6C;
+				DEVELOPMENT_TEAM = MHX5JY33F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CocktailApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SipifyNow;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ensarozturk.CocktailApp;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensarozturk.cocktailapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,24 +797,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95TP2MMC6C;
+				DEVELOPMENT_TEAM = MHX5JY33F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CocktailApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SipifyNow;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ensarozturk.CocktailApp;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ensarozturk.cocktailapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
